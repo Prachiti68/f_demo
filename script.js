@@ -32,29 +32,31 @@ contactDropdown.addEventListener('mouseleave', () => {
 });
 
 //product filteration===============================================================================================
-  
-document.addEventListener("DOMContentLoaded", () => {
+
+
+  document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const productItems = document.querySelectorAll(".product-item");
   
     filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const category = button.getAttribute("data-category");
-  
-        filterButtons.forEach(btn => btn.classList.remove("bg-red-600", "text-white"));
-        button.classList.add("bg-red-600", "text-white");
-  
-        productItems.forEach(item => {
-          if (category === "all" || item.classList.contains(category)) {
-            item.classList.remove("hidden", "animate-fadeOut");
-            item.classList.add("animate-fadeIn");
-          } else {
-            item.classList.remove("animate-fadeIn");
-            item.classList.add("animate-fadeOut");
-            setTimeout(() => item.classList.add("hidden"), 500);  
-          }
+        button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
+
+            filterButtons.forEach(btn => btn.classList.remove("bg-red-600", "text-white"));
+            button.classList.add("bg-red-600", "text-white");
+
+            productItems.forEach(item => {
+                if (category === "all" || item.classList.contains(category)) {
+                    item.classList.remove("hidden", "animate-fadeOut");
+                    item.classList.add("animate-fadeIn");
+                } else {
+                    item.classList.remove("animate-fadeIn");
+                    item.classList.add("animate-fadeOut");
+                    setTimeout(() => {
+                        item.classList.add("hidden");
+                    }, 500); 
+                }
+            });
         });
-      });
     });
-  });
-  
+});

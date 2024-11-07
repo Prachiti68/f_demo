@@ -144,12 +144,106 @@
         </nav>
       </header>
       <!-- Header ends -->
-      
+       <!-- hero  -->
+        <!-- Hero start -->
+        <section class="relative bg-black text-white">
+            <!-- Video Background -->
+            <div class="absolute inset-0 overflow-hidden z-0">
+              <video autoplay loop muted playsinline class="w-full h-full object-cover"style="filter: brightness(0.7);">
+                  <source src="assets/videos/Fixomech.webm" type="video/webm">
+                  <source src="assets/videos/Fixomech.mp4" type="video/mp4">
+                  <!-- Optional message if video is not supported -->
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          
+            <!-- Overlay for text readability -->
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+          
+              <!-- Hero Content -->
+              <section class="relative z-20 flex flex-col items-center justify-center min-h-screen text-center space-y-8 px-4 lg:px-0">
+                <!-- Heading -->
+                <h1 class="text-3xl md:text-5xl font-bold">
+                  Service tooling designer <span class="text-red-600">&</span> manufacture<br>
+                  for Aftermarket industry</span>
+                </h1>
+            
+                <!-- Industries Section -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 w-full max-w-4xl">
+                <!-- Icon Boxes with Transparent Background -->
+                <div class="flex flex-col items-center p-4 bg-gray-800 bg-opacity-30 rounded-lg hover:bg-opacity-50">
+                  <i class="fas fa-hard-hat text-red-700 text-3xl mb-2"></i>
+                  <span>Mining</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800 bg-opacity-30 rounded-lg hover:bg-opacity-50">
+                  <i class="fa fa-droplet text-red-700 text-3xl mb-2"></i>
+                  <span>Oil and Gas</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800 bg-opacity-30 rounded-lg hover:bg-opacity-50">
+                  <i class="fa fa-building text-red-700 text-3xl mb-2"></i>
+                  <span>Construction</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800 bg-opacity-30 rounded-lg hover:bg-opacity-50">
+                  <i class="fa fa-tractor text-red-700 text-3xl mb-2"></i>
+                  <span>Agriculture</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-gray-800 bg-opacity-30 rounded-lg hover:bg-opacity-50">
+                  <i class="fa fa-anchor text-red-600 text-3xl mb-2"></i>
+                  <span>Marine</span>
+                </div>
+              </div>
+              
+              </section>
+          </section>
+          <!-- Hero end -->
+           <!-- Sections start  -->
+           <section class="wrapper bg-gray-50 text-gray-800">
+            <!-- Section 1: Product Details -->
+            <section class="relative py-36 bg-gray-100">
+              <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-20">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                  <!-- Image with frame -->
+                  <div class="overflow-hidden">
+                    <img src="assets/img/products/features_section.png" alt="Hydraulic Cylinder Repair" class="w-full h-auto shadow-lg">
+                  </div>
+                  
+                  <!-- Text Content -->
+                  <div>
+                    <h2 class="text-2xl md:text-4xl lg:text-4xl font-bold text-red-600 mb-8">Hydraulic Cylinder Repair/Nut Buster</h2>
+                    <ul class="space-y-4">
+                      <li class="flex items-start">
+                        <i class="fas fa-tools text-red-600 text-2xl md:text-3xl lg:text-4xl mr-4 lg:mr-6"></i>
+                        <span class="text-base md:text-lg lg:text-xl">Building Innovation with Decades of Expertise</span>
+                      </li>
+                      <li class="flex items-start">
+                        <i class="fas fa-tools text-red-600 text-2xl md:text-3xl lg:text-4xl mr-4 lg:mr-6"></i>
+                        <span class="text-base md:text-lg lg:text-xl">Designed to disassemble and tighten piston nuts and cylinder glands</span>
+                      </li>
+                      <li class="flex items-start">
+                        <i class="fas fa-tools text-red-600 text-2xl md:text-3xl lg:text-4xl mr-4 lg:mr-6"></i>
+                        <span class="text-base md:text-lg lg:text-xl">Suitable for all applications from Marine, Hydraulic Shops, Construction Machinery, or Mining industry</span>
+                      </li>
+                      <li class="flex items-start">
+                        <i class="fas fa-tools text-red-600 text-2xl md:text-3xl lg:text-4xl mr-4 lg:mr-6"></i>
+                        <span class="text-base md:text-lg lg:text-xl">High torque capacity to handle large applications</span>
+                      </li>
+                      <li class="flex items-start">
+                        <i class="fas fa-tools text-red-600 text-2xl md:text-3xl lg:text-4xl mr-4 lg:mr-6"></i>
+                        <span class="text-base md:text-lg lg:text-xl">Rotatable base provides flexibility in positioning the unit, facilitating easier operation from various angles</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+    
+        <!-- hero end  -->
+      <!-- product  -->
       <div id="productfiltersect" class="w-full h-auto mx-auto flex justify-center items-center p-8 bg-beige">
        <div class="pt-12 lg:pt-20">
         <section class="text-center mb-8">
             <h2 class="text-xl text-gray-600 font-semibold">Our Products</h2>
-            <h1 class="text-6xl font-bold mb-9 text-[#A90101]">Discover Our Full Range</h1>
+            <h1 class="text-6xl font-bold mb-9 text-[#DC2626]">Discover Our Full Range</h1>
             <div class="flex justify-center space-x-4">
               <button class="filter-btn text-white bg-[#d30704] px-4 py-2 rounded-md hover:bg-red-500 border-dashed border-2 border-[#d30704]" data-category="all">All</button>
               <button class="filter-btn text-gray-800 px-4 py-2 rounded-md hover:text-red-600 border-dashed border-2 border-[#d30704]" data-category="master-pin-pusher">Master Pin Pusher</button>
@@ -163,37 +257,82 @@
           <section id="product-grid" class="flex flex-wrap gap-6 justify-center">
             <div class="product-item master-pin-pusher w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
               <img src="assets/img/products/tracklinepress/TrackLink Press.png" alt="Master Pin Pusher" class="w-full rounded-md mb-4" loading="lazy">
-              <p class="font-semibold text-center">Master Pin Pusher</p>
+              <p class="font-semibold text-center">Track Line Press</p>
             </div>
             
             <div class="product-item undercarriage-repair w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
               <img src="assets/img/products/ElectricTorqueWrench/Electric Torque Wrench.png" alt="Undercarriage Repair" class="w-full rounded-md mb-4" loading="lazy">
-              <p class="font-semibold text-center">Undercarriage Repair</p>
+              <p class="font-semibold text-center">Electric Torque Wrench</p>
             </div>
             
             <div class="product-item hydraulic-cylinder-repair w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
               <img src="assets/img/products/Cylinder Honing/CH3-removebg.png" alt="Hydraulic Cylinder Repair" class="w-full rounded-md mb-4" loading="lazy">
-              <p class="font-semibold text-center">Hydraulic Cylinder Repair</p>
+              <p class="font-semibold text-center">Cylinder Honing Station</p>
             </div>
             
-            <div class="product-item tyre-handling w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
-              <img src="assets/img/products/Roller Conveyer Table/RGT2-removebg.png" alt="Tyre Handling" class="w-full rounded-md mb-4" loading="lazy">
-              <p class="font-semibold text-center">Tyre Handling</p>
-            </div>
-            
-            <div class="product-item hydraulic-repair w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
-              <img src="assets/img/products/Nutbuster/Nutbuster.png" alt="Hydraulic Repair" class="w-full rounded-md mb-4" loading="lazy">
-              <p class="font-semibold text-center">Hydraulic Repair</p>
+            <div class="product-item undercarriage-repair w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
+              <img src="assets/img/products/Roller Conveyer Table/RGT2-removebg.png" alt="undercarriage-repair" class="w-full rounded-md mb-4" loading="lazy">
+              <p class="font-semibold text-center">Roller Conveyer Table</p>
             </div>
             
             <div class="product-item hydraulic-cylinder-repair w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
-              <img src="assets/img/Comming Soon.png" alt="Hydraulic Cylinder Repair" class="w-full rounded-md mb-4" loading="lazy">
-              <p class="font-semibold text-center">Hydraulic Cylinder Repair</p>
+              <img src="assets/img/products/Nutbuster/Nutbuster.png" alt="hydraulic-cylinder-repair" class="w-full rounded-md mb-4" loading="lazy">
+              <p class="font-semibold text-center">Nut Buster</p>
+            </div>
+
+            <div class="comingsoon product-item tyre-handling hidden w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
+                <img src="assets/img/Comming Soon.png" alt="tyre-handling" class="w-full rounded-md mb-4" loading="lazy">
+                <p class="font-semibold text-center">Tyre Handling</p>
+            </div>
+            
+            <div class="comingsoon product-item hydraulic-repair hidden w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
+                <img src="assets/img/Comming Soon.png" alt="hydraulic-repair" class="w-full rounded-md mb-4" loading="lazy">
+                <p class="font-semibold text-center">hydraulic-repair</p>
+            </div>
+            
+            
+            <div class="product-item undercarriage-repair w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4 bg-white rounded-lg shadow-md">
+              <img src="assets/img/products/Trackwinder/Trackwinder.png" alt="undercarriage-repair" class="w-full rounded-md mb-4" loading="lazy">
+              <p class="font-semibold text-center">Trackwinder</p>
             </div>
           </section>
           
        </div>
       </div>
+      <!-- product ends  -->
+          <!-- Section 2: About Fixomech -->
+          <section class="relative py-36 bg-white text-center">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+              <h2 class="text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 mb-6">Fixomech: Innovating the Future of Machinery Repair</h2>
+              <p class="text-gray-600 text-sm md:text-base lg:text-lg mb-8">At Fixomech, research and development are the pillars of our progress. We continually invest in cutting-edge technologies to enhance our machinery solutions, ensuring we stay ahead in a rapidly evolving industry.</p>
+              
+              <!-- Icons Section -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <!-- Icon Box 1 -->
+                <div class="flex flex-col items-center">
+                  <i class="fas fa-flask text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
+                  <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">State-of-the-art Facilities</h3>
+                  <p class="text-gray-600 text-sm md:text-base lg:text-lg">For testing and developing advanced repair tools.</p>
+                </div>
+                <!-- Icon Box 2 -->
+                <div class="flex flex-col items-center">
+                  <i class="fas fa-users-cog text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
+                  <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">Dedicated R&D Team</h3>
+                  <p class="text-gray-600 text-sm md:text-base lg:text-lg">Focused on safety, efficiency, and durability.</p>
+                </div>
+                <!-- Icon Box 3 -->
+                <div class="flex flex-col items-center">
+                  <i class="fas fa-lightbulb text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
+                  <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">Continuous Innovation</h3>
+                  <p class="text-gray-600 text-sm md:text-base lg:text-lg">Enabling clients to benefit from the latest advancements.</p>
+                </div>
+              </div>
+        
+              <p class="text-gray-600 text-sm md:text-base lg:text-lg mt-8 max-w-3xl mx-auto">Our commitment to R&D guarantees that every solution we provide is backed by thorough research and rigorous testing, ensuring top-tier performance and reliability across all our services.</p>
+            </div>
+          </section>
+        </section>
+          <!-- Sections end -->
       <!-- Footer -->
     <footer class="py-16 px-6 lg:px-24 bg-black text-white">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -224,19 +363,19 @@
                 <h2 class="text-white text-lg font-semibold mb-4">Useful Links</h2>
                 <ul>
                     <li class="flex items-center mb-1">                        
-                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Home</a>
+                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Home</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>About Us</a>
+                        <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>About Us</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Products</a>
+                        <a href="products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Products</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Terms of Services</a>
+                        <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Terms of Services</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Privacy Policy</a>
+                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Privacy Policy</a>
                     </li>
                 </ul>
             </div>
@@ -246,13 +385,13 @@
                 <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
                 <ul>
                     <li class="flex items-center mb-1">                        
-                        <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Master Pin Pusher</a>
+                        <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Under Carriage</a>
+                        <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Hydraulic Cylinder Repair</a>
+                        <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
                     </li>
                 </ul>
             </div>
@@ -262,8 +401,8 @@
                 <h2 class="text-white text-lg font-semibold mb-4">Our Newsletter</h2>
                 <p class="mb-4">Subscribe to our newsletter and receive the latest news about our products and services!</p>
                 <div class="flex">
-                    <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 text-white border border-red-500 focus:outline-none">
-                    <button class="bg-red-500 text-white p-2 px-4">Subscribe</button>
+                    <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 text-white border border-[#DC2626] focus:outline-none">
+                    <button class="bg-[#DC2626] text-white p-2 px-4">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -271,7 +410,7 @@
         <!-- Bottom Section -->
         <div class="mt-8 text-center text-gray-500 text-sm">
             <p>Copyright Fixomech All Rights Reserved</p>
-            <p>Designed by <span class="text-red-500"><a href="https://www.benzenecorp.com">BenzeneCorp</a></span></p>
+            <p>Designed by <span class="text-[text-[#DC2626]]"><a href="https://www.benzenecorp.com">BenzeneCorp</a></span></p>
         </div>
     </footer>
     </div>
