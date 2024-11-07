@@ -1520,6 +1520,14 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: 0px;
+}
+
 :root {
   --bs-indigo: #1b0046;
   --bs-red: #d30015;
