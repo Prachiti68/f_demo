@@ -83,4 +83,10 @@
     animation: dropdown 0.3s forwards;
   }
   /* Header CSS end */
-  
+  /* bg effect for industry  */
+  .hover-zoom:hover .bg-img {
+    transform: scale(1.1);
+  }
+  .bg-img {
+    transition: transform 0.3s ease-in-out;
+  }
