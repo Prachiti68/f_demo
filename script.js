@@ -33,34 +33,77 @@ contactDropdown.addEventListener('mouseleave', () => {
 
 //product filteration===============================================================================================
 
+(function() {
+  const products = [
+    { name: 'Track Line Press', category: 'master-pin-pusher', imgSrc: 'assets/img/products/tracklinepress/TrackLink Press.png' },
+    { name: 'Electric Torque Wrench', category: 'undercarriage-repair', imgSrc: 'assets/img/products/ElectricTorqueWrench/Electric Torque Wrench.png' },
+    { name: 'Cylinder Honing Station', category: 'hydraulic-cylinder-repair', imgSrc: 'assets/img/products/Cylinder Honing/CH3-removebg.png' },
+    { name: 'Roller Conveyer Table', category: 'undercarriage-repair', imgSrc: 'assets/img/products/Roller Conveyer Table/RGT2-removebg.png' },
+    { name: 'Nut Buster', category: 'hydraulic-cylinder-repair', imgSrc: 'assets/img/products/Nutbuster/Nutbuster.png' },
+    { name: 'Tyre Handling', category: 'tyre-handling', imgSrc: 'assets/img/Comming Soon.png', isComingSoon: true },
+    { name: 'Hydraulic Repair', category: 'hydraulic-repair', imgSrc: 'assets/img/Comming Soon.png', isComingSoon: true },
+    { name: 'Trackwinder', category: 'undercarriage-repair', imgSrc: 'assets/img/products/Trackwinder/Trackwinder.png' }
+  ];
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const productItems = document.querySelectorAll(".product-item");
-  
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const category = button.getAttribute("data-category");
+  const categories = ['all', 'undercarriage-repair', 'hydraulic-cylinder-repair', 'master-pin-pusher', 'hydraulic-repair', 'tyre-handling'];
 
-            filterButtons.forEach(btn => btn.classList.remove("bg-red-600", "text-white"));
-            button.classList.add("bg-red-600", "text-white");
+  // Generate Filter Buttons
+  const filterButtonsContainer = document.getElementById('filter-buttons');
+  categories.forEach(category => {
+    const button = document.createElement('button');
+    button.textContent = category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ');
+    button.classList.add('filter-btn', 'px-4', 'py-2', 'rounded-md', 'hover:bg-red-500', 'border-dashed', 'border-2', 'border-[#d30704]');
+    button.dataset.category = category;
+    button.addEventListener('click', () => filterProducts(category));
+    filterButtonsContainer.appendChild(button);
+  });
 
-            productItems.forEach(item => {
-                if (category === "all" || item.classList.contains(category)) {
-                    item.classList.remove("hidden", "animate-fadeOut");
-                    item.classList.add("animate-fadeIn");
-                } else {
-                    item.classList.remove("animate-fadeIn");
-                    item.classList.add("animate-fadeOut");
-                    setTimeout(() => {
-                        item.classList.add("hidden");
-                    }, 500); 
-                }
-            });
+  // Function to render products
+  function renderProducts(filter = 'all') {
+    const productGrid = document.getElementById('product-grid');
+    productGrid.innerHTML = ''; // Clear previous products
+
+    const filteredProducts = filter === 'all'
+      ? products.filter(product => !product.isComingSoon) // Hide "Coming Soon" in "All" category
+      : products.filter(product => {
+          if (product.isComingSoon && product.category === filter) {
+            return true; // Show "Coming Soon" product in its specific category
+          }
+          return product.category === filter && !product.isComingSoon; // Show regular products in specific categories
         });
-    });
-});
 
+    filteredProducts.forEach(product => {
+      const productDiv = document.createElement('div');
+      productDiv.classList.add('product-item', product.category, 'w-full', 'sm:w-1/2', 'lg:w-1/3', 'xl:w-1/4', 'p-4', 'rounded-lg', 'shadow-md');
+
+      const img = document.createElement('img');
+      img.src = product.imgSrc;
+      img.alt = product.name;
+      img.classList.add('w-full', 'rounded-md', 'mb-4');
+      img.loading = 'lazy';
+
+      const name = document.createElement('p');
+      name.classList.add('font-semibold', 'text-center');
+      name.textContent = product.name;
+
+      productDiv.appendChild(img);
+      productDiv.appendChild(name);
+      productGrid.appendChild(productDiv);
+    });
+  }
+
+  // Function to filter products
+  function filterProducts(category) {
+    renderProducts(category);
+  }
+
+  // Initial render
+  renderProducts();
+})();
+
+
+
+// mob drop 
 const mobileMenuButton = document.getElementById('mobileMenuButton');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -130,10 +173,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-    // Get the button
+    // back to top button
     var mybutton = document.getElementById("scrollToTopBtn");
     
-    // When the user scrolls down 100px from the top of the document, show the button
+
     window.onscroll = function() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         mybutton.classList.add("show");
@@ -142,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     };
 
-    // When the user clicks the button, scroll to the top of the document
     mybutton.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -163,3 +205,22 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("WhatsApp button not found.");
       }
   });
+
+
+  // JavaScript to observe when elements enter the viewport
+document.addEventListener("DOMContentLoaded", function () {
+  const elementsToAnimate = document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in-up');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');  // Add 'show' class to trigger the animation
+        observer.unobserve(entry.target);    // Stop observing once animated
+      }
+    });
+  }, { threshold: 0.1 });  // Adjust threshold if needed
+
+  elementsToAnimate.forEach(element => {
+    observer.observe(element);
+  });
+});

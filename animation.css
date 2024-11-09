@@ -122,3 +122,79 @@
     }
     
     
+/* Hover effect for expanding background image */
+.hover-zoom:hover .bg-img {
+  transform: scale(1.1);
+}
+.bg-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Custom font size for responsive text */
+.responsive-text {
+  font-size: 1.25rem;
+}
+@media (min-width: 640px) {
+  .responsive-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .responsive-text {
+    font-size: 1.75rem;
+  }
+}
+
+/* Keyframes for fade-in animations from different directions */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial states to keep elements hidden before they enter the viewport */
+.fade-in-left, .fade-in-right, .fade-in-up {
+  opacity: 0;
+  transform: translateY(50px); /* Adjust to control initial position */
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/* Animation classes to apply on viewport entry */
+.fade-in-left.show {
+  animation: fadeInLeft 0.7s ease-out forwards;
+}
+
+.fade-in-right.show {
+  animation: fadeInRight 0.7s ease-out forwards;
+}
+
+.fade-in-up.show {
+  animation: fadeInUp 0.7s ease-out forwards;
+}

@@ -378,7 +378,6 @@
         </div>
         </div>
 
-        <!-- Repeat product items with appropriate classes for filtering -->
         <div class="product-item Under_Carriage_Repair bg-white rounded-lg shadow-lg overflow-hidden">
         <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Track Winder" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
         <div class="p-4">
@@ -407,14 +406,13 @@
         </div>
         </div>
 
-        <!-- Hidden from 'All' section but visible in specific filters -->
         <div class="product-item Tyre_Handling hide-in-all bg-white rounded-lg shadow-lg overflow-hidden">
-        <img src="assets/img/coming_soon.jpg" alt="Tyre Handler" class="w-auto h-full object-cover ">
+        <img src="assets/img/Comming Soon.png" alt="Tyre Handler" class="w-auto h-full object-cover ">
         
         </div>
 
         <div class="product-item Hydraulic_Repair hide-in-all bg-white rounded-lg shadow-lg overflow-hidden">
-        <img src="assets/img/coming_soon.jpg" alt="Hydraulic Repair Kit" class="w-auto h-54 object-cover" >
+        <img src="assets/img/Comming Soon.png" alt="Hydraulic Repair Kit" class="w-auto h-54 object-cover" >
         
         </div>
     </div>
@@ -605,11 +603,10 @@
     modalImageName.textContent = alt;
   }
 
-  // Collect all product images and attach events
   document.querySelectorAll('.product-item img').forEach((img, index) => {
     images.push({ src: img.src, alt: img.alt }); // Store each image's src and alt
     img.addEventListener('click', function() {
-      openModal(this.src, this.alt, index); // Pass the image source, alt, and index
+      openModal(this.src, this.alt, index); 
     });
   });
 </script>
