@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixomech /application </title>
+    <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+      .custom-border-radius {
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    }  
+    
+    @media (max-width: 1024px) {
+    
+    #head{
+    padding: 0px 1rem 0px 1rem !important;
+    }
+    
+    }
+    .ulmobile{
+    margin: 2rem .1rem;
+    }
+    .ulmobile li{
+     margin-top: 1rem;
+     margin-left: 1rem;
+    
+    }
+    
+    .elemhoverclass{
+     display: none;
+     position: absolute;
+     top: 0;
+     right: -250px;
+     
+    }
+    .elemhoverclass1{
+     display: none;
+     position: absolute;
+     top: 0;
+     right: -160px;
+    }
+    
+    .elemhoverclass2{
+     display: none;
+     position: absolute;
+     top: 0;
+     right: -255px;
+    }
+    
+    .elemparenthoverclass:hover .elemhoverclass,
+    .elemhoverclass:hover {
+     display: block;
+    }
+    header nav ul li a{
+     color: #f5f6f6;
+     text-decoration: none;
+    }
+    header nav ul li a:hover{
+     font-weight: 600;
+     color: #d30015;
+    }
+    .dropper li:hover{
+     border-bottom: 2px solid  #d30015;
+    }
+    
+    @keyframes dropdown {
+     from {
+         transform: translateY(-20px);
+         opacity: 0;
+     }
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+    }
+    
+    .animate-dropdown {
+     animation: dropdown 0.3s forwards;
+    }
+    
+     </style>
+  </head>
+  <body>
+    <div class="wrapper  h-screen w-full">
+      <!-- Header start -->
+      <header
+      id="head"
+      class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
+      >
+      <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
+      >
+       <!-- Logo -->
+       <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div>
+      
+       <!-- Navbar Items -->
+       <ul class="flex justify-center items-center gap-4 text-lg z-50">
+         <!-- Home Link -->
+         <li><a href="index.html" class="">Home</a></li>
+      
+         <!-- About Link -->
+         <li id="about" class="relative py-6 cursor-pointer">
+           <a href="about.html" class="">About</a>
+         </li>
+         <!-- blogs -->
+         <li class="relative py-6 cursor-pointer">
+           <a href="blogs.html" class="">Blogs</a>
+         </li>
+      
+         <!-- gallery  -->
+         <li class="relative py-6 cursor-pointer">
+           <a href="Gallery.html" class="">Gallery</a>
+         </li>
+      
+         <!-- Products Link -->
+         <li id="contact" class="relative py-6 cursor-pointer">
+           <a href="Products.html" class="">Products</a>
+         </li>
+         <!-- gallery  -->
+         <li class="relative py-6 cursor-pointer">
+           <a href="Contact.html" class="">Contact</a>
+         </li>
+      
+         
+      </ul>
+      
+      <!-- Search Input -->
+      
+      
+       <button
+       type="button"
+       class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+      >Get Brochure</button>
+      
+      
+      
+       <!-- Independent Dropdown for About -->
+       <div
+         id="aboutDropdown"
+         class="hidden absolute left-0 w-[100%] bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
+       >
+         <div class="container flex items-center justify-center gap-0">
+           <div class="h-96 border-white border-l-2"></div>
+           <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff]">
+             <li class="text-2xl py-2 ml-4">
+               <a href="about.html">Company Overview</a>
+             </li>
+            <li class="elemparenthoverclass cursor-pointer flex relative">
+               Our History
+               <!-- <ul
+                 class="elemhoverclass hidden absolute animate-dropdown pl-32 text-lg  justify-center"
+               >
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4 ">
+                     Year of Establishment
+                   </li>
+                   <li class="py-1 px-4 ">About Founder</li>
+                   <li class="py-1 px-4 ">Gallery section</li>
+                   <li class="py-1 px-4">Achievements</li>
+                 </div>
+               </ul> -->
+             </li> 
+             <li class="cursor-pointer">Leadership Team</li>
+             <li class="cursor-pointer">Careers</li>
+           </ul>
+         </div>
+       </div>
+      
+       <!-- Independent Dropdown for products -->
+       <div
+         id="contactDropdown"
+         class="hidden absolute left-0 w-full bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
+       >
+         <div class="container flex items-center justify-center mx-auto">
+           <div class="h-96 border-white border-l-2"></div>
+           <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff] text-lg">
+             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 ">
+                 Master Pin Pusher
+                 <ul
+                   class="elemhoverclass  elemhoverclass1 hidden absolute animate-dropdown    justify-center"
+                 >
+                   <div class="w-full border-white   ml-12 border-l-2">
+                     <li class="py-1 px-4 "><a href="track-line-press.html">Track Line Press</a></li>
+                     <li class="py-1 px-4 "><a href="#">Application</a></li>
+                   </div>
+                 </ul>
+               </li>
+             <li class="elemparenthoverclass cursor-pointer flex relative">
+               Undercarriage Repair
+               <ul
+                 class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown pl-32   justify-center"
+               >
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4 ">
+                     <a href="electrictorquewrencher.html">Electronic Torgue Wrench</a>
+                   </li>
+                   <li class="py-1 px-4 "><a href="trackwinder.html">Track Winder</a></li>
+                   <li class="py-1 px-4 "><a href="Hydraulic_repair.html">Hydraulic_repair</a></li>
+                   <li class="py-1 px-4 "><a href="#">Application</a></li>
+                 </div>
+               </ul>
+             </li>
+             <li class="elemparenthoverclass cursor-pointer flex relative">
+                 Hydraulic Cylinder Repair
+                 <ul
+                   class="elemhoverclass hidden absolute animate-dropdown pl-32   justify-center"
+                 >
+                   <div class="w-full border-white border-l-2 ">
+                     <li class="py-1 px-4 ">
+                      <a href="Netbuster.html"> Nut Buster</a>
+                     </li>
+                     <li class="py-1 px-4 "><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
+                     <li class="py-1 px-4 "><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
+                     <li class="py-1 px-4 "><a href="#">Application</a></li>
+                   </div>
+                 </ul>
+               </li>
+           </ul>
+         </div>
+       </div>
+      </nav>
+      <nav class="box flex  md:hidden justify-between py-4">
+      <div class="text-xl w-40  font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" alt=""></div>
+      
+      <button class="text-white" id="mobileMenuButton">
+       <i class="fa-solid fa-bars text-2xl" style="color: #ca0707;"></i>
+      </button>
+      
+      
+      </nav>
+      <div id="mobileMenu" class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50  bg-opacity-90 p`-4   sm:hidden">
+       <ul class="space-y-12 ulmobile ">
+         <li><a href="index.html" class="text-white">Home</a></li>
+         <li class="relative">
+           <a href="#" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a>
+           <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
+             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
+               Master Pin Pusher
+               <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
+                 <div class="w-full border-white ml-2 border-l-2">
+                   <li class="py-1 px-4">Track Line Press</li>
+                   <li class="py-1 px-4">Application</li>
+                 </div>
+               </ul>
+             </li>
+             <li class="elemparenthoverclass cursor-pointer flex relative group">
+               Undercarriage Repair
+               <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4">Electronic Torque Wrench</li>
+                   <li class="py-1 px-4">Track Winder</li>
+                   <li class="py-1 px-4">Roller Conveyor Table</li>
+                   <li class="py-1 px-4">Application</li>
+                 </div>
+               </ul>
+             </li>
+             <li class="elemparenthoverclass cursor-pointer flex relative group">
+               Hydraulic Cylinder Repair
+               <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4">Nut Buster</li>
+                   <li class="py-1 px-4">Cylinder Honing Station</li>
+                   <li class="py-1 px-4">Roller Conveyor Table</li>
+                   <li class="py-1 px-4">Application</li>
+                 </div>
+               </ul>
+             </li>
+           </ul> -->
+         </li>
+         <li><a href="blogs.html" class="text-white">Blogs</a></li>
+         <li><a href="Gallery.html" class="text-white">Gallery</a></li>
+         <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
+           <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
+             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
+               Master Pin Pusher
+               <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
+                 <div class="w-full border-white ml-2 border-l-2">
+                   <li class="py-1 px-4"><a href="track-line-press.html">Track Line Press</a></li>
+                   <li class="py-1 px-4"><a href="#">Application</a></li>
+                 </div>
+               </ul>
+             </li>
+             <li class="elemparenthoverclass cursor-pointer flex relative group">
+            <a href="under_carriage.html">   Undercarriage Repair</a>
+               <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4"><a href="electrictorquewrencher.html">Electronic Torque Wrench</a></li>
+                   <li class="py-1 px-4"><a href="trackwinder.html">Track Winder</a></li>
+                   <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
+                   <li class="py-1 px-4"><a href="#">Application</a></li>
+                 </div>
+               </ul>
+             </li>
+             <li class="elemhoverclass1 cursor-pointer flex relative group">
+               <a href="hydraulic_cylinder_repair.html">Hydraulic Cylinder Repair</a>
+               <ul class="elemhoverclass hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4"><a href="Netbuster.html">Nut Buster</a></li>
+                   <li class="py-1 px-4"><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
+                   <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
+                   <li class="py-1 px-4"><a href="#">Application</a></li>
+                 </div>
+               </ul>
+             </li>
+           </ul>
+         </li>
+         <li><a href="Contact.html" class="text-white">Contact</a></li>
+       </ul>
+      
+       <!-- Search Input -->
+      <a href="brochure.html">
+        <button type="button" class="border rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in w-full mt-4">
+          Get Brochure
+        </button>
+      </a>
+      </div>
+      
+      </header>
+      <!-- Header ends -->
+        <!-- Hero start -->
+        <section class="relative bg-black h-screen w-full flex justify-center items-center text-red-600 text-8xl">
+           coming soon
+          </section>
+          <!-- Hero end -->
+        
+
+  <!-- Section 2: Industries We Serve with Video Backgrounds -->
+  <section class="py-16 px-4 md:px-8 lg:px-16 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-12">Industries We Serve</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Industry 1 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+          <source src="assets/videos/marine.webm" type="video/mp4">
+        </video>
+        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
+          <h3 class="font-semibold text-lg">Marine</h3>
+        </div>
+      </div>
+
+      <!-- Industry 2 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+          <source src="assets/videos/agriculture.webm" type="video/mp4">
+        </video>
+        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
+          <h3 class="font-semibold text-lg">Agriculture</h3>
+        </div>
+      </div>
+
+      <!-- Industry 3 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+          <source src="assets/videos/construction.webm" type="video/mp4">
+        </video>
+        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
+          <h3 class="font-semibold text-lg">Construction</h3>
+        </div>
+      </div>
+
+      <!-- Industry 4 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+          <source src="assets/videos/oil and gas.webm" type="video/mp4">
+        </video>
+        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
+          <h3 class="font-semibold text-lg">Oil & Gas</h3>
+        </div>
+      </div>
+
+      <!-- Industry 5 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+          <source src="assets/videos/Mining.webm" type="video/mp4">
+        </video>
+        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
+          <h3 class="font-semibold text-lg">Mining</h3>
+        </div>
+      </div>
+
+      <!-- Industry 6 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+          <source src="assets/videos/forestry.webm" type="video/mp4">
+        </video>
+        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
+          <h3 class="font-semibold text-lg">Forestry</h3>
+        </div>
+      </div>
+
+    </div>
+  </section> 
+           <!-- end  -->
+      <!-- Footer -->
+    <footer class="py-16 px-6 lg:px-24 bg-black text-white">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Logo and Contact -->
+            <div>
+                <!-- Logo -->
+                <img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8">
+                <p class="mb-1">
+                    <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
+                        <strong>Phone:</strong> <span>+91 884787140</span>
+                    </a>
+                </p>
+                <p class="mb-2">
+                    <a href="mailto:info@fixomech.com">
+                    <strong>Email:</strong> <span class="mx-3">info@fixomech.com</span>
+                    </a>
+                </p>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-google"></i></a>
+                    <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Useful Links -->
+            <div>
+                <h2 class="text-white text-lg font-semibold mb-4">Useful Links</h2>
+                <ul>
+                    <li class="flex items-center mb-1">                        
+                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Home</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>About Us</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Products</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Terms of Services</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div>
+                <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
+                <ul>
+                    <li class="flex items-center mb-1">                        
+                        <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                      <a href="Tyre_handaling.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
+                  </li>
+                  <li class="flex items-center mb-1">                        
+                    <a href="Hydraulic_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h2 class="text-white text-lg font-semibold mb-4">Our Newsletter</h2>
+                <p class="mb-4">Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 text-white border border-[#DC2626] focus:outline-none">
+                    <button class="bg-[#DC2626] text-white p-2 px-4">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>Copyright Fixomech All Rights Reserved</p>
+            <p>Designed by <span class="text-[text-[#DC2626]]"><a href="https://www.benzenecorp.com">BenzeneCorp</a></span></p>
+        </div>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

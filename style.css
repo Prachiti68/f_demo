@@ -33,62 +33,7 @@ html::-webkit-scrollbar{
 *{
     margin: 0;
     padding: 0;
-  }
-  .elemhoverclass{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: -250px;
-    
-  }
-  .elemhoverclass1{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: -160px;
-  }
-  
-  .elemhoverclass2{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: -255px;
-  }
- 
-  
-  
-  
-  .elemparenthoverclass:hover .elemhoverclass,
-  .elemhoverclass:hover {
-    display: block;
-  }
-  header nav ul li a{
-    color: var(--bs-light);
-    text-decoration: none;
-  }
-  header nav ul li a:hover{
-    font-weight: 600;
-    color: var(--bs-red);
-  }
-  .dropper li:hover{
-    border-bottom: 2px solid var(--bs-warning);
-  }
-  
-  @keyframes dropdown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-  }
-  
-  .animate-dropdown {
-    animation: dropdown 0.3s forwards;
-  }
-  /* Header CSS end */
+  }*/
   /* bg effect for industry  */
   .hover-zoom:hover .bg-img {
     transform: scale(1.1);
@@ -96,3 +41,4 @@ html::-webkit-scrollbar{
   .bg-img {
     transition: transform 0.3s ease-in-out;
   }
+/* Additional Centering */

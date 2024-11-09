@@ -19,6 +19,7 @@ module.exports = {
       animation: {
         fadeIn: 'fadeIn 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards',
         fadeOut: 'fadeOut 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards',
+        dropdown: 'fadeIn 0.3s ease-out',
       },
     },
   },
