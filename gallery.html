@@ -1,22 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fixomech /Hydraulic cylinder repair </title>
-    <link href="output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="animation.css">
-  </head>
-  <body>
-    <div class="wrapper  h-screen w-full">
-      <!-- Header start -->
-      <header
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Gallery</title>
+  <link href="output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="animation.css">
+  <style>
+    .filter-button.active {
+      background-color: #ff0000;
+      color: white;
+    }
+    /* CSS class to hide items in "All" filter */
+    .hide-in-all {
+      display: none;
+    }
+  
+    /* Modal styling */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    }
+
+    .modal-content {
+      position: relative;
+      margin: auto;
+      padding: 0;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    /* Image inside the modal */
+    .modal-image {
+      display: block;
+      width: 100%;
+      max-height: 90vh;
+      margin: auto;
+      padding-top: 10vh;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #ffffff;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #bbbbbb;
+    }
+
+    /* Styling for navigation arrows */
+    .prev-btn, .next-btn {
+        position: absolute;
+        top: 50%;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    
+    
+  </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <header
+    style="  background-image: url('assets/img/DOT W.png');
+    background-position: left center; 
+    background-size: contain; 
+    background-repeat: no-repeat; "
       id="head"
-      style="  background-image: url('assets/img/DOT W.png');
-      background-position: left center; 
-      background-size: contain; 
-      background-repeat: no-repeat; "
       class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
       >
       <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
@@ -247,89 +323,120 @@
       </div>
       
       </header>
-      <!-- Header ends -->
-        <!-- Hero start -->
-        <section class="relative bg-black h-screen w-full flex justify-center items-center text-red-600 text-8xl">
-           coming soon
-          </section>
-          <!-- Hero end -->
-        
 
-  <!-- Section 2: Industries We Serve with Video Backgrounds -->
-  <section class="py-16 px-4 md:px-8 lg:px-16 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-12">Industries We Serve</h2>
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Industry 1 -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-          <source src="assets/videos/marine.webm" type="video/mp4">
-        </video>
-        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
-          <h3 class="font-semibold text-lg">Marine</h3>
+    <!-- Hero Section -->
+    <section class="relative h-80 bg-cover bg-center bg-gray-900 text-white" style="background-image: url('assets/img/products/Section\ 4\ Image.jpg'); background-attachment: fixed;">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Hero Text -->
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">Gallery</h1>
         </div>
-      </div>
+    </section>
 
-      <!-- Industry 2 -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-          <source src="assets/videos/agriculture.webm" type="video/mp4">
-        </video>
-        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
-          <h3 class="font-semibold text-lg">Agriculture</h3>
-        </div>
-      </div>
+    <script>
+        // Toggle mobile menu
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Nanvbar ends -->
 
-      <!-- Industry 3 -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-          <source src="assets/videos/construction.webm" type="video/mp4">
-        </video>
-        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
-          <h3 class="font-semibold text-lg">Construction</h3>
-        </div>
-      </div>
-
-      <!-- Industry 4 -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-          <source src="assets/videos/oil and gas.webm" type="video/mp4">
-        </video>
-        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
-          <h3 class="font-semibold text-lg">Oil & Gas</h3>
-        </div>
-      </div>
-
-      <!-- Industry 5 -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-          <source src="assets/videos/Mining.webm" type="video/mp4">
-        </video>
-        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
-          <h3 class="font-semibold text-lg">Mining</h3>
-        </div>
-      </div>
-
-      <!-- Industry 6 -->
-      <div class="relative rounded-lg overflow-hidden shadow-lg text-white h-64 sm:h-48 md:h-52 lg:h-64">
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-          <source src="assets/videos/forestry.webm" type="video/mp4">
-        </video>
-        <div class="relative p-8 z-10 bg-opacity-25 bg-black h-64 sm:h-48 md:h-52 lg:h-64 flex justify-center items-center flex-col">
-          <h3 class="font-semibold text-lg">Forestry</h3>
-        </div>
-      </div>
-
+    <!-- Product Gallery Section -->
+    <section class="py-12 px-4 sm:px-8 md:px-16 lg:px-32">
+    <div class="text-center mb-8">
+        <h3 class="text-md font-semibold tracking-wider text-gray-500 uppercase">Other Products</h3>
+        <h2 class="text-3xl font-bold text-red-600">Discover our full Range</h2>
     </div>
-  </section> 
-           <!-- end  -->
-      <!-- Footer -->
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-2 mb-8">
+        <button onclick="filterSelection('all')" class="filter-button active text-red-600 border border-red-600 px-4 py-2 rounded-full">All</button>
+        <button onclick="filterSelection('Master_Pin_Pusher')" class="filter-button text-red-600 border border-red-600 px-4 py-2 rounded-full">Master Pin Pusher</button>
+        <button onclick="filterSelection('Under_Carriage_Repair')" class="filter-button text-red-600 border border-red-600 px-4 py-2 rounded-full">Under Carriage Repair</button>
+        <button onclick="filterSelection('Hydraulic_Cylinder_Repair')" class="filter-button text-red-600 border border-red-600 px-4 py-2 rounded-full">Hydraulic Cylinder Repair</button>
+        <button onclick="filterSelection('Tyre_Handling')" class="filter-button text-red-600 border border-red-600 px-4 py-2 rounded-full">Tyre Handling</button>
+        <button onclick="filterSelection('Hydraulic_Repair')" class="filter-button text-red-600 border border-red-600 px-4 py-2 rounded-full">Hydraulic Repair</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Product Card -->
+        <div class="product-item Master_Pin_Pusher bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/products/tracklinepress/TLP 1.jpg" alt="Track Line Press" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Track Line Press</h3>
+        </div>
+        </div>
+        
+        <div class="product-item Under_Carriage_Repair bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/products/ElectricTorqueWrench/ETW 1.jpg" alt="Electric Torque Wrench" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Electric Torque Wrench</h3>
+        </div>
+        </div>
+
+        <!-- Repeat product items with appropriate classes for filtering -->
+        <div class="product-item Under_Carriage_Repair bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Track Winder" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Track Winder</h3>
+        </div>
+        </div>
+
+        <div class="product-item Under_Carriage_Repair bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/products/Roller Conveyer Table/RGT1.jpg" alt="Roller Conveyer Table" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Roller Conveyer Table</h3>
+        </div>
+        </div>
+
+        <div class="product-item Hydraulic_Cylinder_Repair bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/products/Nutbuster/1.jpg" alt="Nut Buster" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Nut Buster</h3>
+        </div>
+        </div>
+
+        <div class="product-item Hydraulic_Cylinder_Repair bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/products/Cylinder Honing/CH1.jpg" alt="Cylinder Honing Station" class="w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Cylinder Honing Station</h3>
+        </div>
+        </div>
+
+        <!-- Hidden from 'All' section but visible in specific filters -->
+        <div class="product-item Tyre_Handling hide-in-all bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/coming_soon.jpg" alt="Tyre Handler" class="w-auto h-full object-cover ">
+        
+        </div>
+
+        <div class="product-item Hydraulic_Repair hide-in-all bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/img/coming_soon.jpg" alt="Hydraulic Repair Kit" class="w-auto h-54 object-cover" >
+        
+        </div>
+    </div>
+    </section>
+    <!-- Modal for full-screen image view -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <span class="prev-btn" onclick="showPrevImage()">&#10094;</span> <!-- Previous arrow -->
+        <span class="next-btn" onclick="showNextImage()">&#10095;</span> <!-- Next arrow -->
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" alt="Full Screen Image">
+            <p id="modalImageName" class="text-white text-center mt-4"></p> <!-- Image name element -->
+        </div>
+    </div>
+    
+    <!-- Footer -->
     <footer class="py-16 px-6 lg:px-24 bg-black text-white">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
             <!-- Logo and Contact -->
             <div>
                 <!-- Logo -->
-                <img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8">
+                <img src="assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8">
                 <p class="mb-1">
                     <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
                         <strong>Phone:</strong> <span>+91 884787140</span>
@@ -337,7 +444,7 @@
                 </p>
                 <p class="mb-2">
                     <a href="mailto:info@fixomech.com">
-                    <strong>Email:</strong> <span class="mx-3">info@fixomech.com</span>
+                    <strong>Email:</strong> <span>info@fixomech.com</span>
                     </a>
                 </p>
                 <div class="flex space-x-4 text-2xl">
@@ -353,19 +460,19 @@
                 <h2 class="text-white text-lg font-semibold mb-4">Useful Links</h2>
                 <ul>
                     <li class="flex items-center mb-1">                        
-                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Home</a>
+                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Home</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>About Us</a>
+                        <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>About Us</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Products</a>
+                        <a href="products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Products</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Terms of Services</a>
+                        <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Terms of Services</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Privacy Policy</a>
+                        <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Privacy Policy</a>
                     </li>
                 </ul>
             </div>
@@ -375,19 +482,19 @@
                 <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
                 <ul>
                     <li class="flex items-center mb-1">                        
-                        <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
+                        <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Master Pin Pusher</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
+                        <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Under Carriage</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                        <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
+                        <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Hydraulic Cylinder Repair</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                      <a href="Tyre_handaling.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
-                  </li>
-                  <li class="flex items-center mb-1">                        
-                    <a href="Hydraulic_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+                    <a href="tyre_handling.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Tyre Handling</a>
+                </li>
+                <li class="flex items-center mb-1">                        
+                    <a href="hydraulic_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-red-500 mr-2"></i>Hydraulic Repair</a>
                 </li>
                 </ul>
             </div>
@@ -397,8 +504,8 @@
                 <h2 class="text-white text-lg font-semibold mb-4">Our Newsletter</h2>
                 <p class="mb-4">Subscribe to our newsletter and receive the latest news about our products and services!</p>
                 <div class="flex">
-                    <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 text-white border border-[#DC2626] focus:outline-none">
-                    <button class="bg-[#DC2626] text-white p-2 px-4">Subscribe</button>
+                    <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 text-white border border-red-500 focus:outline-none">
+                    <button class="bg-red-600 text-white p-2 px-4">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -406,23 +513,107 @@
         <!-- Bottom Section -->
         <div class="mt-8 text-center text-gray-500 text-sm">
             <p>Copyright Fixomech All Rights Reserved</p>
-            <p>Designed by <span class="text-[text-[#DC2626]]"><a href="https://www.benzenecorp.com">BenzeneCorp</a></span></p>
+            <p >Designed by <span class="text-red-500"><a href="https://benzenecorp.com">BenzeneCorp</a></span></p>
         </div>
     </footer>
+
     
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="scroll-to-top-btn  text-white text-4xl z-50">
-      <i class="fa-regular fa-circle-up"></i>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+        <i class="fa-regular fa-circle-up"></i>
     </button>
-  
-  
-  <!-- WhatsApp Button HTML -->
-  <a class="whatsapp-button" href="https://wa.me/918884787140" target="_blank" title="Chat with us on WhatsApp"> 
-      <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
-  </a>
+
+    
+    <!-- WhatsApp Button HTML -->
+    <a class="whatsapp-button" href="https://wa.me/918884787140" target="_blank" title="Chat with us on WhatsApp"> 
+        <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
+    </a>
 
 
-    </div>
+    <!-- Script starts -->
     <script src="script.js"></script>
-  </body>
+   
+
+<!-- JavaScript for filtering functionality -->
+<script>
+  function filterSelection(category) {
+    const products = document.querySelectorAll('.product-item');
+    const buttons = document.querySelectorAll('.filter-button');
+
+    // Loop through buttons to remove active class and add to the clicked one
+    buttons.forEach(button => {
+      button.classList.remove('active');
+      if (button.innerText.replace(/ /g, '_') === category) {
+        button.classList.add('active');
+      }
+    });
+
+    // Show/hide products based on category and hide-in-all class
+    products.forEach(item => {
+      if (category === 'all') {
+        item.style.display = item.classList.contains('hide-in-all') ? 'none' : 'block';
+      } else if (item.classList.contains(category)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+  
+ 
+  // JavaScript for modal functionality with navigation
+  let currentImageIndex = 0; // Track the index of the current image
+  let images = []; // Store all images to navigate
+
+  function openModal(imageSrc, imageName, index) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalImageName = document.getElementById('modalImageName');
+    
+    // Set the source and name of the modal image
+    modalImage.src = imageSrc;
+    modalImageName.textContent = imageName;
+    
+    // Set the current image index
+    currentImageIndex = index;
+
+    // Display the modal
+    modal.style.display = 'block';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+  }
+
+  function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateModalImage();
+  }
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateModalImage();
+  }
+
+  function updateModalImage() {
+    const modalImage = document.getElementById('modalImage');
+    const modalImageName = document.getElementById('modalImageName');
+
+    const { src, alt } = images[currentImageIndex];
+    modalImage.src = src;
+    modalImageName.textContent = alt;
+  }
+
+  // Collect all product images and attach events
+  document.querySelectorAll('.product-item img').forEach((img, index) => {
+    images.push({ src: img.src, alt: img.alt }); // Store each image's src and alt
+    img.addEventListener('click', function() {
+      openModal(this.src, this.alt, index); // Pass the image source, alt, and index
+    });
+  });
+</script>
+
+
+</body>
 </html>

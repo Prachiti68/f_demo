@@ -128,3 +128,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initializeSlider();
 });
+
+
+    // Get the button
+    var mybutton = document.getElementById("scrollToTopBtn");
+    
+    // When the user scrolls down 100px from the top of the document, show the button
+    window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.classList.add("show");
+    } else {
+        mybutton.classList.remove("show");
+    }
+    };
+
+    // When the user clicks the button, scroll to the top of the document
+    mybutton.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const phoneNumber = "918884787140";
+      const presetMessage = "Hello, I have a question about your services.";
+      const encodedMessage = encodeURIComponent(presetMessage);
+      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
+      console.log("Encoded Message:", encodedMessage); // Log the encoded message
+      console.log("WhatsApp Link:", whatsappLink); // Log the generated link
+  
+      const whatsappButton = document.querySelector(".whatsapp-button");
+      if (whatsappButton) {
+          whatsappButton.setAttribute("href", whatsappLink);
+      } else {
+          console.error("WhatsApp button not found.");
+      }
+  });
