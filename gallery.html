@@ -528,91 +528,9 @@
     </a>
 
    
-    <script>
-      document.getElementById('mobileMenuButton').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenu.classList.toggle('hidden'); // Toggle the 'hidden' class to show/hide the menu
-      });
-    </script>
+    
 <!-- JavaScript for filtering functionality -->
-<script>
-  function filterSelection(category) {
-    const products = document.querySelectorAll('.product-item');
-    const buttons = document.querySelectorAll('.filter-button');
-
-    // Loop through buttons to remove active class and add to the clicked one
-    buttons.forEach(button => {
-      button.classList.remove('active');
-      if (button.innerText.replace(/ /g, '_') === category) {
-        button.classList.add('active');
-      }
-    });
-
-    // Show/hide products based on category and hide-in-all class
-    products.forEach(item => {
-      if (category === 'all') {
-        item.style.display = item.classList.contains('hide-in-all') ? 'none' : 'block';
-      } else if (item.classList.contains(category)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
-  
- 
-  // JavaScript for modal functionality with navigation
-  let currentImageIndex = 0; // Track the index of the current image
-  let images = []; // Store all images to navigate
-
-  function openModal(imageSrc, imageName, index) {
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalImageName = document.getElementById('modalImageName');
-    
-    // Set the source and name of the modal image
-    modalImage.src = imageSrc;
-    modalImageName.textContent = imageName;
-    
-    // Set the current image index
-    currentImageIndex = index;
-
-    // Display the modal
-    modal.style.display = 'block';
-  }
-
-  function closeModal() {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = 'none';
-  }
-
-  function showNextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    updateModalImage();
-  }
-
-  function showPrevImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    updateModalImage();
-  }
-
-  function updateModalImage() {
-    const modalImage = document.getElementById('modalImage');
-    const modalImageName = document.getElementById('modalImageName');
-
-    const { src, alt } = images[currentImageIndex];
-    modalImage.src = src;
-    modalImageName.textContent = alt;
-  }
-
-  document.querySelectorAll('.product-item img').forEach((img, index) => {
-    images.push({ src: img.src, alt: img.alt }); // Store each image's src and alt
-    img.addEventListener('click', function() {
-      openModal(this.src, this.alt, index); 
-    });
-  });
-</script>
-
+<script src="scriptproduct.js"></script>
 
     <!-- Script starts -->
     <script src="script.js"></script>
