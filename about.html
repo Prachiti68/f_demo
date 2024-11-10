@@ -200,7 +200,7 @@
        <li><a href="#" class="text-white">Blogs</a></li>
        <li><a href="gallery.html" class="text-white">Gallery</a></li>
        <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
-         <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
+         <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
            <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
              Master Pin Pusher
              <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
@@ -232,7 +232,7 @@
                </div>
              </ul>
            </li>
-         </ul>
+         </ul> -->
        </li>
        <li><a href="contact.html" class="text-white">Contact</a></li>
      </ul>
@@ -267,12 +267,12 @@
           <h2 class="text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 mb-6 " >
             Fixomech: Innovating the Future of Machinery Repair
           </h2>
-          <p class="text-gray-600 text-sm md:text-base lg:text-lg mb-12 " data-delay="0.3s">
+          <p class="text-gray-600 text-sm md:text-base lg:text-lg mb-12 " >
             At Fixomech, research and development are the pillars of our progress. We continually invest in cutting-edge technologies to enhance our machinery solutions, ensuring we stay ahead in a rapidly evolving industry.
           </p>
       
           <!-- Icons Section -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10 " data-delay="0.3s">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10 " >
             <!-- Icon Box 1 -->
             <div class="flex flex-col items-center bg-gray-100 p-4 rounded-2xl " >
               <i class="fas fa-flask text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
@@ -293,7 +293,7 @@
             </div>
           </div>
       
-          <p class="text-gray-600 text-sm md:text-base lg:text-lg mt-12 max-w-3xl mx-auto " data-delay="0.3s">
+          <p class="text-gray-600 text-sm md:text-base lg:text-lg mt-12 max-w-3xl mx-auto " >
             Our commitment to R&D guarantees that every solution we provide is backed by thorough research and rigorous testing, ensuring top-tier performance and reliability across all our services.
           </p>
         </div>
@@ -591,14 +591,15 @@
 
 
     <!-- Script starts -->
-    <script src="script.js"></script>
     <script>
-      // Toggle mobile menu
-      document.getElementById('menu-btn').addEventListener('click', function() {
-          const menu = document.getElementById('mobile-menu');
-          menu.classList.toggle('hidden');
+      document.getElementById('mobileMenuButton').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('hidden'); // Toggle the 'hidden' class to show/hide the menu
       });
-  </script>
+    </script>
+    
+    <script src="script.js"></script>
+   
 
 </body>
 </html>

@@ -13,11 +13,11 @@
       <!-- Header start -->
       <header
       id="head"
+      class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
       style="  background-image: url('assets/img/DOT W.png');
       background-position: left center; 
       background-size: contain; 
       background-repeat: no-repeat; "
-      class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
       >
       <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
       >
@@ -201,7 +201,7 @@
          <li><a href="#" class="text-white">Blogs</a></li>
          <li><a href="gallery.html" class="text-white">Gallery</a></li>
          <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
-           <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
+           <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
              <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
                Master Pin Pusher
                <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
@@ -233,7 +233,7 @@
                  </div>
                </ul>
              </li>
-           </ul>
+           </ul> -->
          </li>
          <li><a href="contact.html" class="text-white">Contact</a></li>
        </ul>
@@ -420,7 +420,12 @@
   <a class="whatsapp-button" href="https://wa.me/918884787140" target="_blank" title="Chat with us on WhatsApp"> 
       <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
   </a>
-
+  <script>
+    document.getElementById('mobileMenuButton').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden'); // Toggle the 'hidden' class to show/hide the menu
+    });
+  </script>
 
     </div>
     <script src="script.js"></script>

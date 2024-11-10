@@ -102,8 +102,7 @@ contactDropdown.addEventListener('mouseleave', () => {
 })();
 
 
-
-// mob drop 
+// mob bars 
 const mobileMenuButton = document.getElementById('mobileMenuButton');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -115,6 +114,13 @@ function toggleDropdown() {
   // Toggle the visibility of the dropdown menu
   dropdown.classList.toggle('hidden');
 }
+
+
+
+
+
+
+
 
 // scroller 
 document.addEventListener("DOMContentLoaded", function () {
