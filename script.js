@@ -1,37 +1,27 @@
 // dropdown menu ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Select the dropdown trigger and dropdown menu
+const productsMenu = document.getElementById('contact');
+const productsDropdown = document.getElementById('contactDropdown');
 
-const about = document.getElementById('about');
-const contact = document.getElementById('contact');
-const aboutDropdown = document.getElementById('aboutDropdown');
-const contactDropdown = document.getElementById('contactDropdown');
-
-about.addEventListener('mouseenter', () => {
-  aboutDropdown.classList.remove('hidden');
-});
-about.addEventListener('mouseleave', () => {
-  aboutDropdown.classList.add('hidden');
-});
-aboutDropdown.addEventListener('mouseenter', () => {
-  aboutDropdown.classList.remove('hidden');
-});
-aboutDropdown.addEventListener('mouseleave', () => {
-  aboutDropdown.classList.add('hidden');
+// Show dropdown on mouseenter
+productsMenu.addEventListener('mouseenter', function () {
+  productsDropdown.classList.remove('hidden');
 });
 
-contact.addEventListener('mouseenter', () => {
-  contactDropdown.classList.remove('hidden');
-});
-contact.addEventListener('mouseleave', () => {
-  contactDropdown.classList.add('hidden');
-});
-contactDropdown.addEventListener('mouseenter', () => {
-  contactDropdown.classList.remove('hidden');
-});
-contactDropdown.addEventListener('mouseleave', () => {
-  contactDropdown.classList.add('hidden');
+// Keep dropdown open when hovering over the dropdown itself
+productsDropdown.addEventListener('mouseenter', function () {
+  productsDropdown.classList.remove('hidden');
 });
 
+// Hide dropdown when leaving the dropdown area
+productsDropdown.addEventListener('mouseleave', function () {
+  productsDropdown.classList.add('hidden');
+});
 
+// Hide dropdown when leaving the menu item
+productsMenu.addEventListener('mouseleave', function () {
+  productsDropdown.classList.add('hidden');
+});
 
 
 
