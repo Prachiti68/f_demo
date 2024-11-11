@@ -209,3 +209,42 @@ document.addEventListener("DOMContentLoaded", function () {
       openModal(this.src, this.alt, index); 
     });
   });
+
+
+
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth <= 768) {
+        // Add mobile view style: Remove padding and disable vertical scroll
+        makeTableResponsive();
+    } else {
+        // Revert to the standard layout for larger screens
+        revertTableLayout();
+    }
+});
+
+function makeTableResponsive() {
+    const table = document.querySelector("#responsive-table");
+    const cells = table.querySelectorAll("td");
+    
+    // Disable vertical scrolling for mobile view
+    table.style.overflowY = "hidden"; 
+
+    // Remove padding for mobile view
+    cells.forEach(cell => {
+        cell.style.padding = "0"; // Remove padding for mobile
+    });
+}
+
+function revertTableLayout() {
+    const table = document.querySelector("#responsive-table");
+    const cells = table.querySelectorAll("td");
+
+    // Revert back to default padding
+    cells.forEach(cell => {
+        cell.style.padding = "0.5rem"; // Reset padding to default
+    });
+
+    // Re-enable vertical scroll for larger screens
+    table.style.overflowY = "auto";
+}

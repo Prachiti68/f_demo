@@ -17,10 +17,7 @@
   <header
       id="head"
       class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
-      style="  background-image: url('assets/img/DOT W.png');
-      background-position: left center; 
-      background-size: contain; 
-      background-repeat: no-repeat; "
+      
       >
       <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
       >
@@ -96,7 +93,7 @@
                >
                  <div class="w-full border-white border-l-2">
                    <li class="py-1 px-4 ">
-                     <a href="electrictorquewrencher.html">Electronic Torgue Wrench</a>
+                     <a href="electrictorquewrencher.html">Electronic Torque Wrench</a>
                    </li>
                    <li class="py-1 px-4 "><a href="trackwinder.html">Track Winder</a></li>
                    <li class="py-1 px-4 "><a href="Hydraulic_repair.html">Hydraulic_repair</a></li>
@@ -157,6 +154,7 @@
       </header>
    <!-- header ends  -->
     <!-- producthero / -->
+
    <div class="pt-4">
     <div class="relative w-full h-full pt-20 bg-gray-900 overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.162), rgba(0, 0, 0, 0.126)), url('assets/img/products/tracklinepress/Trackline press.png'); background-position: center center; background-attachment: fixed; background-size: cover;">
       <!-- Main Content -->
@@ -188,9 +186,16 @@
             <div class="w-full rounded-lg bg-red-600 p-8 ">
                 <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
                 <h3 class="text-white text-sm mb-8">Find out why thousands trust Certo to secure their mobile world.</h3>
+                <a href="#" id="getBrochureLink">
+                  <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
+                      Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                  </button>
+              </a>
+               <a href="https://youtu.be/27vrsCw8hYU?si=I__VizErBx9fXKrU">
                 <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
-                    Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
-                </button>
+                  View Video <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+              </button>
+               </a>
             </div>
         </div>
 
@@ -198,16 +203,49 @@
             <p class="text-gray-700 mb-6">
                 Download our brochure for more detailed information about the project, including technical specifications, design process, and future developments.
             </p>
+            <a href="#table">
             <button class="rounded-lg w-48 px-4 py-2 text-red-600 border border-red-600 font-semibold mb-4">
                 Technical Specs <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
             </button>
+          </a>
+          <a href="tel:+91884787140" >
             <button class="rounded-lg w-48 px-2 py-2 text-red-600 border border-red-600 font-semibold">
                 Request a Callback <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
             </button>
+            </a>
         </div>
     </div>
 </div>
 
+</div>
+<!-- brocher form  -->
+<div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
+  <div class="bg-white p-6 rounded-lg relative w-96">
+      <!-- Close Button -->
+      <span id="closeModal" class="absolute top-2 left-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
+
+      <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
+
+      <!-- Form -->
+      <form id="brochureForm">
+          <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
+          </div>
+
+          <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
+          </div>
+
+          <div class="mb-4">
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
+          </div>
+
+          <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Submit</button>
+      </form>
+  </div>
 </div>
 <!-- products -->
  <div class="bg-gray-100 h-auto w-full py-20 md:10 lg:p-20 grid place-content-center">
@@ -216,19 +254,19 @@
       
       <!-- Product Description Section -->
       <div class="space-y-4 p-6 fade-in-left ">
-        <h3 class="text-xl font-bold text-red-600">Product Description:</h3>
+        <h3 class="text-3xl font-bold text-red-600">Product Description:</h3>
         <h2 class="text-2xl font-bold text-black">Trackline Press</h2>
-        <p class="text-gray-700 text-justify">
+        <p class="text-gray-700 text-xl text-justify">
           The Fixomech's FTLP range of portable track link presses are designed for tracked machines such as tractors, loaders, shovels, and excavators. They are suitable for use with modern machines, including JCB, Caterpillar, Komatsu, and Poclain. These presses are engineered to simplify field service or shop repairs, allowing equipment to be quickly brought back into service.
         </p>
-        <p class="text-gray-700 text-justify">
+        <p class="text-gray-700 text-xl text-justify">
           You can rest assured that they have been rigorously tested to not only meet but exceed worldwide safety standards, including the European Conformity (CE) standard. Buying directly from the manufacturer ensures fast response times for service and maintenance parts, as well as excellent customer support.
         </p>
       </div>
     
       <!-- Product Image Section -->
       <div class="p-6 flex justify-center items-center fade-in-right">
-        <img src="assets/img/products/tracklinepress/TLP 3.jpg" alt="Electronic Torque Wrench Image" class="rounded-lg shadow-lg max-w-[60%] h-auto">
+        <img src="assets/img/products/tracklinepress/TLP 3.jpg" alt="Electronic Torque Wrench Image" class="rounded-lg shadow-lg max-w-[80%] h-auto">
       </div>
     
     </div>
@@ -238,6 +276,133 @@
   
   
  </div>
+
+    <!-- table  -->
+   <div class="h-auto w-full " id="table">
+    <h1 class="w-full text-center text-5xl mt-7 font-semibold">Overview</h1>
+    <div class="w-full h-auto grid place-content-center p-0 md:p-20 lg:p-20 " >
+      <!-- Table wrapper with horizontal scrolling enabled -->
+      <div class="w-full overflow-x-auto px-2">
+          <table id="responsive-table" class="min-w-full bg-gray-100 shadow-lg table-auto">
+              <thead>
+                  <tr>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">Model</th>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">Capacity (Ton)</th>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">Stroke (mm)</th>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">Working Pressure (kg/cm²)</th>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">Effective Area</th>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">No. Tooling Sets</th>
+                      <th rowspan="2" class="border p-3 bg-red-600 text-white">Approx Weight (Kgs.)</th>
+                      <th colspan="4" class="border p-3 bg-red-600 text-white">PIN DETAILS</th>
+                  </tr>
+                  <tr>
+                      <th class="border p-3 bg-red-600 text-white">Min. dia (mm)</th>
+                      <th class="border p-3 bg-red-600 text-white">Max. dia (mm)</th>
+                      <th class="border p-3 bg-red-600 text-white">Min. Length (mm)</th>
+                      <th class="border p-3 bg-red-600 text-white">Max. Length (mm)</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-50</td>
+                      <td class="border p-2">50</td>
+                      <td class="border p-2">250</td>
+                      <td class="border p-2">700</td>
+                      <td class="border p-2">70.8 cm²</td>
+                      <td class="border p-2">4</td>
+                      <td class="border p-2">85</td>
+                      <td class="border p-2">19.3</td>
+                      <td class="border p-2">36.3</td>
+                      <td class="border p-2">133</td>
+                      <td class="border p-2">178</td>
+                  </tr>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-100</td>
+                      <td class="border p-2">100</td>
+                      <td class="border p-2">350</td>
+                      <td class="border p-2">700</td>
+                      <td class="border p-2">132.7 cm²</td>
+                      <td class="border p-2">10</td>
+                      <td class="border p-2">205</td>
+                      <td class="border p-2">19.3</td>
+                      <td class="border p-2">60.2</td>
+                      <td class="border p-2">160</td>
+                      <td class="border p-2">320</td>
+                  </tr>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-150</td>
+                      <td class="border p-2">150</td>
+                      <td class="border p-2">350</td>
+                      <td class="border p-2">700</td>
+                      <td class="border p-2">213.7 cm²</td>
+                      <td class="border p-2">12</td>
+                      <td class="border p-2">480</td>
+                      <td class="border p-2">23.7</td>
+                      <td class="border p-2">70</td>
+                      <td class="border p-2">311</td>
+                      <td class="border p-2">365</td>
+                  </tr>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-200</td>
+                      <td class="border p-2">200</td>
+                      <td class="border p-2">350</td>
+                      <td class="border p-2">700</td>
+                      <td class="border p-2">283.5 cm²</td>
+                      <td class="border p-2">15</td>
+                      <td class="border p-2">630</td>
+                      <td class="border p-2">19.3</td>
+                      <td class="border p-2">76.2</td>
+                      <td class="border p-2">311</td>
+                      <td class="border p-2">415</td>
+                  </tr>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-250</td>
+                      <td class="border p-2">250</td>
+                      <td class="border p-2">350</td>
+                      <td class="border p-2">660</td>
+                      <td class="border p-2">380.13 cm²</td>
+                      <td class="border p-2">7</td>
+                      <td class="border p-2">900</td>
+                      <td class="border p-2">22</td>
+                      <td class="border p-2">85</td>
+                      <td class="border p-2">360</td>
+                      <td class="border p-2">425</td>
+                  </tr>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-300</td>
+                      <td class="border p-2">300</td>
+                      <td class="border p-2">600</td>
+                      <td class="border p-2">664</td>
+                      <td class="border p-2">452.4 cm²</td>
+                      <td class="border p-2">15</td>
+                      <td class="border p-2">1420</td>
+                      <td class="border p-2">36.4</td>
+                      <td class="border p-2">85</td>
+                      <td class="border p-2">360</td>
+                      <td class="border p-2">425</td>
+                  </tr>
+                  <tr class="bg-white  hover:bg-teal-100">
+                      <td class="border p-2">FTLP-400</td>
+                      <td class="border p-2">400</td>
+                      <td class="border p-2">500</td>
+                      <td class="border p-2">700</td>
+                      <td class="border p-2">572.55 cm²</td>
+                      <td class="border p-2">16</td>
+                      <td class="border p-2">2750</td>
+                      <td class="border p-2">60</td>
+                      <td class="border p-2">105.2</td>
+                      <td class="border p-2">400</td>
+                      <td class="border p-2">400</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <div class="w-auto h-28 sm:h-96 md:h-28 lg:h-28 m-10 gap-6 sm:flex sm:justify-center sm:items-center">
+   
+    </div>
+    
+   </div>
 
 
 <!-- features section  -->
@@ -413,26 +578,26 @@
                 </div>
     
                 <!-- Products -->
-                <div>
-                    <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
-                    <ul>
-                        <li class="flex items-center mb-1">                        
-                            <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
-                        </li>
-                        <li class="flex items-center mb-1">                        
-                            <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
-                        </li>
-                        <li class="flex items-center mb-1">                        
-                            <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
-                        </li>
-                        <li class="flex items-center mb-1">                        
-                          <a href="Tyre_handaling.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                        <a href="Hydraulic_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+            <div>
+                <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
+                <ul>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
                     </li>
-                    </ul>
-                </div>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                      <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
+                  </li>
+                  <li class="flex items-center mb-1">                        
+                    <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+                </li>
+                </ul>
+            </div>
     
                 <!-- Newsletter -->
                 <div>
@@ -465,7 +630,43 @@
 
 
     </div>
-
+    <script>
+      // Brochure download functionality
+      const brochureButton = document.getElementById('getBrochureLink');
+      const modalWindow = document.getElementById('formModal');
+      const closeButton = document.getElementById('closeModal');
+      const formSubmission = document.getElementById('brochureForm');
+  
+      brochureButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          modalWindow.classList.remove('hidden');
+      });
+  
+      closeButton.addEventListener('click', () => {
+          modalWindow.classList.add('hidden');
+      });
+  
+      formSubmission.addEventListener('submit', (e) => {
+          e.preventDefault();
+  
+          const userName = document.getElementById('name').value;
+          const userEmail = document.getElementById('email').value;
+          const userPhone = document.getElementById('phone').value;
+  
+          if (userName && userEmail && userPhone) {
+              const brochureUrl = 'https://drive.google.com/file/d/1dUs-9R-Fw7GToz9XnABoKzHXIwcPzSOV/view?usp=sharing'; 
+  
+              alert("Brochure is being downloaded...");
+  
+              window.location.href = brochureUrl;
+  
+              modalWindow.classList.add('hidden');
+          } else {
+              alert("Please fill out all fields.");
+          }
+      });
+  </script>
+    
     <script src="script.js"></script>
     <script src="scriptproduct.js"></script>
   </body>

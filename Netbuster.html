@@ -17,10 +17,7 @@
   <header
   id="head"
   class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
-  style="  background-image: url('assets/img/DOT W.png');
-  background-position: left center; 
-  background-size: contain; 
-  background-repeat: no-repeat; "
+  
   >
   <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
   >
@@ -96,7 +93,7 @@
            >
              <div class="w-full border-white border-l-2">
                <li class="py-1 px-4 ">
-                 <a href="electrictorquewrencher.html">Electronic Torgue Wrench</a>
+                 <a href="electrictorquewrencher.html">Electronic Torque Wrench</a>
                </li>
                <li class="py-1 px-4 "><a href="trackwinder.html">Track Winder</a></li>
                <li class="py-1 px-4 "><a href="Hydraulic_repair.html">Hydraulic_repair</a></li>
@@ -181,34 +178,75 @@
    </div>
 
     <!-- brocher  -->
-<div class="w-full py-2  md:py-20 lg:py-20">
-  <div class="w-full py-4 px-1 lg:px-24">
-    <div class="grid gap-10 md:grid-cols-2 items-start justify-center">
-        <div class="w-full p-6 fade-in-left">
-            <div class="w-full rounded-lg bg-red-600 p-8 ">
-                <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
-                <h3 class="text-white text-sm mb-8">Find out why thousands trust Certo to secure their mobile world.</h3>
-                <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
-                    Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+    <!-- brocher  -->
+    <div class="w-full py-2  md:py-20 lg:py-20">
+      <div class="w-full py-4 px-1 lg:px-24">
+        <div class="grid gap-10 md:grid-cols-2 items-start justify-center">
+            <div class="w-full p-6 fade-in-left">
+                <div class="w-full rounded-lg bg-red-600 p-8 ">
+                    <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
+                    <h3 class="text-white text-sm mb-8">Find out why thousands trust Certo to secure their mobile world.</h3>
+                    <a href="#" id="getBrochureLink">
+                      <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
+                          Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                      </button>
+                  </a>
+                   <a href="https://youtu.be/27vrsCw8hYU?si=I__VizErBx9fXKrU">
+                    <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
+                      View Video <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                  </button>
+                   </a>
+                </div>
+            </div>
+    
+            <div class="w-full p-6 flex flex-col  md:text-left fade-in-right">
+                <p class="text-gray-700 mb-6">
+                    Download our brochure for more detailed information about the project, including technical specifications, design process, and future developments.
+                </p>
+                <a href="#table">
+                <button class="rounded-lg w-48 px-4 py-2 text-red-600 border border-red-600 font-semibold mb-4">
+                    Technical Specs <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
                 </button>
+              </a>
+              <a href="tel:+91884787140" >
+                <button class="rounded-lg w-48 px-2 py-2 text-red-600 border border-red-600 font-semibold">
+                    Request a Callback <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                </button>
+                </a>
             </div>
         </div>
-
-        <div class="w-full p-6 flex flex-col  md:text-left fade-in-right">
-            <p class="text-gray-700 mb-6">
-                Download our brochure for more detailed information about the project, including technical specifications, design process, and future developments.
-            </p>
-            <button class="rounded-lg w-48 px-4 py-2 text-red-600 border border-red-600 font-semibold mb-4">
-                Technical Specs <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
-            </button>
-            <button class="rounded-lg w-48 px-2 py-2 text-red-600 border border-red-600 font-semibold">
-                Request a Callback <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
-            </button>
-        </div>
     </div>
-</div>
-
-</div>
+    
+    </div>
+    <!-- brocher form  -->
+    <div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
+      <div class="bg-white p-6 rounded-lg relative w-96">
+          <!-- Close Button -->
+          <span id="closeModal" class="absolute top-2 left-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
+    
+          <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
+    
+          <!-- Form -->
+          <form id="brochureForm">
+              <div class="mb-4">
+                  <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                  <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
+              </div>
+    
+              <div class="mb-4">
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
+              </div>
+    
+              <div class="mb-4">
+                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
+              </div>
+    
+              <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Submit</button>
+          </form>
+      </div>
+    </div>
 <!-- products -->
  <div class="bg-gray-100 h-auto w-full py-20 md:10 lg:p-20 grid place-content-center">
   <div class=" py-20 px-4 sm:px-6 lg:px-20">
@@ -216,27 +254,94 @@
       
       <!-- Product Description Section -->
       <div class="space-y-4 p-6  fade-in-left">
-        <h3 class="text-xl font-bold text-red-600">Product Description:</h3>
+        <h3 class="text-3xl font-bold text-red-600">Product Description:</h3>
         <h2 class="text-2xl font-bold text-black">Nut Buster</h2>
-        <p class="text-gray-700 text-justify">
+        <p class="text-gray-700 text-xl text-justify">
             Fixomech’s Nutbuster is a hydraulic cylinder repair bench built for disassembling and ghtening piston nuts and cylinder glands with unmatched power and precision. This system uses two counterac ng cylinders to generate a high cracking torque, while a fast-turning motor allows for swi removal or ghtening of nuts
         </p>
-        <p class="text-gray-700 text-justify">
+        <p class="text-gray-700 text-xl text-justify">
         </p>
       </div>
     
       <!-- Product Image Section -->
       <div class="p-6 flex justify-center items-center fade-in-right">
-        <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Electronic Torque Wrench Image" class="rounded-lg shadow-lg max-w-[60%] h-auto">
+        <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Electronic Torque Wrench Image" class="rounded-lg shadow-lg max-w-[80%] h-auto">
       </div>
-    
+
+
+      
     </div>
   </div>
-  
-  
-  
-  
  </div>
+ <!-- table  -->
+ <div class="h-auto w-full">
+  <h1 class="w-full text-center text-5xl mt-7 font-semibold">Overview</h1>
+  
+  <div class="w-full h-screen grid place-content-center p-0 md:p-20 lg:p-20 " id="table">
+    <!-- Table wrapper with horizontal scrolling enabled -->
+    <div class="w-full overflow-x-auto px-2">
+        
+
+        <table class="min-w-full bg-gray-100 shadow-lg table-auto">
+          
+          <tbody>
+            <tr class="bg-white">
+              <td class="bg-red-600 font-bold  text-white border p-4">Product name</td>
+              <td class="border p-4 bg-red-600 font-bold  text-white">NUTBUSTER - FHNB-65</td>
+              <td class="border p-4 bg-red-600 font-bold  text-white">NUTBUSTER - FHNB-80</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="bg-red-600 font-bold  text-white border p-4">Nut Buster Torque</td>
+              <td class="border p-4">65,000 Nm / 47,940 ft lb</td>
+              <td class="border p-4">80,000 Nm / 59,000 ft lb</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="bg-red-600 font-bold  text-white border p-4">Hydraulic Motor Torque</td>
+              <td class="border p-4">600 Nm / 440 ft lb</td>
+              <td class="border p-4">600 Nm / 440 ft lb</td>
+            </tr>
+            <tr class="bg-white">
+              <td class=" bg-red-600 font-bold  text-white border p-4">Table Size (Customised)</td>
+              <td class="border p-4">4 mtr to 10 Mtr</td>
+              <td class="border p-4">5 mtr to 12 Mtr</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="bg-red-600 font-bold  text-white border p-4">Max Cylinder OD</td>
+              <td class="border p-4">500mm</td>
+              <td class="border p-4">600mm</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="bg-red-600 font-bold  text-white border p-4">Extraction Cylinder Stroke</td>
+              <td class="border p-4">2000mm</td>
+              <td class="border p-4">2000mm</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="bg-red-600 font-bold  text-white border p-4">Hydraulic Pressure (Max)</td>
+              <td class="border p-4">300 bar</td>
+              <td class="border p-4">300 bar</td>
+            </tr>
+            <tr class="bg-white">
+              <td class=" bg-red-600 font-bold  text-white border p-4">Electric Motor</td>
+              <td class="border p-4">3HP, All Voltage (50/60 Hz)</td>
+              <td class="border p-4">5HP, 3 Phase (50/60 Hz)</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class=" bg-red-600 font-bold  text-white border p-4">Pump Flow</td>
+              <td class="border p-4">4.3 lpm</td>
+              <td class="border p-4">6.8 lpm</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="bg-red-600 font-bold  text-white border p-4">Oil Tank Capacity</td>
+              <td class="border p-4">40 Lts</td>
+              <td class="border p-4">60 Lts</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+</div>
 
 
 <!-- features section  -->
@@ -393,26 +498,26 @@
                 </div>
     
                 <!-- Products -->
-                <div>
-                    <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
-                    <ul>
-                        <li class="flex items-center mb-1">                        
-                            <a href="master_pin_pusher.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
-                        </li>
-                        <li class="flex items-center mb-1">                        
-                            <a href="under_carriage.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
-                        </li>
-                        <li class="flex items-center mb-1">                        
-                            <a href="hydraulic_cylinder_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
-                        </li>
-                        <li class="flex items-center mb-1">                        
-                          <a href="Tyre_handaling.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                        <a href="Hydraulic_repair.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+            <div>
+                <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
+                <ul>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
                     </li>
-                    </ul>
-                </div>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                      <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
+                  </li>
+                  <li class="flex items-center mb-1">                        
+                    <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+                </li>
+                </ul>
+            </div>
     
                 <!-- Newsletter -->
                 <div>
@@ -445,6 +550,42 @@
 
 
     </div>
+    <script>
+      // Brochure download functionality
+      const brochureButton = document.getElementById('getBrochureLink');
+      const modalWindow = document.getElementById('formModal');
+      const closeButton = document.getElementById('closeModal');
+      const formSubmission = document.getElementById('brochureForm');
+  
+      brochureButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          modalWindow.classList.remove('hidden');
+      });
+  
+      closeButton.addEventListener('click', () => {
+          modalWindow.classList.add('hidden');
+      });
+  
+      formSubmission.addEventListener('submit', (e) => {
+          e.preventDefault();
+  
+          const userName = document.getElementById('name').value;
+          const userEmail = document.getElementById('email').value;
+          const userPhone = document.getElementById('phone').value;
+  
+          if (userName && userEmail && userPhone) {
+              const brochureUrl = 'https://drive.google.com/file/d/18oQA9aLA3ytkl6r6QUrvBAUhU-Q1wSpl/view?usp=sharing'; 
+  
+              alert("Brochure is being downloaded...");
+  
+              window.location.href = brochureUrl;
+  
+              modalWindow.classList.add('hidden');
+          } else {
+              alert("Please fill out all fields.");
+          }
+      });
+  </script>
     <script src="scriptproduct.js"></script>
     
     <script src="script.js"></script>
