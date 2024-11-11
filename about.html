@@ -11,241 +11,146 @@
 <body >
     <!-- Navbar -->
     <header
-    id="head"
-    class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
-    style="  background-image: url('assets/img/DOT W.png');
-    background-position: left center; 
-    background-size: contain; 
-    background-repeat: no-repeat; "
-    >
-    <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
-    >
-     <!-- Logo -->
-     <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div>
-    
-     <!-- Navbar Items -->
-     <ul class="flex justify-center items-center gap-4 text-lg z-50">
-       <!-- Home Link -->
-       <li><a href="index.html" class="">Home</a></li>
-    
-       <!-- About Link -->
-       <li id="about" class="relative py-6 cursor-pointer">
-         <a href="about.html" class="">About</a>
-       </li>
-       <!-- blogs -->
-       <li class="relative py-6 cursor-pointer">
-         <a href="#" class="">Blogs</a>
-       </li>
-    
-       <!-- gallery  -->
-       <li class="relative py-6 cursor-pointer">
-         <a href="gallery.html" class="">Gallery</a>
-       </li>
-    
-       <!-- Products Link -->
-       <li id="contact" class="relative py-6 cursor-pointer">
-         <a href="Products.html" class="">Products</a>
-       </li>
-       <!-- contact  -->
-       <li class="relative py-6 cursor-pointer">
-         <a href="contact.html" class="">Contact</a>
-       </li>
-    
+      id="head"
+      class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
+      style="  background-image: url('assets/img/DOT W.png');
+      background-position: left center; 
+      background-size: contain; 
+      background-repeat: no-repeat; "
+      >
+      <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
+      >
+       <!-- Logo -->
+       <a href="index.html"> <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div></a>
+      
+       <!-- Navbar Items -->
+       <ul class="flex justify-center items-center gap-4 text-lg z-50">
+         <!-- Home Link -->
+         <li><a href="index.html" class="">Home</a></li>
+      
+         <!-- About Link -->
+         <li id="about" class="relative py-6 cursor-pointer">
+           <a href="about.html" class="">About</a>
+         </li>
+         <!-- blogs -->
+         <li class="relative py-6 cursor-pointer">
+           <a href="blogs.html" class="">Blogs</a>
+         </li>
+      
+         <!-- gallery  -->
+         <li class="relative py-6 cursor-pointer">
+           <a href="gallery.html" class="">Gallery</a>
+         </li>
+      
+         <!-- Products Link -->
+         <li id="contact" class="relative py-6 cursor-pointer">
+           <a href="Products.html" class="">Products</a>
+         </li>
+         <!-- contact  -->
+         <li class="relative py-6 cursor-pointer">
+           <a href="contact.html" class="">Contact</a>
+         </li>
+      
+         
+      </ul>
+      
+      <!-- Search Input -->
+      
+      
+       <button
+       type="button"
+       class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+      >Get Brochure</button>
+      
+      
+      
+       <!-- Independent Dropdown for About -->
        
-    </ul>
-    
-    <!-- Search Input -->
-    
-    
-     <button
-     type="button"
-     class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
-    >Get Brochure</button>
-    
-    
-    
-     <!-- Independent Dropdown for About -->
-     <div
-       id="aboutDropdown"
-       class="hidden absolute left-0 w-[100%] bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
-     >
-       <div class="container flex items-center justify-center gap-0">
-         <div class="h-96 border-white border-l-2"></div>
-         <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff]">
-           <li class="text-2xl py-2 ml-4">
-             <a href="about.html">Company Overview</a>
-           </li>
-          <li class="elemparenthoverclass cursor-pointer flex relative">
-             Our History
-             <!-- <ul
-               class="elemhoverclass hidden absolute animate-dropdown pl-32 text-lg  justify-center"
-             >
-               <div class="w-full border-white border-l-2">
-                 <li class="py-1 px-4 ">
-                   Year of Establishment
-                 </li>
-                 <li class="py-1 px-4 ">About Founder</li>
-                 <li class="py-1 px-4 ">Gallery section</li>
-                 <li class="py-1 px-4">Achievements</li>
-               </div>
-             </ul> -->
-           </li> 
-           <li class="cursor-pointer">Leadership Team</li>
-           <li class="cursor-pointer">Careers</li>
-         </ul>
-       </div>
-     </div>
-    
-     <!-- Independent Dropdown for products -->
-     <div
-       id="contactDropdown"
-       class="hidden absolute left-0 w-full bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
-     >
-       <div class="container flex items-center justify-center mx-auto">
-         <div class="h-96 border-white border-l-2"></div>
-         <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff] text-lg">
-           <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 ">
-               Master Pin Pusher
+       <!-- Independent Dropdown for products -->
+       <div
+         id="contactDropdown"
+         class="hidden absolute left-0 w-full bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
+       >
+         <div class="container flex items-center justify-center mx-auto">
+           <div class="h-96 border-white border-l-2"></div>
+           <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff] text-lg">
+             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 ">
+                 Master Pin Pusher
+                 <ul
+                   class="elemhoverclass  elemhoverclass1 hidden absolute animate-dropdown    justify-center"
+                 >
+                   <div class="w-full border-white   ml-12 border-l-2">
+                     <li class="py-1 px-4 "><a href="track-line-press.html">Track Line Press</a></li>
+                     <li class="py-1 px-4 "><a href="application.html">Application</a></li>
+                   </div>
+                 </ul>
+               </li>
+             <li class="elemparenthoverclass cursor-pointer flex relative">
+               Undercarriage Repair
                <ul
-                 class="elemhoverclass  elemhoverclass1 hidden absolute animate-dropdown    justify-center"
+                 class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown pl-32   justify-center"
                >
-                 <div class="w-full border-white   ml-12 border-l-2">
-                   <li class="py-1 px-4 "><a href="track-line-press.html">Track Line Press</a></li>
+                 <div class="w-full border-white border-l-2">
+                   <li class="py-1 px-4 ">
+                     <a href="electrictorquewrencher.html">Electronic Torgue Wrench</a>
+                   </li>
+                   <li class="py-1 px-4 "><a href="trackwinder.html">Track Winder</a></li>
+                   <li class="py-1 px-4 "><a href="Hydraulic_repair.html">Hydraulic_repair</a></li>
                    <li class="py-1 px-4 "><a href="application.html">Application</a></li>
                  </div>
                </ul>
              </li>
-           <li class="elemparenthoverclass cursor-pointer flex relative">
-             Undercarriage Repair
-             <ul
-               class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown pl-32   justify-center"
-             >
-               <div class="w-full border-white border-l-2">
-                 <li class="py-1 px-4 ">
-                   <a href="electrictorquewrencher.html">Electronic Torgue Wrench</a>
-                 </li>
-                 <li class="py-1 px-4 "><a href="trackwinder.html">Track Winder</a></li>
-                 <li class="py-1 px-4 "><a href="Hydraulic_repair.html">Hydraulic_repair</a></li>
-                 <li class="py-1 px-4 "><a href="application.html">Application</a></li>
-               </div>
-             </ul>
-           </li>
-           <li class="elemparenthoverclass cursor-pointer flex relative">
-               Hydraulic Cylinder Repair
-               <ul
-                 class="elemhoverclass hidden absolute animate-dropdown pl-32   justify-center"
-               >
-                 <div class="w-full border-white border-l-2 ">
-                   <li class="py-1 px-4 ">
-                    <a href="Netbuster.html"> Nut Buster</a>
-                   </li>
-                   <li class="py-1 px-4 "><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
-                   <li class="py-1 px-4 "><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-                   <li class="py-1 px-4 "><a href="#">Application</a></li>
-                 </div>
-               </ul>
-             </li>
-         </ul>
+             <li class="elemparenthoverclass cursor-pointer flex relative">
+                 Hydraulic Cylinder Repair
+                 <ul
+                   class="elemhoverclass hidden absolute animate-dropdown pl-32   justify-center"
+                 >
+                   <div class="w-full border-white border-l-2 ">
+                     <li class="py-1 px-4 ">
+                      <a href="Netbuster.html"> Nut Buster</a>
+                     </li>
+                     <li class="py-1 px-4 "><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
+                     <li class="py-1 px-4 "><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
+                     <li class="py-1 px-4 "><a href="#">Application</a></li>
+                   </div>
+                 </ul>
+               </li>
+           </ul>
+         </div>
        </div>
-     </div>
-    </nav>
-    <nav class="box flex  md:hidden justify-between py-4">
-    <div class="text-xl w-40  font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" alt=""></div>
-    
-    <button class="text-white" id="mobileMenuButton">
-     <i class="fa-solid fa-bars text-2xl" style="color: #ca0707;"></i>
-    </button>
-    
-    
-    </nav>
-    <div id="mobileMenu" class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50  bg-opacity-90 p`-4   sm:hidden">
-     <ul class="space-y-12 ulmobile ">
-       <li><a href="index.html" class="text-white">Home</a></li>
-       <li class="relative">
-         <a href="about.html" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a>
-         <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
-           <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
-             Master Pin Pusher
-             <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
-               <div class="w-full border-white ml-2 border-l-2">
-                 <li class="py-1 px-4">Track Line Press</li>
-                 <li class="py-1 px-4">Application</li>
-               </div>
-             </ul>
-           </li>
-           <li class="elemparenthoverclass cursor-pointer flex relative group">
-             Undercarriage Repair
-             <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-               <div class="w-full border-white border-l-2">
-                 <li class="py-1 px-4">Electronic Torque Wrench</li>
-                 <li class="py-1 px-4">Track Winder</li>
-                 <li class="py-1 px-4">Roller Conveyor Table</li>
-                 <li class="py-1 px-4">Application</li>
-               </div>
-             </ul>
-           </li>
-           <li class="elemparenthoverclass cursor-pointer flex relative group">
-             Hydraulic Cylinder Repair
-             <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-               <div class="w-full border-white border-l-2">
-                 <li class="py-1 px-4">Nut Buster</li>
-                 <li class="py-1 px-4">Cylinder Honing Station</li>
-                 <li class="py-1 px-4">Roller Conveyor Table</li>
-                 <li class="py-1 px-4">Application</li>
-               </div>
-             </ul>
-           </li>
-         </ul> -->
-       </li>
-       <li><a href="#" class="text-white">Blogs</a></li>
-       <li><a href="gallery.html" class="text-white">Gallery</a></li>
-       <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
-         <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
-           <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
-             Master Pin Pusher
-             <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
-               <div class="w-full border-white ml-2 border-l-2">
-                 <li class="py-1 px-4"><a href="track-line-press.html">Track Line Press</a></li>
-                 <li class="py-1 px-4"><a href="#">Application</a></li>
-               </div>
-             </ul>
-           </li>
-           <li class="elemparenthoverclass cursor-pointer flex relative group">
-          <a href="under_carriage.html">   Undercarriage Repair</a>
-             <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-               <div class="w-full border-white border-l-2">
-                 <li class="py-1 px-4"><a href="electrictorquewrencher.html">Electronic Torque Wrench</a></li>
-                 <li class="py-1 px-4"><a href="trackwinder.html">Track Winder</a></li>
-                 <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-                 <li class="py-1 px-4"><a href="#">Application</a></li>
-               </div>
-             </ul>
-           </li>
-           <li class="elemhoverclass1 cursor-pointer flex relative group">
-             <a href="hydraulic_cylinder_repair.html">Hydraulic Cylinder Repair</a>
-             <ul class="elemhoverclass hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-               <div class="w-full border-white border-l-2">
-                 <li class="py-1 px-4"><a href="Netbuster.html">Nut Buster</a></li>
-                 <li class="py-1 px-4"><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
-                 <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-                 <li class="py-1 px-4"><a href="#">Application</a></li>
-               </div>
-             </ul>
-           </li>
-         </ul> -->
-       </li>
-       <li><a href="contact.html" class="text-white">Contact</a></li>
-     </ul>
-    
-     <!-- Search Input -->
-    <a href="brochure.html">
-      <button type="button" class="border rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in w-full mt-4">
-        Get Brochure
+      </nav>
+      <nav class="box flex  md:hidden justify-between py-4">
+      <div class="text-xl w-40  font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" alt=""></div>
+      
+      <button class="text-white" id="mobileMenuButton">
+       <i class="fa-solid fa-bars text-2xl" style="color: #ca0707;"></i>
       </button>
-    </a>
-    </div>
-    
-    </header>
+      
+      
+      </nav>
+      <div id="mobileMenu" class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50  bg-opacity-90 p`-4   sm:hidden">
+       <ul class="space-y-12 ulmobile ">
+         <li><a href="index.html" class="text-white">Home</a></li>
+         <li class="relative">
+           <a href="about.html" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a>
+         </li>
+         <li><a href="blogs.html" class="text-white">Blogs</a></li>
+         <li><a href="gallery.html" class="text-white">Gallery</a></li>
+         <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
+      
+         </li>
+         <li><a href="contact.html" class="text-white">Contact</a></li>
+       </ul>
+      
+       <!-- Search Input -->
+      <a href="brochure.html">
+        <button type="button" class="border rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in w-full mt-4">
+          Get Brochure
+        </button>
+      </a>
+      </div>
+      
+      </header>
 
     <!-- Hero Section -->
     <section class="relative h-80 bg-cover bg-center bg-gray-900 text-white" style="background-image: url('assets/img/products/Section\ 4\ Image.jpg'); background-attachment: fixed;">
@@ -261,6 +166,51 @@
   
     <!-- Nanvbar ends -->
      
+
+ <!--Section2 About Our Company Starts -->
+ <section class="bg-gray-200 text-gray-900 py-16 sm:py-24 md:py-32 ">
+  <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-36 md:flex md:items-center md:space-x-10 gap-8 ">
+      <!-- Text Section -->
+      <div class="md:w-1/2 fade-in-left ">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-4 sm:mb-6">ABOUT OUR COMPANY</h2>
+          <p class="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base">We are dedicated to delivering innovative solutions that drive success for our clients. With a global presence and a commitment to excellence, we’re leading the way in cutting-edge technology and customer satisfaction.</p>
+          <div class="space-y-6">
+              <!-- Global Operations -->
+              <div class="flex items-start space-x-4">
+                  <i class="fas fa-globe text-red-600 text-2xl sm:text-3xl mr-2 p-4 bg-white rounded-3xl"></i>
+                  <div>
+                      <h3 class="text-lg sm:text-xl font-semibold">Global Operations</h3>
+                      <p class="text-gray-700 text-sm sm:text-base">Our network spans multiple countries, ensuring localized expertise wherever we operate.</p>
+                  </div>
+              </div>
+              <!-- Innovation & Technology -->
+              <div class="flex items-start space-x-4">
+                  <i class="fas fa-lightbulb text-red-600 text-2xl sm:text-3xl mr-3 ml-1 p-4 bg-white rounded-3xl"></i>
+                  <div>
+                      <h3 class="text-lg sm:text-xl font-semibold">Innovation & Technology</h3>
+                      <p class="text-gray-700 text-sm sm:text-base">We leverage the latest technologies to provide forward-thinking solutions that meet the demands of tomorrow.</p>
+                  </div>
+              </div>
+              <!-- Customer-Centric Approach -->
+              <div class="flex items-start space-x-4">
+                  <i class="fas fa-user-friends text-red-600 text-2xl sm:text-3xl p-4 bg-white rounded-3xl"></i>
+                  <div>
+                      <h3 class="text-lg sm:text-xl font-semibold">Customer-Centric Approach</h3>
+                      <p class="text-gray-700 text-sm sm:text-base">Our customers are at the heart of everything we do, driving us to deliver exceptional experiences every time.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="relative mt-8 md:mt-0 md:w-1/2 fade-in-right">
+          <img src="assets/img/about.jpg" alt="Company Image" class=" w-full h-full object-cover rounded-tl-3xl rounded-br-3xl " >
+      </div>
+  </div>
+</section>
+<!--Section2 About Our Company ends -->
+
+
     <!-- Section 1: About Fixomech -->
     <section class="relative py-36 bg-white text-center background-icon2 overflow-hidden ">
         <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 fade-in-up">
@@ -300,49 +250,7 @@
       </section>
     <!-- Section 1  end -->
 
-    <!--Section2 About Our Company Starts -->
-    <section class="bg-gray-200 text-gray-900 py-16 sm:py-24 md:py-32 ">
-        <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-36 md:flex md:items-center md:space-x-10 gap-8 ">
-            <!-- Text Section -->
-            <div class="md:w-1/2 fade-in-left ">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-4 sm:mb-6">ABOUT OUR COMPANY</h2>
-                <p class="text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base">We are dedicated to delivering innovative solutions that drive success for our clients. With a global presence and a commitment to excellence, we’re leading the way in cutting-edge technology and customer satisfaction.</p>
-                <div class="space-y-6">
-                    <!-- Global Operations -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fas fa-globe text-red-600 text-2xl sm:text-3xl mr-2 p-4 bg-white rounded-3xl"></i>
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-semibold">Global Operations</h3>
-                            <p class="text-gray-700 text-sm sm:text-base">Our network spans multiple countries, ensuring localized expertise wherever we operate.</p>
-                        </div>
-                    </div>
-                    <!-- Innovation & Technology -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fas fa-lightbulb text-red-600 text-2xl sm:text-3xl mr-3 ml-1 p-4 bg-white rounded-3xl"></i>
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-semibold">Innovation & Technology</h3>
-                            <p class="text-gray-700 text-sm sm:text-base">We leverage the latest technologies to provide forward-thinking solutions that meet the demands of tomorrow.</p>
-                        </div>
-                    </div>
-                    <!-- Customer-Centric Approach -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fas fa-user-friends text-red-600 text-2xl sm:text-3xl p-4 bg-white rounded-3xl"></i>
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-semibold">Customer-Centric Approach</h3>
-                            <p class="text-gray-700 text-sm sm:text-base">Our customers are at the heart of everything we do, driving us to deliver exceptional experiences every time.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Image Section -->
-            <div class="relative mt-8 md:mt-0 md:w-1/2 fade-in-right">
-                <img src="assets/img/about.jpg" alt="Company Image" class=" w-full h-full object-cover rounded-tl-3xl rounded-br-3xl " >
-            </div>
-        </div>
-    </section>
-    <!--Section2 About Our Company ends -->
-
+   
 
     <!--Section3 Vision & Mission starts -->
     <section class="relative bg-cover bg-center bg-gray-900 text-white py-16 px-6 sm:px-12 md:px-20 lg:px-36" style="background-image: url('assets/img/feature/Customised\ Solutions.webp'); background-attachment: fixed;">
@@ -496,7 +404,7 @@
             <!-- Logo and Contact -->
             <div>
                 <!-- Logo -->
-                <img src="assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8">
+                <a href="index.html"><img src="assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8"></a>
                 <p class="mb-1">
                     <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
                         <strong>Phone:</strong> <span>+91 884787140</span>

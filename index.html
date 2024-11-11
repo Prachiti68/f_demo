@@ -22,7 +22,7 @@
       <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
       >
        <!-- Logo -->
-       <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div>
+       <a href="index.html"> <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div></a>
       
        <!-- Navbar Items -->
        <ul class="flex justify-center items-center gap-4 text-lg z-50">
@@ -35,7 +35,7 @@
          </li>
          <!-- blogs -->
          <li class="relative py-6 cursor-pointer">
-           <a href="#" class="">Blogs</a>
+           <a href="blogs.html" class="">Blogs</a>
          </li>
       
          <!-- gallery  -->
@@ -66,37 +66,7 @@
       
       
        <!-- Independent Dropdown for About -->
-       <div
-         id="aboutDropdown"
-         class="hidden absolute left-0 w-[100%] bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
-       >
-         <div class="container flex items-center justify-center gap-0">
-           <div class="h-96 border-white border-l-2"></div>
-           <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff]">
-             <li class="text-2xl py-2 ml-4">
-               <a href="about.html">Company Overview</a>
-             </li>
-            <li class="elemparenthoverclass cursor-pointer flex relative">
-               Our History
-               <!-- <ul
-                 class="elemhoverclass hidden absolute animate-dropdown pl-32 text-lg  justify-center"
-               >
-                 <div class="w-full border-white border-l-2">
-                   <li class="py-1 px-4 ">
-                     Year of Establishment
-                   </li>
-                   <li class="py-1 px-4 ">About Founder</li>
-                   <li class="py-1 px-4 ">Gallery section</li>
-                   <li class="py-1 px-4">Achievements</li>
-                 </div>
-               </ul> -->
-             </li> 
-             <li class="cursor-pointer">Leadership Team</li>
-             <li class="cursor-pointer">Careers</li>
-           </ul>
-         </div>
-       </div>
-      
+       
        <!-- Independent Dropdown for products -->
        <div
          id="contactDropdown"
@@ -164,76 +134,11 @@
          <li><a href="index.html" class="text-white">Home</a></li>
          <li class="relative">
            <a href="about.html" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a>
-           <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
-             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
-               Master Pin Pusher
-               <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
-                 <div class="w-full border-white ml-2 border-l-2">
-                   <li class="py-1 px-4">Track Line Press</li>
-                   <li class="py-1 px-4">Application</li>
-                 </div>
-               </ul>
-             </li>
-             <li class="elemparenthoverclass cursor-pointer flex relative group">
-               Undercarriage Repair
-               <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-                 <div class="w-full border-white border-l-2">
-                   <li class="py-1 px-4">Electronic Torque Wrench</li>
-                   <li class="py-1 px-4">Track Winder</li>
-                   <li class="py-1 px-4">Roller Conveyor Table</li>
-                   <li class="py-1 px-4">Application</li>
-                 </div>
-               </ul>
-             </li>
-             <li class="elemparenthoverclass cursor-pointer flex relative group">
-               Hydraulic Cylinder Repair
-               <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-                 <div class="w-full border-white border-l-2">
-                   <li class="py-1 px-4">Nut Buster</li>
-                   <li class="py-1 px-4">Cylinder Honing Station</li>
-                   <li class="py-1 px-4">Roller Conveyor Table</li>
-                   <li class="py-1 px-4">Application</li>
-                 </div>
-               </ul>
-             </li>
-           </ul> -->
          </li>
-         <li><a href="#" class="text-white">Blogs</a></li>
+         <li><a href="blogs.html" class="text-white">Blogs</a></li>
          <li><a href="gallery.html" class="text-white">Gallery</a></li>
          <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
-           <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
-             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
-               Master Pin Pusher
-               <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
-                 <div class="w-full border-white ml-2 border-l-2">
-                   <li class="py-1 px-4"><a href="track-line-press.html">Track Line Press</a></li>
-                   <li class="py-1 px-4"><a href="#">Application</a></li>
-                 </div>
-               </ul>
-             </li>
-             <li class="elemparenthoverclass cursor-pointer flex relative group">
-            <a href="under_carriage.html">   Undercarriage Repair</a>
-               <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-                 <div class="w-full border-white border-l-2">
-                   <li class="py-1 px-4"><a href="electrictorquewrencher.html">Electronic Torque Wrench</a></li>
-                   <li class="py-1 px-4"><a href="trackwinder.html">Track Winder</a></li>
-                   <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-                   <li class="py-1 px-4"><a href="#">Application</a></li>
-                 </div>
-               </ul>
-             </li>
-             <li class="elemhoverclass1 cursor-pointer flex relative group">
-               <a href="hydraulic_cylinder_repair.html">Hydraulic Cylinder Repair</a>
-               <ul class="elemhoverclass hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-                 <div class="w-full border-white border-l-2">
-                   <li class="py-1 px-4"><a href="Netbuster.html">Nut Buster</a></li>
-                   <li class="py-1 px-4"><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
-                   <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-                   <li class="py-1 px-4"><a href="#">Application</a></li>
-                 </div>
-               </ul>
-             </li>
-           </ul> -->
+      
          </li>
          <li><a href="contact.html" class="text-white">Contact</a></li>
        </ul>
@@ -421,37 +326,43 @@
       
       <!-- product ends  -->
           <!-- Section 2: About Fixomech -->
-          <section class="relative py-36 bg-white text-center fade-in-up">
-            <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-              <h2 class="text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 mb-6">Fixomech: Innovating the Future of Machinery Repair</h2>
-              <p class="text-gray-600 text-sm md:text-base lg:text-lg mb-8">At Fixomech, research and development are the pillars of our progress. We continually invest in cutting-edge technologies to enhance our machinery solutions, ensuring we stay ahead in a rapidly evolving industry.</p>
-              
-           
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              
-                <div class="flex flex-col items-center fade-in-up">
+          <section class="relative py-36 bg-white text-center background-icon2 overflow-hidden ">
+            <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 fade-in-up">
+              <h2 class="text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 mb-6 " >
+                Fixomech: Innovating the Future of Machinery Repair
+              </h2>
+              <p class="text-gray-600 text-sm md:text-base lg:text-lg mb-12 " >
+                At Fixomech, research and development are the pillars of our progress. We continually invest in cutting-edge technologies to enhance our machinery solutions, ensuring we stay ahead in a rapidly evolving industry.
+              </p>
+          
+              <!-- Icons Section -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10 fade-in-up" >
+                <!-- Icon Box 1 -->
+                <div class="flex flex-col items-center bg-gray-100 p-4 rounded-2xl " >
                   <i class="fas fa-flask text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
                   <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">State-of-the-art Facilities</h3>
                   <p class="text-gray-600 text-sm md:text-base lg:text-lg">For testing and developing advanced repair tools.</p>
                 </div>
-         
-                <div class="flex flex-col items-center fade-in-up">
+                <!-- Icon Box 2 -->
+                <div class="flex flex-col items-center bg-gray-100 p-4 rounded-2xl ">
                   <i class="fas fa-users-cog text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
                   <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">Dedicated R&D Team</h3>
                   <p class="text-gray-600 text-sm md:text-base lg:text-lg">Focused on safety, efficiency, and durability.</p>
                 </div>
-          
-                <div class="flex flex-col items-center fade-in-up">
+                <!-- Icon Box 3 -->
+                <div class="flex flex-col items-center bg-gray-100 p-4 rounded-2xl " >
                   <i class="fas fa-lightbulb text-red-600 text-3xl md:text-4xl lg:text-5xl mb-3"></i>
                   <h3 class="font-semibold text-lg md:text-xl lg:text-2xl">Continuous Innovation</h3>
                   <p class="text-gray-600 text-sm md:text-base lg:text-lg">Enabling clients to benefit from the latest advancements.</p>
                 </div>
               </div>
-        
-              <p class="text-gray-600 text-sm md:text-base lg:text-lg mt-8 max-w-3xl mx-auto fade-in-up">Our commitment to R&D guarantees that every solution we provide is backed by thorough research and rigorous testing, ensuring top-tier performance and reliability across all our services.</p>
+          
+              <p class="text-gray-600 text-sm md:text-base lg:text-lg mt-12 max-w-3xl mx-auto " >
+                Our commitment to R&D guarantees that every solution we provide is backed by thorough research and rigorous testing, ensuring top-tier performance and reliability across all our services.
+              </p>
             </div>
           </section>
-        </section>
+       
           <!-- Sections end -->
       
 
@@ -670,7 +581,7 @@
             <!-- Logo and Contact -->
             <div>
                 <!-- Logo -->
-                <img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8">
+                <a href="index.html"><img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8"></a>
                 <p class="mb-1">
                     <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
                         <strong>Phone:</strong> <span>+91 884787140</span>

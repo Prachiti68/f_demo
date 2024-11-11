@@ -24,7 +24,7 @@
   <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
   >
    <!-- Logo -->
-   <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div>
+   <a href="index.html"> <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div></a>
   
    <!-- Navbar Items -->
    <ul class="flex justify-center items-center gap-4 text-lg z-50">
@@ -37,7 +37,7 @@
      </li>
      <!-- blogs -->
      <li class="relative py-6 cursor-pointer">
-       <a href="#" class="">Blogs</a>
+       <a href="blogs.html" class="">Blogs</a>
      </li>
   
      <!-- gallery  -->
@@ -68,37 +68,7 @@
   
   
    <!-- Independent Dropdown for About -->
-   <div
-     id="aboutDropdown"
-     class="hidden absolute left-0 w-[100%] bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
-   >
-     <div class="container flex items-center justify-center gap-0">
-       <div class="h-96 border-white border-l-2"></div>
-       <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff]">
-         <li class="text-2xl py-2 ml-4">
-           <a href="about.html">Company Overview</a>
-         </li>
-        <li class="elemparenthoverclass cursor-pointer flex relative">
-           Our History
-           <!-- <ul
-             class="elemhoverclass hidden absolute animate-dropdown pl-32 text-lg  justify-center"
-           >
-             <div class="w-full border-white border-l-2">
-               <li class="py-1 px-4 ">
-                 Year of Establishment
-               </li>
-               <li class="py-1 px-4 ">About Founder</li>
-               <li class="py-1 px-4 ">Gallery section</li>
-               <li class="py-1 px-4">Achievements</li>
-             </div>
-           </ul> -->
-         </li> 
-         <li class="cursor-pointer">Leadership Team</li>
-         <li class="cursor-pointer">Careers</li>
-       </ul>
-     </div>
-   </div>
-  
+   
    <!-- Independent Dropdown for products -->
    <div
      id="contactDropdown"
@@ -166,76 +136,11 @@
      <li><a href="index.html" class="text-white">Home</a></li>
      <li class="relative">
        <a href="about.html" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a>
-       <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
-         <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
-           Master Pin Pusher
-           <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
-             <div class="w-full border-white ml-2 border-l-2">
-               <li class="py-1 px-4">Track Line Press</li>
-               <li class="py-1 px-4">Application</li>
-             </div>
-           </ul>
-         </li>
-         <li class="elemparenthoverclass cursor-pointer flex relative group">
-           Undercarriage Repair
-           <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-             <div class="w-full border-white border-l-2">
-               <li class="py-1 px-4">Electronic Torque Wrench</li>
-               <li class="py-1 px-4">Track Winder</li>
-               <li class="py-1 px-4">Roller Conveyor Table</li>
-               <li class="py-1 px-4">Application</li>
-             </div>
-           </ul>
-         </li>
-         <li class="elemparenthoverclass cursor-pointer flex relative group">
-           Hydraulic Cylinder Repair
-           <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-             <div class="w-full border-white border-l-2">
-               <li class="py-1 px-4">Nut Buster</li>
-               <li class="py-1 px-4">Cylinder Honing Station</li>
-               <li class="py-1 px-4">Roller Conveyor Table</li>
-               <li class="py-1 px-4">Application</li>
-             </div>
-           </ul>
-         </li>
-       </ul> -->
      </li>
-     <li><a href="#" class="text-white">Blogs</a></li>
+     <li><a href="blogs.html" class="text-white">Blogs</a></li>
      <li><a href="gallery.html" class="text-white">Gallery</a></li>
      <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
-       <!-- <ul id="mobiledrop" class="mobiledrop hidden flex-col space-x-4 gap-1 text-white bg-black rounded text-lg absolute  mt-2">
-         <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 group">
-           Master Pin Pusher
-           <ul class="elemhoverclass1 hidden absolute animate-dropdown bg-black   justify-center group-hover:block">
-             <div class="w-full border-white ml-2 border-l-2">
-               <li class="py-1 px-4"><a href="track-line-press.html">Track Line Press</a></li>
-               <li class="py-1 px-4"><a href="#">Application</a></li>
-             </div>
-           </ul>
-         </li>
-         <li class="elemparenthoverclass cursor-pointer flex relative group">
-        <a href="under_carriage.html">   Undercarriage Repair</a>
-           <ul class="elemhoverclass1 hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-             <div class="w-full border-white border-l-2">
-               <li class="py-1 px-4"><a href="electrictorquewrencher.html">Electronic Torque Wrench</a></li>
-               <li class="py-1 px-4"><a href="trackwinder.html">Track Winder</a></li>
-               <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-               <li class="py-1 px-4"><a href="#">Application</a></li>
-             </div>
-           </ul>
-         </li>
-         <li class="elemhoverclass1 cursor-pointer flex relative group">
-           <a href="hydraulic_cylinder_repair.html">Hydraulic Cylinder Repair</a>
-           <ul class="elemhoverclass hidden absolute animate-dropdown pl-28 bg-black   justify-center group-hover:block">
-             <div class="w-full border-white border-l-2">
-               <li class="py-1 px-4"><a href="Netbuster.html">Nut Buster</a></li>
-               <li class="py-1 px-4"><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
-               <li class="py-1 px-4"><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-               <li class="py-1 px-4"><a href="#">Application</a></li>
-             </div>
-           </ul>
-         </li>
-       </ul> -->
+  
      </li>
      <li><a href="contact.html" class="text-white">Contact</a></li>
    </ul>
@@ -455,7 +360,7 @@
                 <!-- Logo and Contact -->
                 <div>
                     <!-- Logo -->
-                    <img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8">
+                    <a href="index.html"><img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8"></a>
                     <p class="mb-1">
                         <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
                             <strong>Phone:</strong> <span>+91 884787140</span>
