@@ -59,7 +59,7 @@
 
       <!-- Search Input -->
 
-      <a href="" id="getBrochureLink">
+      <a href="" class="getBrochureLink">
         <button
           type="button"
           class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
@@ -210,7 +210,7 @@
       </ul>
 
       <!-- Search Input -->
-      <a href="" id="getBrochureLink">
+      <a href="" class="getBrochureLink">
         <button
           type="button"
           class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
@@ -513,77 +513,42 @@
     <script src="scriptproduct.js"></script>
     <script>
       // Brochure download functionality
-      const brochureButton = document.getElementById('getBrochureLink');
-      const modalWindow = document.getElementById('formModal');
-      const closeButton = document.getElementById('closeModal');
-      const formSubmission = document.getElementById('brochureForm');
-  
-      brochureButton.addEventListener('click', (e) => {
-          e.preventDefault();
-          modalWindow.classList.remove('hidden');
-      });
-  
-      closeButton.addEventListener('click', () => {
-          modalWindow.classList.add('hidden');
-      });
-  
-      formSubmission.addEventListener('submit', (e) => {
-          e.preventDefault();
-  
-          const userName = document.getElementById('name').value;
-          const userEmail = document.getElementById('email').value;
-          const userPhone = document.getElementById('phone').value;
-  
-          if (userName && userEmail && userPhone) {
-              const brochureUrl = 'https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing'; 
-  
-              alert("Brochure is being downloaded...");
-  
-              window.location.href = brochureUrl;
-  
-              modalWindow.classList.add('hidden');
-          } else {
-              alert("Please fill out all fields.");
-          }
-      });
-
-      // blogs 
-      document.addEventListener("DOMContentLoaded", function() {
-  const blogPosts = document.querySelectorAll("#blog-posts > div"); // Select all blog post divs inside the blog-posts container
-  const viewMoreButton = document.getElementById("view-more-button");
-  const initialVisibleBlogs = 3; // Number of blogs to show initially
-
-  // Hide all blogs except the first 3
-  blogPosts.forEach((post, index) => {
-      if (index >= initialVisibleBlogs) {
-          post.style.display = "none";
-      }
-  });
-
-  let isExpanded = false; // State to track if blogs are expanded
-
-  // Add event listener for "View More"/"View Less" button
-  viewMoreButton.addEventListener("click", () => {
-      if (!isExpanded) {
-          // Show all hidden blogs
-          blogPosts.forEach(post => {
-              post.style.display = "block";
-          });
-          viewMoreButton.textContent = "View Less"; // Change button text to "View Less"
-          isExpanded = true; // Update state
-      } else {
-          // Hide all blogs except the first 3
-          blogPosts.forEach((post, index) => {
-              if (index >= initialVisibleBlogs) {
-                  post.style.display = "none";
-              }
-          });
-          viewMoreButton.textContent = "View More"; // Change button text back to "View More"
-          isExpanded = false; // Update state
-      }
-  });
-});
-  </script>
+   const brochureButtons = document.querySelectorAll('.getBrochureLink');
+   const modalWindow = document.getElementById('formModal');
+   const closeButton = document.getElementById('closeModal');
+   const formSubmission = document.getElementById('brochureForm');
+   
+   brochureButtons.forEach(button => {
+       button.addEventListener('click', (e) => {
+           e.preventDefault();
+           modalWindow.classList.remove('hidden');
+       });
+   });
+   
+   closeButton.addEventListener('click', () => {
+       modalWindow.classList.add('hidden');
+   });
+   
+   formSubmission.addEventListener('submit', (e) => {
+       e.preventDefault();
+   
+       const userName = document.getElementById('name').value;
+       const userEmail = document.getElementById('email').value;
+       const userPhone = document.getElementById('phone').value;
+   
+       if (userName && userEmail && userPhone) {
+           const brochureUrl = 'https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing'; 
+   
+           alert("Brochure is being downloaded...");
+   
+           window.location.href = brochureUrl;
+   
+           modalWindow.classList.add('hidden');
+       } else {
+           alert("Please fill out all fields.");
+       }
+   });
+     </script>
     <!-- Script starts -->
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

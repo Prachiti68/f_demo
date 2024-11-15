@@ -40,7 +40,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
 // scroller 
   const scroller = document.getElementById('scroller');
-  let scrollSpeed = 1; // Adjust the speed as needed
+  let scrollSpeed = 6; // Adjust the speed as needed
 
   // Duplicate content for seamless scrolling
   scroller.innerHTML += scroller.innerHTML;
@@ -300,3 +300,10 @@ document.getElementById('imageModal').addEventListener('click', (e) => {
       }, 500); // Wait 500ms to ensure scroll completion
     });
   });
+
+  
+
+
+  // scroptfor master brocher
+ 
+   

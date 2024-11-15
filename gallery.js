@@ -32,7 +32,7 @@ const productImages = {
     ],
     "Track_Assembly_Press": [
         { src: "assets/img/products/TrackAssemblyPress/TrackPress-darkbg-compressed.jpeg", name: "Track Assembly Press image 1" },
-        { src: "assets/img/products/TrackAssemblyPress/trackpress-topangle-compressed..jpg", name: "Track Assembly Press image 2" },
+        { src: "assets/img/products/TrackAssemblyPress/trackpressgallery.jpeg", name: "Track Assembly Press image 2" },
         { src: "assets/img/products/TrackAssemblyPress/Undercarriagerepair-wholeline-compressed.jpeg", name: "Track Assembly Press image 3" },
         { src: "assets/img/products/TrackAssemblyPress/completeline-UC-compressed.jpeg", name: "Track Assembly Press image 4" }
     ],

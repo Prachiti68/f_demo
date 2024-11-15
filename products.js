@@ -3,9 +3,9 @@
   const products = [
     { title: "TrackLink Press", imageUrl: "assets/img/products/tracklinepress/TLP 4.jpg", link: "tracklink-press.html", buttonText: "LEARN MORE" },
     { title: "Nut Buster", imageUrl: "assets/img/products/Nutbuster/3.jpg", link: "Nutbuster.html", buttonText: "LEARN MORE" },
-    { title: "Electric Torque Wrench", imageUrl: "assets/img/products/Roller Conveyer Table/RGT2.jpg", link: "electrictorquewrencher.html", buttonText: "LEARN MORE" },
+    { title: "Electric Torque Wrench", imageUrl: "assets/img/products/ElectricTorqueWrench/ETW 1.jpg", link: "electrictorquewrencher.html", buttonText: "LEARN MORE" },
     { title: "Track Winder", imageUrl: "assets/img/products/Trackwinder/TrackWinder-3.jpg", link: "trackwinder.html", buttonText: "LEARN MORE" },
-    { title: "Roller Conveyor Table", imageUrl: "assets/img/products/ElectricTorqueWrench/ETW 1.jpg", link: "rollerconveyartable.html", buttonText: "LEARN MORE" },
+    { title: "Roller Conveyor Table", imageUrl: " assets/img/products/Roller Conveyer Table/RGT2.jpg", link: "rollerconveyartable.html", buttonText: "LEARN MORE" },
     { title: "Cylinder Honing", imageUrl: "assets/img/products/Cylinder Honing/CH2.jpg", link: "cylinderhoningstation.html", buttonText: "LEARN MORE" },
     { title: "Track Assembly Press", imageUrl: "assets/img/products/TrackAssemblyPress/TrackPress-darkbg-compressed.jpeg", link: "trackassemblypress.html", buttonText: "LEARN MORE" },
     { title: "Hydraulic Cylinders [Jacks]", imageUrl: "assets/img/products/HydraulicCylindersJacks/1 FVPS.jpg", link: "HydraulicCylindersJacks.html", buttonText: "LEARN MORE" },
