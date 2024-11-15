@@ -4,157 +4,247 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fixomech/Track-winder</title>
+    <link rel="icon" href="assets/img/products/5.jpeg" type="image/jpeg">
     <link href="output.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <link rel="stylesheet" href="animation.css">
 </head>
+<style>
+  /* Custom CSS for hover zoom effect */
+  .card {
+    min-width: 250px;
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Container to enable scrolling */
+  #scroller {
+    display: flex;
+    overflow-x: hidden;
+    white-space: nowrap; /* Ensures all cards are in a single line */
+  }
+</style>
+
 <body>
 
-<div class="wrapper  h-screen w-full">
+<div class="wrapper  h-full w-full">
   <header
-      id="head"
-      class=" fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50  px-40 lg:px-4"
-    
+  id="head"
+  class="fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50 px-40 lg:px-4"
+>
+  <nav
+    class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
+  >
+    <!-- Logo -->
+    <a href="index.html">
+      <div class="w-40 logo font-bold text-[#fff]">
+        <img
+          src="./assets/img/icon/lllogo (1).png"
+          class="h-auto w-full"
+          alt=""
+        /></div
+    ></a>
+
+    <!-- Navbar Items -->
+    <ul class="flex justify-center items-center gap-4 text-lg z-50">
+      <!-- Home Link -->
+      <li><a href="index.html" class=" hover:text-gray-300">Home</a></li>
+
+      <!-- About Link -->
+      <li id="about" class="relative py-6 cursor-pointer">
+        <a href="about.html" class=" hover:text-gray-300">About</a>
+      </li>
+      <!-- blogs -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="blogs.html" class=" hover:text-gray-300">Blogs</a>
+      </li>
+
+      <!-- gallery  -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="gallery.html" class=" hover:text-gray-300">Gallery</a>
+      </li>
+
+      <!-- Products Link -->
+      <li id="contact" class="relative py-6 cursor-pointer">
+        <a href="Products.html" class="itisactive hover:text-gray-300">Products <i class="fa-solid fa-chevron-down"></i></a>
+      </li>
+      <!-- contact  -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="contact.html" class=" hover:text-gray-300">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Search Input -->
+
+    <a href="" id="getBrochureLink">
+      <button
+        type="button"
+        class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
       >
-      <nav  class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
-      >
-       <!-- Logo -->
-       <a href="index.html"> <div class=" w-40 logo font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" class="h-auto w-full" alt=""></div></a>
-      
-       <!-- Navbar Items -->
-       <ul class="flex justify-center items-center gap-4 text-lg z-50">
-         <!-- Home Link -->
-         <li><a href="index.html" class="">Home</a></li>
-      
-         <!-- About Link -->
-         <li id="about" class="relative py-6 cursor-pointer">
-           <a href="about.html" class="">About</a>
-         </li>
-         <!-- blogs -->
-         <li class="relative py-6 cursor-pointer">
-           <a href="blogs.html" class="">Blogs</a>
-         </li>
-      
-         <!-- gallery  -->
-         <li class="relative py-6 cursor-pointer">
-           <a href="gallery.html" class="">Gallery</a>
-         </li>
-      
-         <!-- Products Link -->
-         <li id="contact" class="relative py-6 cursor-pointer">
-           <a href="Products.html" class="">Products</a>
-         </li>
-         <!-- contact  -->
-         <li class="relative py-6 cursor-pointer">
-           <a href="contact.html" class="">Contact</a>
-         </li>
-      
-         
-      </ul>
-      
-      <!-- Search Input -->
-      
-      
-       <button
-       type="button"
-       class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
-      >Get Brochure</button>
-      
-      
-      
-       <!-- Independent Dropdown for About -->
-       
-       <!-- Independent Dropdown for products -->
-       <div
-         id="contactDropdown"
-         class="hidden absolute left-0 w-full bg-gray-800/90 backdrop-blur-lg shadow-2xl py-4 top-[4.6rem] rounded-b-md animate-dropdown"
-       >
-         <div class="container flex items-center justify-center mx-auto">
-           <div class="h-96 border-white border-l-2"></div>
-           <ul class="dropper flex justify-evenly flex-col space-x-4 gap-1 text-[#fff] text-lg">
-             <li class="elemparenthoverclass cursor-pointer flex relative ml-4 pr-20 ">
-                 Master Pin Pusher
-                 <ul
-                   class="elemhoverclass  elemhoverclass1 hidden absolute animate-dropdown    justify-center"
-                 >
-                   <div class="w-full border-white   ml-12 border-l-2">
-                     <li class="py-1 px-4 "><a href="track-line-press.html">Track Line Press</a></li>
-                     <li class="py-1 px-4 "><a href="application.html">Application</a></li>
-                   </div>
-                 </ul>
-               </li>
-             <li class="elemparenthoverclass cursor-pointer flex relative">
-               Undercarriage Repair
-               <ul
-                 class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown pl-32   justify-center"
-               >
-                 <div class="w-full border-white border-l-2">
-                   <li class="py-1 px-4 ">
-                     <a href="electrictorquewrencher.html">Electronic Torque Wrench</a>
-                   </li>
-                   <li class="py-1 px-4 "><a href="trackwinder.html">Track Winder</a></li>
-                   <li class="py-1 px-4 "><a href="Hydraulic_repair.html">Hydraulic_repair</a></li>
-                   <li class="py-1 px-4 "><a href="application.html">Application</a></li>
-                 </div>
-               </ul>
-             </li>
-             <li class="elemparenthoverclass cursor-pointer flex relative">
-                 Hydraulic Cylinder Repair
-                 <ul
-                   class="elemhoverclass hidden absolute animate-dropdown pl-32   justify-center"
-                 >
-                   <div class="w-full border-white border-l-2 ">
-                     <li class="py-1 px-4 ">
-                      <a href="Netbuster.html"> Nut Buster</a>
-                     </li>
-                     <li class="py-1 px-4 "><a href="cylinderhoningstation.html">Cylinder Honing Station</a></li>
-                     <li class="py-1 px-4 "><a href="rollerconveyartable.html">Roller Conveyor Table</a></li>
-                     <li class="py-1 px-4 "><a href="#">Application</a></li>
-                   </div>
-                 </ul>
-               </li>
-           </ul>
-         </div>
-       </div>
-      </nav>
-      <nav class="box flex  md:hidden justify-between py-4">
-      <div class="text-xl w-40  font-bold text-[#fff]"><img src="./assets/img/icon/lllogo (1).png" alt=""></div>
-      
-      <button class="text-white" id="mobileMenuButton">
-       <i class="fa-solid fa-bars text-2xl" style="color: #ca0707;"></i>
+        Get Brochure
       </button>
-      
-      
-      </nav>
-      <div id="mobileMenu" class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50  bg-opacity-90 p`-4   sm:hidden">
-       <ul class="space-y-12 ulmobile ">
-         <li><a href="index.html" class="text-white">Home</a></li>
-         <li class="relative">
-           <a href="about.html" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a>
-         </li>
-         <li><a href="blogs.html" class="text-white">Blogs</a></li>
-         <li><a href="gallery.html" class="text-white">Gallery</a></li>
-         <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a>
-      
-         </li>
-         <li><a href="contact.html" class="text-white">Contact</a></li>
-       </ul>
-      
-       <!-- Search Input -->
-      <a href="brochure.html">
-        <button type="button" class="border rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in w-full mt-4">
-          Get Brochure
-        </button>
-      </a>
+    </a>
+
+
+    <!-- Independent Dropdown for products -->
+    <div
+      id="contactDropdown"
+      class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black"
+    >
+      <div class="container flex items-center justify-center mx-auto">
+        <!-- <div class="h-96 border-white border-l-2"></div> -->
+        <ul
+          class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4"
+        >
+          <li
+            class="elemparenthoverclass cursor-pointer flex relative justify-start items-center p-2 hover:bg-red-600 "
+          >
+            <span class="flex justify-between w-full">
+              <h2 class="hover:text-white">Master Pin Pusher</h2>
+              <i class="fa-solid fa-chevron-down"></i
+            ></span>
+            <ul
+              class="elemhoverclass elemhoverclass1 hidden absolute animate-dropdown justify-center"
+            >
+              <div class="w-full border-red-600 py-2 border-l-2 bg-white">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="tracklink-press.html">Tracklink Press</a>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li
+            class="elemparenthoverclass cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600 "
+          >
+            <span class="flex justify-between w-full">
+              <h2 class="hover:text-white">Undercarriage Repair</h2>
+              <i class="fa-solid fa-chevron-down"></i
+            ></span>
+
+            <ul
+              class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown  justify-center"
+            >
+              <div class="w-full border-red-600 border-l-2 bg-white py-4">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="trackwinder.html">Track Winder</a>
+                </li>
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="trackassemblypress.html">Track Assembly Press</a>
+                </li>
+               
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="rollerconveyartable.html"
+                    >Roller Conveyor Table</a
+                  >
+                </li>
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="electrictorquewrencher.html"
+                    >Electronic Torque Wrench</a
+                  >
+                </li>
+               
+              </div>
+            </ul>
+          </li>
+          <li
+            class="elemparenthoverclass cursor-pointer flex relative justify-center items-start p-2 hover:bg-red-600 "
+          >
+            <h3 class="hover:text-white">Hydraulic Cylinder Repair</h3><i
+              class="fa-solid fa-chevron-down ml-10"
+            ></i>
+            <ul
+              class="elemhoverclass hidden absolute animate-dropdown justify-center"
+            >
+              <div class="w-full border-red-600 border-l-2 bg-white py-4">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="cylinderhoningstation.html">Cylinder Honing Station</a >
+                </li>
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="Nutbuster.html"> Nut Buster</a>
+                </li>
+                
+              </div>
+            </ul>
+          </li>
+          <li
+            class="elemparenthoverclass  cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600 "
+          >
+            <span class="flex justify-between w-full">
+              <h2 class="hover:text-white">Hydraulic  Repair</h2>
+              <i class="fa-solid fa-chevron-down"></i
+            ></span>
+            <ul
+              class=" elemhoverclass elemhoverclass2 absolute  animate-dropdown justify-start"
+            >
+              <div class="w-full border-red-600 border-l-2 bg-white py-4 m-8">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="hydrauliccylindersjacks.html">Hydraulic Cylinders (Jacks)</a >
+                </li>
+                
+              </div>
+            </ul>
+          </li>
+        </ul>
       </div>
-      
-      </header>
+    </div>
+  </nav>
+  <!-- for mobile  -->
+  <nav class="box flex md:hidden justify-between py-4">
+    <a href="index.html"
+      ><div class="text-xl w-40 font-bold text-[#fff]">
+        <img src="./assets/img/icon/lllogo (1).png" alt="" /></div
+    ></a>
+
+    <button class="text-white" id="mobileMenuButton">
+      <i class="fa-solid fa-bars text-2xl" style="color: #ca0707"></i>
+    </button>
+  </nav>
+  <div
+    id="mobileMenu"
+    class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50 bg-opacity-90 p`-4 sm:hidden"
+  >
+    <ul class="space-y-12 ulmobile">
+      <li><a href="index.html" class="text-white">Home</a></li>
+      <li class="relative">
+        <a
+          href="about.html"
+          class="text-white cursor-pointer"
+          onclick="toggleDropdown()"
+          >About</a
+        >
+      </li>
+      <li><a href="blogs.html" class="text-white">Blogs</a></li>
+      <li><a href="gallery.html" class="text-white">Gallery</a></li>
+      <li>
+        <a
+          href="Products.html"
+          class="text-white"
+          onclick="toggleDropdown()"
+          >Products</a
+        >
+      </li>
+      <li><a href="contact.html" class="text-white">Contact</a></li>
+    </ul>
+
+    <!-- Search Input -->
+    <a href="" id="getBrochureLink">
+      <button
+        type="button"
+        class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+      >
+        Get Brochure
+      </button>
+    </a>
+  </div>
+</header>
    <!-- header ends  -->
     <!-- producthero / -->
-   <div class="pt-4">
+   <div >
     <div class="relative w-full h-full pt-20 bg-gray-900 overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.162), rgba(0, 0, 0, 0.126)), url('assets/img/products/Trackwinder/Track Winder.png'); background-position: center center; background-attachment: fixed; background-size: cover;">
       <!-- Main Content -->
       <div class="relative z-10 grid w-full  grid-cols-1 md:grid-cols-2 items-center justify-center px-4 gap-8">
@@ -167,9 +257,12 @@
           <!-- Right Text Section -->
           <div class="w-full flex justify-center items-center text-center md:text-left flex-col text-white px-4">
               <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">Track</h1>
-              <span class="text-4xl md:text-6xl font-medium mt-8 flex items-center">
-                  <i class="fa-solid fa-screwdriver-wrench text-6xl mr-2" style="color: #e00b0b;"></i> Winder
-              </span>
+              <span class="text-4xl md:text-6xl font-medium  flex items-center">
+                <i class="fa-solid fa-screwdriver-wrench text-3xl md:text-5xl lg:text-6xl mr-2" style="color: #e00b0b;"></i> Winder 
+            </span>
+            <span class="text-2xl  font-medium m-8 md:mt-8 lg:mt-8 flex items-center">
+              [ FX TWN85 ] 
+          </span>
           </div>
   
       </div>
@@ -177,210 +270,324 @@
   
    </div>
 
-    <!-- brocher  -->
-    <!-- brocher  -->
-    <div class="w-full py-2  md:py-20 lg:py-20">
-      <div class="w-full py-4 px-1 lg:px-24">
-        <div class="grid gap-10 md:grid-cols-2 items-start justify-center">
-            <div class="w-full p-6 fade-in-left">
-                <div class="w-full rounded-lg bg-red-600 p-8 ">
-                    <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
-                    <h3 class="text-white text-sm mb-8">Find out why thousands trust Certo to secure their mobile world.</h3>
-                    <a href="#" id="getBrochureLink">
-                      <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
-                          Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
-                      </button>
-                  </a>
-                   <a href="https://youtu.be/27vrsCw8hYU?si=I__VizErBx9fXKrU">
-                    <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
-                      View Video <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+          <!-- brocher  -->
+<div class="w-full py-2  ">
+  <div class="w-full py-4 px-1 lg:px-24">
+    <div class="grid gap-10 md:grid-cols-2 items-start justify-center">
+        <div class="w-full p-6 fade-in-left">
+            <div class="w-full rounded-lg bg-red-600 p-8 ">
+                <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
+                <h3 class="text-white text-sm mb-8">Find out why thousands trust Certo to secure their mobile world.</h3>
+                <a href="#" id="getBrochureLink" >
+                  <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold mb-3">
+                      Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2 "></i>
                   </button>
-                   </a>
-                </div>
-            </div>
-    
-            <div class="w-full p-6 flex flex-col  md:text-left fade-in-right">
-                <p class="text-gray-700 mb-6">
-                    Download our brochure for more detailed information about the project, including technical specifications, design process, and future developments.
-                </p>
-                <a href="#table">
-                <button class="rounded-lg w-48 px-4 py-2 text-red-600 border border-red-600 font-semibold mb-4">
-                    Technical Specs <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
-                </button>
               </a>
-              <a href="tel:+91884787140" >
-                <button class="rounded-lg w-48 px-2 py-2 text-red-600 border border-red-600 font-semibold">
-                    Request a Callback <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
-                </button>
-                </a>
+               <a href="https://www.youtube.com/@Fixomech" target="_blank">
+                <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
+                  View Video <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+              </button>
+               </a>
             </div>
         </div>
+
+        <div class="w-full p-6 flex flex-col  md:text-left fade-in-right">
+            <p class="text-gray-700 mb-6">
+                Download our brochure for more detailed information about the project, including technical specifications, design process, and future developments.
+            </p>
+            <a href="#table">
+            <button class="rounded-lg w-48 px-4 py-2 text-red-600 border border-red-600 font-semibold mb-4">
+                Technical Specs <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+            </button>
+          </a>
+          <a href="#request-callback" >
+            <button class="rounded-lg w-52 px-2 py-2 text-red-600 border border-red-600 font-semibold">
+                Request a Callback <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+            </button>
+            </a>
+        </div>
     </div>
-    
-    </div>
-    <!-- brocher form  -->
-    <div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
-      <div class="bg-white p-6 rounded-lg relative w-96">
-          <!-- Close Button -->
-          <span id="closeModal" class="absolute top-2 left-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
-    
-          <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
-    
-          <!-- Form -->
-          <form id="brochureForm">
-              <div class="mb-4">
-                  <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                  <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
-              </div>
-    
-              <div class="mb-4">
-                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
-              </div>
-    
-              <div class="mb-4">
-                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
-              </div>
-    
-              <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Submit</button>
-          </form>
-      </div>
-    </div>
-<!-- products -->
- <div class="bg-gray-100 h-auto w-full py-20 md:10 lg:p-20 grid place-content-center">
-  <div class=" py-20 px-4 sm:px-6 lg:px-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center max-w-screen-xl mx-auto">
+</div>
+
+</div>
+<!-- brocher form  -->
+<div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
+  <div class="bg-white p-6 rounded-lg relative w-96">
+      <!-- Close Button -->
+      <span id="closeModal" class="absolute top-2 right-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
+
+      <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
+
+      <!-- Form -->
+      <form id="brochureForm">
+          <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
+          </div>
+
+          <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
+          </div>
+
+          <div class="mb-4">
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
+          </div>
+
+          <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Submit</button>
+      </form>
+  </div>
+</div>
+
+ <!-- products -->
+ <div class="bg-gray-100 h-auto w-full   grid place-content-center">
+  <div class="  px-4 sm:px-6 ">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 place-items-center max-w-screen-xl mx-auto">
       
       <!-- Product Description Section -->
       <div class="space-y-4 p-6 fade-in-left">
         <h3 class="text-3xl font-bold text-red-600">Product Description:</h3>
         <h2 class="text-2xl font-bold text-black">Track Winder</h2>
-        <p class="text-gray-700 text-xl text-justify">
-            FIXOMECH Track Chain Winder model XXXX is designed for winding and unwinding of tracks. It is of extremely robust design, suitable for large and extra-large track chains. It is generally placed in line with the Roller Conveyor for spreading the track on it and for winding the track a er assembly.
+        <p class="text-gray-700 text-lg text-justify">
+          FIXOMECH Track Chain Winder model XXXX is designed for winding and unwinding of tracks. It is of extremely robust design, suitable for large and extra-large track chains. It is generally placed in line with the Roller Conveyor for spreading the track on it and for winding the track a er assembly.
+
         </p>
-        <p class="text-gray-700 text-xl text-justify">
-            You can rest assured that they have been rigorously tested to not only meet, but to exceed worldwide safety standards including the European Conformity (CE) standard.d.
+        <p class="text-gray-700 text-lg text-justify">
+          You can rest assured that they have been rigorously tested to not only meet, but to exceed worldwide safety standards including the European Conformity (CE) standard.d.
+
         </p>
       </div>
-    
-      <!-- Product Image Section -->
-      <div class="p-6 flex justify-center items-center fade-in-right">
-        <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Electronic Torque Wrench Image" class="rounded-lg shadow-lg max-w-[80%] h-auto">
+
+      
+    <!-- Product Image Carousel Section -->
+    <div class="px-6 flex justify-center items-center fade-in-right w-full">
+      <!-- Swiper Container -->
+      <div class="swiper-container main-carousel w-full max-w-md overflow-hidden">
+          <!-- Wrapper for slides -->
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="trackwinder" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+              </div>
+              <div class="swiper-slide">
+                  <img src="assets/img/products/Trackwinder/Trackwinder.png" alt="trackwinder" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+              </div>
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Swiper Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
       </div>
-    
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
+      <div class="swiper-container modal-carousel w-full max-w-3xl overflow-hidden">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Trackwinder Image 1" class="rounded-lg w-full h-auto object-contain">
+              </div>
+              <div class="swiper-slide">
+                  <img src="assets/img/products/Trackwinder/Trackwinder.png" alt="Trackwinder Image 2" class="rounded-lg w-full h-auto object-contain">
+              </div>
+              
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+  </div>
+  
+      </div>
     </div>
   </div>
   
   
-  
-  
- </div>
 
 
-<!-- features section  -->
-   <div class="h-screen w-full flex justify-center items-center flex-col md:p-10 lg:px-20  ">
-    <div class="bg-white py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto  flex justify-center items-center gap-10 flex-col">
-        <h2 class="text-4xl font-bold text-center text-black ">Features</h2>
-        
-        <div class="space-y-8">
+
+    <!-- features section  -->
+<div class="h-fit w-full flex justify-center items-start md:p-10 lg:px-20">
+  <div class="bg-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex justify-center items-start gap-20 flex-col md:flex-row">
+    <!-- Product Range Section -->
+    <div class="flex flex-col gap-8 md:w-1/2">
+      <h2 class="text-4xl font-bold  text-black mb-8">Features</h2>
+
+      <div class="space-y-8">
           
-          <!-- Customizable Solutions -->
-          <div class="flex items-start space-x-4 fade-in-up">
-            <div class="flex-shrink-0">
-              <i class="fas fa-wrench text-red-600 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-red-600"> Robust Build: </h3>
-              <p class="text-gray-700">Engineered for the toughest jobs, the Track Winder is made to handle the demands of winding and unwinding large track chains eﬀortlessly</p>
-            </div>
+        <!-- Customizable Solutions -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-wrench text-red-600 text-2xl"></i>
           </div>
-      
-          <!-- Fast and Efficient Operation -->
-          <div class="flex items-start space-x-4 fade-in-up">
-            <div class="flex-shrink-0">
-              <i class="fas fa-cogs text-red-600 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-red-600">  Integration Ready:</h3>
-              <p class="text-gray-700">
-                The unit works in conjunction with roller conveyors, enabling smoother, more eﬃcient operations when assembling or disassembling tracks.</p>
-            </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600"> Robust Build: </h3>
+            <p class="text-gray-700">Engineered for the toughest jobs, the Track Winder is made to handle the demands of winding and unwinding large track chains eﬀortlessly</p>
           </div>
-      
-          <!-- Enhanced Safety -->
-          <div class="flex items-start space-x-4 fade-in-up">
-            <div class="flex-shrink-0">
-              <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-red-600">Ease of Use:</h3>
-              <p class="text-gray-700"> The Track Winder is designed with user-friendliness in mind, ensuring that operators can quickly learn how to use it, minimizing down time.</p>
-            </div>
+        </div>
+    
+        <!-- Fast and Efficient Operation -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-cogs text-red-600 text-2xl"></i>
           </div>
-      
-          <!-- Long-Lasting Durability -->
-          <div class="flex items-start space-x-4 fade-in-up">
-            <div class="flex-shrink-0">
-              <i class="fas fa-tools text-red-600 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-red-600">Durability:</h3>
-              <p class="text-gray-700">  Manufactured from industrial-grade materials, the Track Winder is built to last, even in the most demanding environments.</p>
-            </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">  Integration Ready:</h3>
+            <p class="text-gray-700">
+              The unit works in conjunction with roller conveyors, enabling smoother, more eﬃcient operations when assembling or disassembling tracks.</p>
           </div>
-      
-          <!-- Integrated Functionality -->
-          <div class="flex items-start space-x-4 fade-in-up">
-            <div class="flex-shrink-0">
-              <i class="fas fa-project-diagram text-red-600 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-red-600">Safety Compliance:</h3>
-              <p class="text-gray-700"> Each Track Winder is rigorously tested to meet and exceed global safety standards, including CE cer fica on, ensuring safe opera on at all mes.</p>
-            </div>
+        </div>
+    
+        <!-- Enhanced Safety -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">Ease of Use:</h3>
+            <p class="text-gray-700"> The Track Winder is designed with user-friendliness in mind, ensuring that operators can quickly learn how to use it, minimizing down time.</p>
+          </div>
+        </div>
+    
+        <!-- Long-Lasting Durability -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-tools text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">Durability:</h3>
+            <p class="text-gray-700">  Manufactured from industrial-grade materials, the Track Winder is built to last, even in the most demanding environments.</p>
+          </div>
+        </div>
+    
+        <!-- Integrated Functionality -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-project-diagram text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">Safety Compliance:</h3>
+            <p class="text-gray-700"> Each Track Winder is rigorously tested to meet and exceed global safety standards, including CE cer fica on, ensuring safe opera on at all mes.</p>
           </div>
         </div>
       </div>
-      
-   </div>
-  
+    </div>
+
+    <!-- Callback Form Section -->
+       <section id="request-callback" class="request-callback section mt-4 md:w-1/2">
+         <div class="max-w-4xl mx-auto px-6">
+           <!-- Get in Touch (Top) -->
+           <div class="mb-8">
+             <h3 class="text-2xl font-semibold mb-3">Get In Touch</h3>
+             <p class="text-lg text-gray-600">
+               Have questions or need help? Fill out the form, and we'll get back to you shortly.
+             </p>
+           </div>
+   
+           <!-- Callback Form (Bottom) -->
+           <div class="bg-white p-6 rounded-lg shadow-lg">
+             <h4 class="text-xl font-semibold mb-4">Request a Callback</h4>
+             <p class="text-sm text-gray-500 mb-4"><small>* Indicates a required field.</small></p>
+             <form id="callback-form" action="" method="POST">
+               <div class="mb-4">
+                 <label for="name" class="block text-sm font-medium text-gray-700">Full Name: *</label>
+                 <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <div class="mb-4">
+                 <label for="company" class="block text-sm font-medium text-gray-700">Company Name: *</label>
+                 <input type="text" id="company" name="company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <div class="mb-4">
+                 <label for="email" class="block text-sm font-medium text-gray-700">Email: *</label>
+                 <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <div class="mb-4">
+                 <label for="country" class="block text-sm font-medium text-gray-700">Country: *</label>
+                 <select id="country" name="country" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                   <option value="" disabled selected>Select Country</option>
+                   <option value="us">United States</option>
+                   <option value="in">India</option>
+                 </select>
+               </div>
+   
+               <div class="mb-6">
+                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone No. (& Country Code): *</label>
+                 <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
+                 Submit
+               </button>
+             </form>
+           </div>
+         </div>
+       </section>
+   
+  </div>
+</div>
  
 
-   <!-- Scroller Container -->
-   <div class="h-auto w-full py-20 lg:py-0 md:py-0">
-    <div class="h-screen flex justify-center items-center flex-col gap-20 pt-20 lg:pt-0 md:pt-0">
-      <div class="text-center">
-        <h1 class="text-2xl">OTHER PRODUCTS</h1>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl text-red-600 font-black">Explore More</h1>
-      </div>
-      <div id="infinite-slider" class="relative w-full max-w-screen-lg mx-auto py-20 overflow-hidden">
-        <!-- Slider track for horizontal scroll -->
-        <div id="slider-track" class="flex gap-8">
-          <!-- Slide 1 -->
-          <div class="slide flex-shrink-0 w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center text-center px-4 py-4 custom-border-radius">
-            <img src="assets/img/products/tracklinepress/TLP 4.jpg" alt="Track Winder" class="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg" />
-            <h3 class="mt-4 text-lg font-semibold">Track Winder</h3>
+  <!-- scroller  -->
+
+<section class="bg-gray-100 flex items-center justify-center h-auto py-12">
+
+  <section class="w-full max-w-5xl lg:max-w-7xl"> 
+    <h2 class="text-center text-gray-800 text-xl font-semibold mb-2">OTHER PRODUCTS</h2>
+    <h3 class="text-center text-red-500 text-2xl font-bold mb-4">Explore More</h3>
+
+    <!-- Scrolling Wrapper -->
+    <div class=" relative mx-auto" style="width: 100%;">
+      <div id="scroller" class="space-x-4 overflow-y-hidden">
+        <!-- Card 1 -->
+        <a href="tracklink-press.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/tracklinepress/TLP 1.jpg" alt="Tracklink Press" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Tracklink Press</p>
           </div>
-          <!-- Slide 2 -->
-          <div class="slide flex-shrink-0 w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center text-center px-4 py-4 custom-border-radius">
-            <img src="assets/img/products/Cylinder Honing/CH2.jpg" alt="Cylinder Honing" class="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg" />
-            <h3 class="mt-4 text-lg font-semibold">Cylinder Honing</h3>
+        </a>
+        <!-- Card 2 -->
+        <a href="electrictorquewrencher.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/ElectricTorqueWrench/ETW 1.jpg" alt="Electric Torque Wrench" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Electric Torque Wrench</p>
           </div>
-          <!-- Slide 3 -->
-          <div class="slide flex-shrink-0 w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center text-center px-4 py-4 custom-border-radius">
-            <img src="assets/img/products/Roller Conveyer Table/RGT2.jpg" alt="Electric Torque Wrench" class="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg" />
-            <h3 class="mt-4 text-lg font-semibold">Electric Torque Wrench</h3>
+        </a>
+        <!-- Card 3 -->
+        <a href="trackwinder.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Track Winder" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Track Winder</p>
           </div>
-          <!-- Slide 4 -->
-          <div class="slide flex-shrink-0 w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center text-center px-4 py-4 custom-border-radius">
-            <img src="assets/img/products/Nutbuster/3.jpg" alt="Nut Buster" class="w-full h-64 sm:h-80 object-cover rounded-lg shadow-lg" />
-            <h3 class="mt-4 text-lg font-semibold">Nut Buster</h3>
+        </a>
+        <!-- Card 4 -->
+        <a href="rollerconveyartable.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Roller Conveyer Table/RGT2.jpg" alt="Roller Conveyer Table" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Roller Conveyer Table</p>
           </div>
-        </div>
+        </a>
+        <!-- Card 5 -->
+        <a href="Nutbuster.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Nutbuster/Nutbuster 2.jpg" alt="Nut Buster" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Nut Buster</p>
+          </div>
+        </a>
+        <!-- Card 6 -->
+        <a href="cylinderhoningstation.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Cylinder Honing/CH2.jpg" alt="Cylinder Honing Station" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Cylinder Honing Station</p>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
+  </section>
+</section>
   
   
   
@@ -393,7 +600,7 @@
                     <a href="index.html"><img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8"></a>
                     <p class="mb-1">
                         <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
-                            <strong>Phone:</strong> <span>+91 884787140</span>
+                            <strong>Phone:</strong> <span>+91 8884787140</span>
                         </a>
                     </p>
                     <p class="mb-2">
@@ -414,13 +621,13 @@
                     <h2 class="text-white text-lg font-semibold mb-4">Useful Links</h2>
                     <ul>
                         <li class="flex items-center mb-1">                        
-                            <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Home</a>
+                            <a href="index.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Home</a>
                         </li>
                         <li class="flex items-center mb-1">                        
                             <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>About Us</a>
                         </li>
                         <li class="flex items-center mb-1">                        
-                            <a href="products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Products</a>
+                            <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Products</a>
                         </li>
                         <li class="flex items-center mb-1">                        
                             <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Terms of Services</a>
@@ -519,9 +726,29 @@
               alert("Please fill out all fields.");
           }
       });
+
+      
   </script>
-    <script src="scriptproduct.js"></script>
+  
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/66dd5e0750c10f7a00a5aa44/1i78bejhs";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
     <script src="script.js"></script>
-    <script src="products.js"></script>
+    <script src="scriptproduct.js"></script>
   </body>
 </html>
+
+    

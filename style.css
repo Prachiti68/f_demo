@@ -5,9 +5,7 @@
 html{
   scroll-behavior: smooth;
 }
-html::-webkit-scrollbar{
- width: 0px;
-}
+
 :root {
   --bs-indigo: #1b0046;
   --bs-red: #d30015;

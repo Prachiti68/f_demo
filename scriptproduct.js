@@ -39,61 +39,30 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
 // scroller 
-document.addEventListener("DOMContentLoaded", function () {
-    const sliderTrack = document.getElementById("slider-track");
-    const slides = Array.from(document.querySelectorAll(".slide"));
-    let slideWidth = slides[0].offsetWidth;
-    let currentPosition = 0;
-    let scrollInterval;
-    let isHovering = false;
-    const scrollSpeed = 0.5; // Controls the scroll speed for smoothness
-  
-    function startScrolling() {
-      scrollInterval = setInterval(() => {
-        if (!isHovering) {
-          currentPosition -= scrollSpeed; // Move by scrollSpeed value for smooth effect
-          sliderTrack.style.transform = `translateX(${currentPosition}px)`;
-  
-          // Check if the first slide has completely moved out of view
-          if (Math.abs(currentPosition) >= slideWidth) {
-            // Reset the position and move the first slide to the end without causing a jump
-            currentPosition = 0;
-            sliderTrack.style.transition = "none"; // Disable transition temporarily
-  
-            // Move the first slide to the end smoothly
-            sliderTrack.appendChild(sliderTrack.firstElementChild);
-  
-            // Reset the transform to the new position, keeping it smooth
-            sliderTrack.style.transform = `translateX(${currentPosition}px)`;
-  
-            // Re-enable transition for smooth scrolling after the change
-            sliderTrack.offsetHeight; // Trigger reflow to ensure the transition works
-            sliderTrack.style.transition = "transform 0.3s ease-in-out";
-          }
-        }
-      }, 16); // Smooth update rate (approx. 60fps)
+  const scroller = document.getElementById('scroller');
+  let scrollSpeed = 1; // Adjust the speed as needed
+
+  // Duplicate content for seamless scrolling
+  scroller.innerHTML += scroller.innerHTML;
+
+  // Use setInterval to move the scroller continuously
+  setInterval(() => {
+    scroller.scrollLeft += scrollSpeed;
+
+    // Reset the scroll position to create an infinite loop
+    if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+      scroller.scrollLeft = 0;
     }
-  
-    function initializeSlider() {
-      startScrolling();
-  
-      // Pause scrolling on hover
-      sliderTrack.addEventListener("mouseover", () => {
-        isHovering = true;
-      });
-      sliderTrack.addEventListener("mouseout", () => {
-        isHovering = false;
-      });
-    }
-  
-    // Recalculate slideWidth on window resize to ensure responsiveness
-    window.addEventListener("resize", () => {
-      slideWidth = slides[0].offsetWidth;
-    });
-  
-    initializeSlider();
+  }, 20); // Adjust the interval for smoothness and speed
+
+  // Optional: Pause scrolling on hover
+  scroller.addEventListener('mouseenter', () => {
+    scrollSpeed = 0;
   });
-  
+
+  scroller.addEventListener('mouseleave', () => {
+    scrollSpeed = 1; // Resume scrolling when the mouse leaves
+  });
 
   document.addEventListener("DOMContentLoaded", function() {
     const phoneNumber = "918884787140";
@@ -248,3 +217,86 @@ function revertTableLayout() {
     // Re-enable vertical scroll for larger screens
     table.style.overflowY = "auto";
 }
+
+
+function showSection(sectionId) {
+  const popupSection = document.getElementById(sectionId);
+  const overlay = document.getElementById("overlay");
+
+  // Toggle popup visibility
+  popupSection.style.display = "block";
+  setTimeout(() => {
+    popupSection.querySelector('.popup-card').classList.add('active');
+  }, 10);
+  overlay.style.display = "block"; 
+}
+
+ // Initialize Swiper for the main carousel---- product scroller --------------------------------------
+ const mainSwiper = new Swiper('.main-carousel', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+// Initialize Swiper for the modal carousel
+let modalSwiper;
+const initModalSwiper = () => {
+  modalSwiper = new Swiper('.modal-carousel', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+};
+
+// Open the modal when an image is clicked
+document.querySelectorAll('.modal-trigger').forEach((image, index) => {
+  image.addEventListener('click', () => {
+    document.getElementById('imageModal').style.display = 'flex';
+    if (!modalSwiper) {
+      initModalSwiper();
+    }
+    modalSwiper.slideTo(index, 0, false); 
+  });
+});
+
+document.getElementById('closeModal').addEventListener('click', () => {
+  document.getElementById('imageModal').style.display = 'none';
+});
+
+document.getElementById('imageModal').addEventListener('click', (e) => {
+  if (e.target.id === 'imageModal') {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+});
+
+ document.addEventListener('DOMContentLoaded', function () {
+    const buttonLink = document.getElementById('scroll-to-form-link'); // The button link
+    const formSection = document.getElementById('request-callback'); // The form section
+    const nameInput = document.getElementById('name'); // The "Name" input field
+
+    buttonLink.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      // Scroll to the form smoothly
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // After scrolling, focus on the "Name" input field
+      setTimeout(function () {
+        nameInput.focus(); // Focus the "Name" input field
+      }, 500); // Wait 500ms to ensure scroll completion
+    });
+  });

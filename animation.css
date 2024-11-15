@@ -1,39 +1,19 @@
-
-html{
-  scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  overflow-x: hidden; 
+  font-family: "Poppins", sans-serif;
 }
-      /* Show button when scrolled down */
-      .scroll-to-top-btn {
-        position: fixed;
-        bottom: 20px; /* Distance from the bottom */
-        left: 20px; /* Distance from the left */
-        background-color: #ffffff00; /* Button color */
-        color: #d30704;
-        border: none;
-        /* border-radius: 50%; */
-        /* padding: 15px; */
-        font-size: 40px;
-        cursor: pointer;
-        /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); */
-        transition: background-color 0.3s ease;
-        opacity: 0; /* Start hidden */
-        visibility: hidden; /* Start hidden */
-        z-index: 1000; /* Ensure it is on top of other elements */
-      }
-      
-      /* Hover effect */
-      .scroll-to-top-btn:hover {
-        color: #A90101; /* Change color on hover */
-      }
-      
-      /* Show button when scrolled down */
-      .scroll-to-top-btn.show {
-        opacity: 1;
-        visibility: visible;
-      }
+::-webkit-scrollbar{
+  display: none;
+}
 
+
+.itisactive{
+  color: #e42908 !important;
+
+}
 .background-icon1::before {
-  content: "\f085"; /* Font Awesome unicode for gear icon */
+  content: "\f085"; 
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
@@ -41,11 +21,83 @@ html{
   left: 60%;
   transform: translate(-50%, -50%);
   rotate: 20deg;
-  font-size: 45rem; /* Adjust size as needed */
-  color: rgba(255, 255, 255, 0.466); /* Tailwind's text-gray-400 with opacity */
+  font-size: 45rem; 
+  color: rgba(255, 255, 255, 0.466); 
   z-index: -100;
   pointer-events: none;
 }
+.background-icon2::before {
+  content: "\f013"; 
+  font-family: "Font Awesome 6 Free";
+  font-weight: 800;
+  position: absolute;
+  top: 70%;
+  left: 0%; /* Center the element horizontally */
+  transform: translate(-50%, -50%); /* Keep it centered vertically */
+  font-size: 35rem; 
+  color: rgba(95, 5, 5, 0.096); 
+  z-index: -100;
+  pointer-events: none;
+  animation: spin 5s linear infinite; /* Animation: spin 5s duration, linear timing, infinite loop */
+}
+.background-icon3::before {
+  content: "\f013"; 
+  font-family: "Font Awesome 6 Free";
+  font-weight: 800;
+  position: absolute;
+  top: 30%;
+  left: 100%; /* Center the element horizontally */
+  transform: translate(-50%, -50%); /* Keep it centered vertically */
+  font-size: 40rem; 
+  color: rgba(95, 5, 5, 0.096); 
+  z-index: -100;
+  pointer-events: none;
+  animation: spin 5s linear infinite; /* Animation: spin 5s duration, linear timing, infinite loop */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg); /* Starting position */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg); /* Final rotation */
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); /* Starting position */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); /* Final rotation */
+  }
+}
+      .scroll-to-top-btn {
+        position: fixed;
+        bottom: 20px; 
+        left: 20px; 
+        background-color: #ffffff00; 
+        color: #d30704;
+        border: none;
+        font-size: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        opacity: 0;
+        visibility: hidden; 
+        z-index: 1000; 
+      }
+      
+      /* Hover effect */
+      .scroll-to-top-btn:hover {
+        color: #A90101; 
+      }
+      
+      .scroll-to-top-btn.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+
 
 /*--------------------------------------------------------------
 # Whatsapp Button
@@ -53,26 +105,26 @@ html{
 /* WhatsApp Button CSS */
 .whatsapp-button{
   position: fixed;
-  bottom: 100px; /* Moved up by 20px (previously 20px) */
+  bottom: 100px; 
   right: 30px;
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  background-color: #25D366; /* WhatsApp green color */
+  width: 50px; 
+  height: 50px; 
+  background-color: #25D366; 
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  z-index: 1000; /* Ensure it's on top of other content */
+  z-index: 1000; 
   transition: background-color 0.3s ease;
 }
 
 .whatsapp-button img {
-  width: 40px; /* Adjust size of the icon */
+  width: 40px; 
 }
 
 .whatsapp-button:hover {
-  background-color: #118509; /* Darker green for hover effect */
+  background-color: #118509; 
 }
       .custom-border-radius {
     border-top-left-radius: 30px;
@@ -99,14 +151,21 @@ html{
      display: none;
      position: absolute;
      top: 0;
-     right: -250px;
+     right: -240px;
      
     }
+    .elemhoverclassjack{
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -260px;
+      
+     }
     .elemhoverclass1{
      display: none;
      position: absolute;
      top: 0;
-     right: -160px;
+     right: -170px;
     }
     
     .elemhoverclass2{
@@ -120,17 +179,7 @@ html{
     .elemhoverclass:hover {
      display: block;
     }
-    header nav ul li a{
-     color: #f5f6f6;
-     text-decoration: none;
-    }
-    header nav ul li a:hover{
-     font-weight: 600;
-     color: #d30015;
-    }
-    .dropper li:hover{
-     border-bottom: 2px solid  #d30015;
-    }
+  
     
     @keyframes dropdown {
      from {
@@ -205,10 +254,9 @@ html{
   }
 }
 
-/* Initial states to keep elements hidden before they enter the viewport */
 .fade-in-left, .fade-in-right, .fade-in-up {
   opacity: 0;
-  transform: translateY(50px); /* Adjust to control initial position */
+  transform: translateY(50px); 
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
@@ -229,14 +277,13 @@ html{
   background-color: #ff0000;
   color: white;
 }
-/* CSS class to hide items in "All" filter */
 .hide-in-all {
   display: none;
 }
 
 /* Modal styling */
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   z-index: 50;
   left: 0;
@@ -244,7 +291,7 @@ html{
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .modal-content {
@@ -287,6 +334,32 @@ html{
 }
 @media (max-width: 768px) {
   #head {
-    background-image: none; /* Removes background image on mobile */
+     background-image: none; /* header */
   }
+}
+
+.swiper-button-next,
+  .swiper-button-prev{
+    color: #e42908 !important;  
+ 
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #e42908 !important;  
+   
+  }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#slider-track {
+  padding-left: 0; 
+  padding-right: 0; 
+}
+#imageModal {
+  display: none;
+}
+#imageModal.show {
+  display: flex;
 }

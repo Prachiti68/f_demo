@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixomech/NUt-Buster</title>
+    <link rel="icon" href="assets/img/products/5.jpeg" type="image/jpeg">
+    <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="animation.css">
+
+</head>
+<style>
+  /* Custom CSS for hover zoom effect */
+  .card {
+    min-width: 250px;
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Container to enable scrolling */
+  #scroller {
+    display: flex;
+    overflow-x: hidden;
+    white-space: nowrap; /* Ensures all cards are in a single line */
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper  h-full w-full">
+  <header
+  id="head"
+  class="fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50 px-40 lg:px-4"
+>
+  <nav
+    class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
+  >
+    <!-- Logo -->
+    <a href="index.html">
+      <div class="w-40 logo font-bold text-[#fff]">
+        <img
+          src="./assets/img/icon/lllogo (1).png"
+          class="h-auto w-full"
+          alt=""
+        /></div
+    ></a>
+
+    <!-- Navbar Items -->
+    <ul class="flex justify-center items-center gap-4 text-lg z-50">
+      <!-- Home Link -->
+      <li><a href="index.html" class=" hover:text-gray-300">Home</a></li>
+
+      <!-- About Link -->
+      <li id="about" class="relative py-6 cursor-pointer">
+        <a href="about.html" class=" hover:text-gray-300">About</a>
+      </li>
+      <!-- blogs -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="blogs.html" class=" hover:text-gray-300">Blogs</a>
+      </li>
+
+      <!-- gallery  -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="gallery.html" class=" hover:text-gray-300">Gallery</a>
+      </li>
+
+      <!-- Products Link -->
+      <li id="contact" class="relative py-6 cursor-pointer">
+        <a href="Products.html" class="itisactive hover:text-gray-300">Products <i class="fa-solid fa-chevron-down"></i></a>
+      </li>
+      <!-- contact  -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="contact.html" class=" hover:text-gray-300">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Search Input -->
+
+    <a href="" id="getBrochureLink">
+      <button
+        type="button"
+        class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+      >
+        Get Brochure
+      </button>
+    </a>
+
+
+    <!-- Independent Dropdown for products -->
+    <div
+      id="contactDropdown"
+      class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black"
+    >
+      <div class="container flex items-center justify-center mx-auto">
+        <!-- <div class="h-96 border-white border-l-2"></div> -->
+        <ul
+          class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4"
+        >
+          <li
+            class="elemparenthoverclass cursor-pointer flex relative justify-start items-center p-2 hover:bg-red-600 "
+          >
+            <span class="flex justify-between w-full">
+              <h2 class="hover:text-white">Master Pin Pusher</h2>
+              <i class="fa-solid fa-chevron-down"></i
+            ></span>
+            <ul
+              class="elemhoverclass elemhoverclass1 hidden absolute animate-dropdown justify-center"
+            >
+              <div class="w-full border-red-600 py-2 border-l-2 bg-white">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="tracklink-press.html">Tracklink Press</a>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li
+            class="elemparenthoverclass cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600 "
+          >
+            <span class="flex justify-between w-full">
+              <h2 class="hover:text-white">Undercarriage Repair</h2>
+              <i class="fa-solid fa-chevron-down"></i
+            ></span>
+
+            <ul
+              class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown  justify-center"
+            >
+              <div class="w-full border-red-600 border-l-2 bg-white py-4">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="trackwinder.html">Track Winder</a>
+                </li>
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="trackassemblypress.html">Track Assembly Press</a>
+                </li>
+               
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="rollerconveyartable.html"
+                    >Roller Conveyor Table</a
+                  >
+                </li>
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="electrictorquewrencher.html"
+                    >Electronic Torque Wrench</a
+                  >
+                </li>
+               
+              </div>
+            </ul>
+          </li>
+          <li
+            class="elemparenthoverclass cursor-pointer flex relative justify-center items-start p-2 hover:bg-red-600 "
+          >
+            <h3 class="hover:text-white">Hydraulic Cylinder Repair</h3><i
+              class="fa-solid fa-chevron-down ml-10"
+            ></i>
+            <ul
+              class="elemhoverclass hidden absolute animate-dropdown justify-center"
+            >
+              <div class="w-full border-red-600 border-l-2 bg-white py-4">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="cylinderhoningstation.html">Cylinder Honing Station</a >
+                </li>
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="Nutbuster.html"> Nut Buster</a>
+                </li>
+                
+              </div>
+            </ul>
+          </li>
+          <li
+            class="elemparenthoverclass  cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600 "
+          >
+            <span class="flex justify-between w-full">
+              <h2 class="hover:text-white">Hydraulic  Repair</h2>
+              <i class="fa-solid fa-chevron-down"></i
+            ></span>
+            <ul
+              class=" elemhoverclass elemhoverclass2 absolute  animate-dropdown justify-start"
+            >
+              <div class="w-full border-red-600 border-l-2 bg-white py-4 m-8">
+                <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
+                  <a href="hydrauliccylindersjacks.html">Hydraulic Cylinders (Jacks)</a >
+                </li>
+                
+              </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- for mobile  -->
+  <nav class="box flex md:hidden justify-between py-4">
+    <a href="index.html"
+      ><div class="text-xl w-40 font-bold text-[#fff]">
+        <img src="./assets/img/icon/lllogo (1).png" alt="" /></div
+    ></a>
+
+    <button class="text-white" id="mobileMenuButton">
+      <i class="fa-solid fa-bars text-2xl" style="color: #ca0707"></i>
+    </button>
+  </nav>
+  <div
+    id="mobileMenu"
+    class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50 bg-opacity-90 p`-4 sm:hidden"
+  >
+    <ul class="space-y-12 ulmobile">
+      <li><a href="index.html" class="text-white">Home</a></li>
+      <li class="relative">
+        <a
+          href="about.html"
+          class="text-white cursor-pointer"
+          onclick="toggleDropdown()"
+          >About</a
+        >
+      </li>
+      <li><a href="blogs.html" class="text-white">Blogs</a></li>
+      <li><a href="gallery.html" class="text-white">Gallery</a></li>
+      <li>
+        <a
+          href="Products.html"
+          class="text-white"
+          onclick="toggleDropdown()"
+          >Products</a
+        >
+      </li>
+      <li><a href="contact.html" class="text-white">Contact</a></li>
+    </ul>
+
+    <!-- Search Input -->
+    <a href="" id="getBrochureLink">
+      <button
+        type="button"
+        class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+      >
+        Get Brochure
+      </button>
+    </a>
+  </div>
+</header>
+   <!-- header ends  -->
+    <!-- producthero / -->
+   <div >
+    <div class="relative w-full h-full pt-20 bg-gray-900 overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.162), rgba(0, 0, 0, 0.126)), url('assets/img/products/Nutbuster/Nut Buster.png'); background-position: center center; background-attachment: fixed; background-size: cover;">
+      <!-- Main Content -->
+      <div class="relative z-10 grid w-full  grid-cols-1 md:grid-cols-2 items-center justify-center px-4 gap-8">
+          
+          <!-- Left Image Section (Aligned to bottom) -->
+          <div class="w-full h-full flex items-end justify-center   ">
+              <img src="assets/img/products/Nutbuster/Nutbuster_1-removebg-preview.png" alt="Electronic Torque Wrench" class="w-full h-auto  ">
+          </div>
+  
+          <!-- Right Text Section -->
+          <div class="w-full flex justify-center items-center text-center md:text-left flex-col text-white px-4">
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">NUT</h1>
+              <span class="text-4xl md:text-6xl font-medium  flex items-center">
+                <i class="fa-solid fa-screwdriver-wrench text-3xl md:text-5xl lg:text-6xl mr-2" style="color: #e00b0b;"></i> Buster 
+            </span>
+            <span class="text-2xl  font-medium m-8 md:mt-8 lg:mt-8 flex items-center">
+              [ FNB-65000 ] 
+          </span>
+          </div>
+  
+      </div>
+  </div>
+  
+   </div>
+
+        <!-- brocher  -->
+        <div class="w-full py-2  ">
+          <div class="w-full py-4 px-1 lg:px-24">
+            <div class="grid gap-10 md:grid-cols-2 items-start justify-center">
+                <div class="w-full p-6 fade-in-left">
+                    <div class="w-full rounded-lg bg-red-600 p-8 ">
+                        <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
+                        <h3 class="text-white text-sm mb-8">Find out why thousands trust Certo to secure their mobile world.</h3>
+                        <a href="#" id="getBrochureLink" >
+                          <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold mb-3">
+                              Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2 "></i>
+                          </button>
+                      </a>
+                       <a href="https://www.youtube.com/embed/27vrsCw8hYU?si=lnxbOfODwbPafuPA" target="_blank">
+                        <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold">
+                          View Video <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                      </button>
+                       </a>
+                    </div>
+                </div>
+        
+                <div class="w-full p-6 flex flex-col  md:text-left fade-in-right">
+                    <p class="text-gray-700 mb-6">
+                        Download our brochure for more detailed information about the project, including technical specifications, design process, and future developments.
+                    </p>
+                    <a href="#table">
+                    <button class="rounded-lg w-48 px-4 py-2 text-red-600 border border-red-600 font-semibold mb-4">
+                        Technical Specs <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                    </button>
+                  </a>
+                  <a href="#request-callback" >
+                    <button class="rounded-lg w-52 px-2 py-2 text-red-600 border border-red-600 font-semibold">
+                        Request a Callback <i class="fa-solid fa-arrow-right text-red-600 ml-2"></i>
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- brocher form  -->
+        <div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
+          <div class="bg-white p-6 rounded-lg relative w-96">
+              <!-- Close Button -->
+              <span id="closeModal" class="absolute top-2 right-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
+        
+              <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
+        
+              <!-- Form -->
+              <form id="brochureForm">
+                  <div class="mb-4">
+                      <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                      <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
+                  </div>
+        
+                  <div class="mb-4">
+                      <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                      <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
+                  </div>
+        
+                  <div class="mb-4">
+                      <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                      <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
+                  </div>
+        
+                  <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg">Submit</button>
+              </form>
+          </div>
+        </div>
+        
+<!-- products -->
+
+ <div class="bg-gray-100 h-auto w-full   grid place-content-center">
+  <div class="  px-4 sm:px-6 ">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 place-items-center max-w-screen-xl mx-auto">
+      
+      <!-- Product Description Section -->
+      <div class="space-y-4 p-6 fade-in-left">
+        <h3 class="text-3xl font-bold text-red-600">Product Description:</h3>
+        <h2 class="text-2xl font-bold text-black">Nut Buster</h2>
+        <p class="text-gray-700 text-lg text-justify">
+          FIXOMECH Hydraulic cylinder repair /Nutbuster, the FNB range is designed to disassemble and tighten piston nuts and cylinder glands. Two counteracting cylinders generate cracking torque and a fast turning motor taking action to open the nut.
+        </p>
+        <p class="text-gray-700 text-lg text-justify">
+       
+        </p>
+      </div>
+
+      <!-- Product Image Carousel Section -->
+      <div class="px-6 flex justify-center items-center fade-in-right w-full">
+        <!-- Swiper Container -->
+        <div class="swiper-container main-carousel w-full max-w-md overflow-hidden"> 
+          <!-- Wrapper for slides -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/2.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/3.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/4.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/5.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/6.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Swiper Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      
+      <!-- Modal Structure -->
+      <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" style="display: none;">
+        <div class="swiper-container modal-carousel w-full max-w-3xl overflow-hidden">
+          <!-- Wrapper for slides in the modal -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/2.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/3.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/4.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/5.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/products/Nutbuster/6.jpg" alt="Nutbuster" class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger">
+            </div>
+          </div>
+          <!-- Modal Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Modal Swiper Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Close Button -->
+          <!-- <button id="closeModal" class="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded shadow-lg">Close</button> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+ </div>
+ <!-- table  -->
+<section class="h-full w-full overflow-hidden">
+  <div class="h-auto w-full">
+    <h1 class="w-full text-center text-5xl m-7 font-semibold">Specifications</h1>
+    
+    <div class="w-full h-full grid place-content-center p-0  " id="table">
+      <!-- Table wrapper with horizontal scrolling enabled -->
+      <div class="w-full overflow-x-auto px-2">
+          
+  
+          <table class="min-w-full bg-gray-100 shadow-lg table-auto">
+            
+            <tbody>
+              <tr class="bg-white">
+                <td class="bg-red-600 font-bold  text-white border p-4">Product name</td>
+                <td class="border p-4 bg-red-600 font-bold  text-white">NUTBUSTER </td>
+                <td class="border p-4 bg-red-600 font-bold  text-white">NUTBUSTER </td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="bg-red-600 font-bold  text-white border p-4">Part Number</td>
+                <td class="border p-4">FNB-65000 </td>
+                <td class="border p-4">FNB-80000</td>
+              </tr>
+              <tr class="bg-white">
+                <td class=" bg-red-600 font-bold  text-white border p-4">Description</td>
+                <td class="border p-4">Cylinder Disassemly/Assembly device </td>
+                <td class="border p-4">Cylinder Disassemly/Assembly device </td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="bg-red-600 font-bold  text-white border p-4">Head Torque Capacity</td>
+                <td class="border p-4">65,000 Nm </td>
+                <td class="border p-4">80,000 Nm </td>
+              </tr>
+              <tr class="bg-white">
+                <td class="bg-red-600 font-bold  text-white border p-4">Hydraulic Motor Torque</td>
+                <td class="border p-4">600 Nm </td>
+                <td class="border p-4">600 Nm </td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="bg-red-600 font-bold  text-white border p-4">Max Cylinder Diameter</td>
+                <td class="border p-4">500mm</td>
+                <td class="border p-4">600mm</td>
+              </tr>
+             
+            </tbody>
+          </table>
+      </div>
+  </div>
+  
+  
+  </div>
+  
+</section>
+
+  <!-- features section  -->
+<div class="h-fit w-full flex justify-center items-start md:p-10 lg:px-20">
+  <div class="bg-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex justify-center items-start gap-20 flex-col md:flex-row">
+    <!-- Product Range Section -->
+    <div class="flex flex-col gap-8 md:w-1/2">
+      <h2 class="text-4xl font-bold  text-black mb-8">FTLP Product Range Includes:</h2>
+
+      <div class="space-y-8">
+          
+        <!-- Customizable Solutions -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-wrench text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600"> Compact: </h3>
+            <p class="text-gray-700">
+              The Fixomech Nut Buster is the most compact yet a powerful designed machine that disassembles and tightens piston nuts and cylinder glands. The whole unit is packed in a solid box with instructions that will enable the customer to set up the machine in no time.</p>
+          </div>
+        </div>
+    
+        <!-- Fast and Efficient Operation -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-cogs text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">  Multitasking :</h3>
+            <p class="text-gray-700">
+              Two major operations by a single machine; is it even possible? Yes!!  Disassemble, assemble the cylinder, and hone the cylinder in one go.</p>
+          </div>
+        </div>
+    
+        <!-- Enhanced Safety -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">Easy to Assemble : </h3>
+            <p class="text-gray-700">
+              The assembly of the whole unit is as easy as you like. The user manual with all the instructions is a simple pathway to get the machine ready to work on the cylinders.</p>
+          </div>
+        </div>
+    
+        <!-- Long-Lasting Durability -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-tools text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">	Capabilities:</h3>
+            <p class="text-gray-700"> The head of this unit is engineered with Perfection on to repair cylinders of the following capacities.</p>
+          </div>
+        </div>
+    
+        <!-- Integrated Functionality -->
+        <div class="flex items-start space-x-4 fade-in-up">
+          <div class="flex-shrink-0">
+            <i class="fas fa-project-diagram text-red-600 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-600">	Customer Support:<h3>
+            <p class="text-gray-700"> 
+              Our inhouse engineers will guide you through any operational difficulty. The user manual and the operational videos will seamlessly provide you all the support. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Callback Form Section -->
+       <section id="request-callback" class="request-callback section mt-4 md:w-1/2">
+         <div class="max-w-4xl mx-auto px-6">
+           <!-- Get in Touch (Top) -->
+           <div class="mb-8">
+             <h3 class="text-2xl font-semibold mb-3">Get In Touch</h3>
+             <p class="text-lg text-gray-600">
+               Have questions or need help? Fill out the form, and we'll get back to you shortly.
+             </p>
+           </div>
+   
+           <!-- Callback Form (Bottom) -->
+           <div class="bg-white p-6 rounded-lg shadow-lg">
+             <h4 class="text-xl font-semibold mb-4">Request a Callback</h4>
+             <p class="text-sm text-gray-500 mb-4"><small>* Indicates a required field.</small></p>
+             <form id="callback-form" action="" method="POST">
+               <div class="mb-4">
+                 <label for="name" class="block text-sm font-medium text-gray-700">Full Name: *</label>
+                 <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <div class="mb-4">
+                 <label for="company" class="block text-sm font-medium text-gray-700">Company Name: *</label>
+                 <input type="text" id="company" name="company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <div class="mb-4">
+                 <label for="email" class="block text-sm font-medium text-gray-700">Email: *</label>
+                 <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <div class="mb-4">
+                 <label for="country" class="block text-sm font-medium text-gray-700">Country: *</label>
+                 <select id="country" name="country" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                   <option value="" disabled selected>Select Country</option>
+                   <option value="us">United States</option>
+                   <option value="in">India</option>
+                 </select>
+               </div>
+   
+               <div class="mb-6">
+                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone No. (& Country Code): *</label>
+                 <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+               </div>
+   
+               <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
+                 Submit
+               </button>
+             </form>
+           </div>
+         </div>
+       </section>
+   
+  </div>
+</div>
+<div class="video w-full h-72 md:h-96 lg:h-96  flex justify-center items-center px-10 mb-4  md:px-40 lg:px-40">
+  <iframe class="w-full h-full " src="https://www.youtube.com/embed/27vrsCw8hYU?si=AjoTPZ8zR--GDGx3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+ <!-- scroller  -->
+
+<section class="bg-gray-100 flex items-center justify-center h-auto py-12">
+
+  <section class="w-full max-w-5xl lg:max-w-7xl"> 
+    <h2 class="text-center text-gray-800 text-xl font-semibold mb-2">OTHER PRODUCTS</h2>
+    <h3 class="text-center text-red-500 text-2xl font-bold mb-4">Explore More</h3>
+
+    <!-- Scrolling Wrapper -->
+    <div class=" relative mx-auto" style="width: 100%;">
+      <div id="scroller" class="space-x-4 overflow-y-hidden">
+        <!-- Card 1 -->
+        <a href="tracklink-press.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/tracklinepress/TLP 1.jpg" alt="Tracklink Press" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Tracklink Press</p>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="electrictorquewrencher.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/ElectricTorqueWrench/ETW 1.jpg" alt="Electric Torque Wrench" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Electric Torque Wrench</p>
+          </div>
+        </a>
+        <!-- Card 3 -->
+        <a href="trackwinder.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Trackwinder/TrackWinder-3.jpg" alt="Track Winder" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Track Winder</p>
+          </div>
+        </a>
+        <!-- Card 4 -->
+        <a href="rollerconveyartable.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Roller Conveyer Table/RGT2.jpg" alt="Roller Conveyer Table" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Roller Conveyer Table</p>
+          </div>
+        </a>
+        <!-- Card 5 -->
+        <a href="Nutbuster.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Nutbuster/Nutbuster 2.jpg" alt="Nut Buster" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Nut Buster</p>
+          </div>
+        </a>
+        <!-- Card 6 -->
+        <a href="cylinderhoningstation.html" class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block">
+          <img src="assets/img/products/Cylinder Honing/CH2.jpg" alt="Cylinder Honing Station" class="w-full h-56 object-cover">
+          <div class="p-4 text-center">
+            <p class="text-gray-700 font-medium">Cylinder Honing Station</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
+  
+  
+  
+        <!-- Footer -->
+        <footer class="py-16 px-6 lg:px-24 bg-black text-white">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Logo and Contact -->
+                <div>
+                    <!-- Logo -->
+                    <a href="index.html"><img src="./assets/img/icon/lllogo (1).png" alt="Fixomech Logo" class="w-32 mb-8"></a>
+                    <p class="mb-1">
+                        <a href="tel:+91884787140" > <!-- Use mb-4 for margin-bottom -->
+                            <strong>Phone:</strong> <span>+91 8884787140</span>
+                        </a>
+                    </p>
+                    <p class="mb-2">
+                        <a href="mailto:info@fixomech.com">
+                        <strong>Email:</strong> <span class="mx-3">info@fixomech.com</span>
+                        </a>
+                    </p>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-google"></i></a>
+                        <a href="#" class="hover:text-gray-500 mt-8"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Useful Links -->
+                <div>
+                    <h2 class="text-white text-lg font-semibold mb-4">Useful Links</h2>
+                    <ul>
+                        <li class="flex items-center mb-1">                        
+                            <a href="index.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Home</a>
+                        </li>
+                        <li class="flex items-center mb-1">                        
+                            <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>About Us</a>
+                        </li>
+                        <li class="flex items-center mb-1">                        
+                            <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Products</a>
+                        </li>
+                        <li class="flex items-center mb-1">                        
+                            <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Terms of Services</a>
+                        </li>
+                        <li class="flex items-center mb-1">                        
+                            <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Products -->
+            <div>
+                <h2 class="text-white text-lg font-semibold mb-4">Products</h2>
+                <ul>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Master Pin Pusher</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Under Carriage</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Cylinder Repair</a>
+                    </li>
+                    <li class="flex items-center mb-1">                        
+                      <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Tyre Handling</a>
+                  </li>
+                  <li class="flex items-center mb-1">                        
+                    <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#DC2626] mr-2"></i>Hydraulic Repair</a>
+                </li>
+                </ul>
+            </div>
+    
+                <!-- Newsletter -->
+                <div>
+                    <h2 class="text-white text-lg font-semibold mb-4">Our Newsletter</h2>
+                    <p class="mb-4">Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email" class="w-full p-2 bg-gray-800 text-white border border-[#DC2626] focus:outline-none">
+                        <button class="bg-[#DC2626] text-white p-2 px-4">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Bottom Section -->
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>Copyright Fixomech All Rights Reserved</p>
+                <p>Designed by <span class="text-[text-[#DC2626]]"><a href="https://www.benzenecorp.com">BenzeneCorp</a></span></p>
+            </div>
+        </footer>
+        
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn  text-white text-4xl z-50">
+      <i class="fa-regular fa-circle-up"></i>
+    </button>
+  
+  
+  <!-- WhatsApp Button HTML -->
+  <a class="whatsapp-button" href="https://wa.me/918884787140" target="_blank" title="Chat with us on WhatsApp"> 
+      <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
+  </a>
+
+
+    </div>
+
+    <script>
+      // Brochure download functionality
+      const brochureButton = document.getElementById('getBrochureLink');
+      const modalWindow = document.getElementById('formModal');
+      const closeButton = document.getElementById('closeModal');
+      const formSubmission = document.getElementById('brochureForm');
+  
+      brochureButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          modalWindow.classList.remove('hidden');
+      });
+  
+      closeButton.addEventListener('click', () => {
+          modalWindow.classList.add('hidden');
+      });
+  
+      formSubmission.addEventListener('submit', (e) => {
+          e.preventDefault();
+  
+          const userName = document.getElementById('name').value;
+          const userEmail = document.getElementById('email').value;
+          const userPhone = document.getElementById('phone').value;
+  
+          if (userName && userEmail && userPhone) {
+              const brochureUrl = 'https://drive.google.com/file/d/18oQA9aLA3ytkl6r6QUrvBAUhU-Q1wSpl/view?usp=sharing'; 
+  
+              alert("Brochure is being downloaded...");
+  
+              window.location.href = brochureUrl;
+  
+              modalWindow.classList.add('hidden');
+          } else {
+              alert("Please fill out all fields.");
+          }
+      });
+  </script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="scriptproduct.js"></script>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/66dd5e0750c10f7a00a5aa44/1i78bejhs";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
