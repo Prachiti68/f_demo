@@ -1,7 +1,7 @@
 (function() {
   // Product data
   const products = [
-    { title: "TrackLink Press", imageUrl: "assets/img/products/tracklinepress/TLP 4.jpg", link: "tracklink-press.html", buttonText: "LEARN MORE" },
+    { title: "Track link Press", imageUrl: "assets/img/products/tracklinepress/TLP 4.jpg", link: "tracklink-press.html", buttonText: "LEARN MORE" },
     { title: "Nut Buster", imageUrl: "assets/img/products/Nutbuster/3.jpg", link: "Nutbuster.html", buttonText: "LEARN MORE" },
     { title: "Electric Torque Wrench", imageUrl: "assets/img/products/ElectricTorqueWrench/ETW 1.jpg", link: "electrictorquewrencher.html", buttonText: "LEARN MORE" },
     { title: "Track Winder", imageUrl: "assets/img/products/Trackwinder/TrackWinder-3.jpg", link: "trackwinder.html", buttonText: "LEARN MORE" },
