@@ -51,37 +51,37 @@
     ></a>
 
     <!-- Navbar Items -->
-          <ul class="flex justify-center items-center gap-4 text-lg z-50">
-            <!-- Home Link -->
-            <li><a href="index.html" class=" hover:text-gray-300">Home</a></li>
+    <ul class="flex justify-center items-center gap-4 text-lg z-50">
+      <!-- Home Link -->
+      <li><a href="index.html" class=" hover:text-gray-300">Home</a></li>
 
-            <!-- About Link -->
-            <li id="about" class="relative py-6 cursor-pointer">
-              <a href="about.html" class=" hover:text-gray-300">About</a>
-            </li>
-            <!-- blogs -->
-            <li class="relative py-6 cursor-pointer">
-              <a href="blogs.html" class=" hover:text-gray-300">Blogs</a>
-            </li>
+      <!-- About Link -->
+      <li id="about" class="relative py-6 cursor-pointer">
+        <a href="about.html" class=" hover:text-gray-300">About</a>
+      </li>
+      <!-- blogs -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="blogs.html" class=" hover:text-gray-300">Blogs</a>
+      </li>
 
-            <!-- gallery  -->
-            <li class="relative py-6 cursor-pointer">
-              <a href="gallery.html" class=" hover:text-gray-300">Gallery</a>
-            </li>
+      <!-- gallery  -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="gallery.html" class=" hover:text-gray-300">Gallery</a>
+      </li>
 
-            <!-- Products Link -->
-            <li id="contact" class="relative py-6 cursor-pointer">
-              <a href="Products.html" class="itisactive hover:text-gray-300">Products <i class="fa-solid fa-chevron-down"></i></a>
-            </li>
-            <!-- contact  -->
-            <li class="relative py-6 cursor-pointer">
-              <a href="contact.html" class=" hover:text-gray-300">Contact</a>
-            </li>
-          </ul>
+      <!-- Products Link -->
+      <li id="contact" class="relative py-6 cursor-pointer">
+        <a href="Products.html" class="itisactive hover:text-gray-300">Products <i class="fa-solid fa-chevron-down"></i></a>
+      </li>
+      <!-- contact  -->
+      <li class="relative py-6 cursor-pointer">
+        <a href="contact.html" class=" hover:text-gray-300">Contact</a>
+      </li>
+    </ul>
 
     <!-- Search Input -->
 
-    <a href="" class="getBrochureLink">
+    <a href="" class="getBrochureLink" data-brochure="https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing">
       <button
         type="button"
         class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
@@ -232,7 +232,7 @@
     </ul>
 
     <!-- Search Input -->
-    <a href="" class="getBrochureLink">
+    <a href="" class="getBrochureLink" data-brochure="https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing">
       <button
         type="button"
         class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
@@ -278,7 +278,7 @@
             <div class="w-full rounded-lg bg-red-600 p-8 ">
                 <h1 class="text-white text-lg font-bold mb-3">Product Brochure</h1>
                 <h3 class="text-white text-sm mb-8">Fixomech's Electric torque wrench can be smoothly manured over the Roller Conveyor and can be exactly place above the removable bolt.</h3>
-                <a href="#" class="getBrochureLink" >
+                <a href="#" class="getBrochureLink"  data-brochure="https://drive.google.com/file/d/1eSoY1t4SbaQ1Rc2rMCrEx9XjvFhMAtO1/view?usp=sharing">
                   <button class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold mb-3">
                       Get Brochure <i class="fa-solid fa-arrow-right text-red-600 ml-2 "></i>
                   </button>
@@ -807,15 +807,18 @@
 
     </div>
     <script>
-   // Brochure download functionality
-const brochureButtons = document.querySelectorAll('.getBrochureLink');
+  // Brochure download functionality
+const brochureLinks = document.querySelectorAll('.getBrochureLink');
 const modalWindow = document.getElementById('formModal');
 const closeButton = document.getElementById('closeModal');
 const formSubmission = document.getElementById('brochureForm');
 
-brochureButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
+let selectedBrochureUrl = ""; // To store the URL of the selected brochure
+
+brochureLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent the default anchor behavior
+        selectedBrochureUrl = link.getAttribute('data-brochure'); // Get the brochure URL from the link
         modalWindow.classList.remove('hidden');
     });
 });
@@ -832,17 +835,17 @@ formSubmission.addEventListener('submit', (e) => {
     const userPhone = document.getElementById('phone').value;
 
     if (userName && userEmail && userPhone) {
-        const brochureUrl = 'https://drive.google.com/file/d/1eSoY1t4SbaQ1Rc2rMCrEx9XjvFhMAtO1/view?usp=sharing'; 
-
         alert("Brochure is being downloaded...");
 
-        window.location.href = brochureUrl;
+        // Redirect to the selected brochure URL
+        window.location.href = selectedBrochureUrl;
 
         modalWindow.classList.add('hidden');
     } else {
         alert("Please fill out all fields.");
     }
 });
+
   </script>
   
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
