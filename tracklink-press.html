@@ -38,214 +38,227 @@
   <body>
     <div class="wrapper h-screen w-full">
       <header
-      id="head"
-      class="fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50 px-40 lg:px-4"
-    >
-      <nav
-        class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
+        id="head"
+        class="fixed w-full top-0 backdrop-blur-lg bg-black text-white shadow-lg z-50 px-40 lg:px-4"
       >
-        <!-- Logo -->
-        <a href="index.html">
-          <div class="w-40 logo font-bold text-[#fff]">
-            <img
-              src="./assets/img/icon/lllogo (1).png"
-              class="h-auto w-full"
-              alt=""
-            /></div
-        ></a>
-
-        <!-- Navbar Items -->
-        <ul class="flex justify-center items-center gap-4 text-lg z-50">
-          <!-- Home Link -->
-          <li><a href="index.html" class=" hover:text-gray-300">Home</a></li>
-
-          <!-- About Link -->
-          <li id="about" class="relative py-6 cursor-pointer">
-            <a href="about.html" class=" hover:text-gray-300">About</a>
-          </li>
-          <!-- blogs -->
-          <li class="relative py-6 cursor-pointer">
-            <a href="blogs.html" class=" hover:text-gray-300">Blogs</a>
-          </li>
-
-          <!-- gallery  -->
-          <li class="relative py-6 cursor-pointer">
-            <a href="gallery.html" class=" hover:text-gray-300">Gallery</a>
-          </li>
-
-          <!-- Products Link -->
-          <li id="contact" class="relative py-6 cursor-pointer">
-            <a href="Products.html" class="itisactive hover:text-gray-300">Products <i class="fa-solid fa-chevron-down"></i></a>
-          </li>
-          <!-- contact  -->
-          <li class="relative py-6 cursor-pointer">
-            <a href="contact.html" class=" hover:text-gray-300">Contact</a>
-          </li>
-        </ul>
-
-        <!-- Search Input -->
-
-        <a href="" class="getBrochureLink" data-brochure="https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing">
-          <button
-            type="button"
-            class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
-          >
-            Get Brochure
-          </button>
-        </a>
-
-
-        <!-- Independent Dropdown for products -->
-        <div
-          id="contactDropdown"
-          class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black"
+        <nav
+          class="hidden w-full container mx-auto md:flex justify-between md:justify-evenly items-center px-4 relative z-50"
         >
-          <div class="container flex items-center justify-center mx-auto">
-            <!-- <div class="h-96 border-white border-l-2"></div> -->
-            <ul
-              class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4"
-            >
-              <li
-                class="elemparenthoverclass cursor-pointer flex relative justify-start items-center p-2 hover:bg-red-600 "
-              >
-                <span class="flex justify-between w-full">
-                  <h2 class="hover:text-white">Master Pin Pusher</h2>
-                  <i class="fa-solid fa-chevron-down"></i
-                ></span>
-                <ul
-                  class="elemhoverclass elemhoverclass1 hidden absolute animate-dropdown justify-center"
-                >
-                  <div class="w-full border-red-600 py-2 border-l-2 bg-white">
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="tracklink-press.html">Tracklink Press</a>
-                    </li>
-                  </div>
-                </ul>
-              </li>
-              <li
-                class="elemparenthoverclass cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600 "
-              >
-                <span class="flex justify-between w-full">
-                  <h2 class="hover:text-white">Undercarriage Repair</h2>
-                  <i class="fa-solid fa-chevron-down"></i
-                ></span>
+          <!-- Logo -->
+          <a href="index.html">
+            <div class="w-40 logo font-bold text-[#fff]">
+              <img
+                src="./assets/img/icon/lllogo (1).png"
+                class="h-auto w-full"
+                alt=""
+              /></div
+          ></a>
 
-                <ul
-                  class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown  justify-center"
-                >
-                  <div class="w-full border-red-600 border-l-2 bg-white py-4">
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="trackwinder.html">Track Winder</a>
-                    </li>
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="trackassemblypress.html">Track Assembly Press</a>
-                    </li>
-                   
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="rollerconveyartable.html"
-                        >Roller Conveyor Table</a
-                      >
-                    </li>
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="electrictorquewrencher.html"
-                        >Electronic Torque Wrench</a
-                      >
-                    </li>
-                   
-                  </div>
-                </ul>
-              </li>
-              <li
-                class="elemparenthoverclass cursor-pointer flex relative justify-center items-start p-2 hover:bg-red-600 "
-              >
-                <h3 class="hover:text-white">Hydraulic Cylinder Repair</h3><i
-                  class="fa-solid fa-chevron-down ml-10"
-                ></i>
-                <ul
-                  class="elemhoverclass hidden absolute animate-dropdown justify-center"
-                >
-                  <div class="w-full border-red-600 border-l-2 bg-white py-4">
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="cylinderhoningstation.html">Cylinder Honing Station</a >
-                    </li>
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="Nutbuster.html"> Nut Buster</a>
-                    </li>
-                    
-                  </div>
-                </ul>
-              </li>
-              <li
-                class="elemparenthoverclass  cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600 "
-              >
-                <span class="flex justify-between w-full">
-                  <h2 class="hover:text-white">Hydraulic  Repair</h2>
-                  <i class="fa-solid fa-chevron-down"></i
-                ></span>
-                <ul
-                  class=" elemhoverclass elemhoverclass2 absolute  animate-dropdown justify-start"
-                >
-                  <div class="w-full border-red-600 border-l-2 bg-white py-4 m-8">
-                    <li class="py-1 px-4  hover:bg-[#F5091C] hover:text-white">
-                      <a href="hydrauliccylindersjacks.html">Hydraulic Cylinders (Jacks)</a >
-                    </li>
-                    
-                  </div>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- for mobile  -->
-      <nav class="box flex md:hidden justify-between py-4">
-        <a href="index.html"
-          ><div class="text-xl w-40 font-bold text-[#fff]">
-            <img src="./assets/img/icon/lllogo (1).png" alt="" /></div
-        ></a>
+          <!-- Navbar Items -->
+          <ul class="flex justify-center items-center gap-4 text-lg z-50">
+            <!-- Home Link -->
+            <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
 
-        <button class="text-white" id="mobileMenuButton">
-          <i class="fa-solid fa-bars text-2xl" style="color: #ca0707"></i>
-        </button>
-      </nav>
-      <div
-        id="mobileMenu"
-        class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50 bg-opacity-90 p`-4 sm:hidden"
-      >
-        <ul class="space-y-12 ulmobile">
-          <li><a href="index.html" class="text-white">Home</a></li>
-          <li class="relative">
-            <a
-              href="about.html"
-              class="text-white cursor-pointer"
-              onclick="toggleDropdown()"
-              >About</a
-            >
-          </li>
-          <li><a href="blogs.html" class="text-white">Blogs</a></li>
-          <li><a href="gallery.html" class="text-white">Gallery</a></li>
-          <li>
-            <a
-              href="Products.html"
-              class="text-white"
-              onclick="toggleDropdown()"
-              >Products</a
-            >
-          </li>
-          <li><a href="contact.html" class="text-white">Contact</a></li>
-        </ul>
+            <!-- About Link -->
+            <li id="about" class="relative py-6 cursor-pointer">
+              <a href="about.html" class="hover:text-gray-300">About</a>
+            </li>
+            <!-- blogs -->
+            <li class="relative py-6 cursor-pointer">
+              <a href="blogs.html" class="hover:text-gray-300">Blogs</a>
+            </li>
 
-        <!-- Search Input -->
-        <a href="" class="getBrochureLink" data-brochure="https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing">
-          <button
-            type="button"
-            class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+            <!-- gallery  -->
+            <li class="relative py-6 cursor-pointer">
+              <a href="gallery.html" class="hover:text-gray-300">Gallery</a>
+            </li>
+
+            <!-- Products Link -->
+            <li id="contact" class="relative py-6 cursor-pointer">
+              <a href="Products.html" class="itisactive hover:text-gray-300"
+                >Products <i class="fa-solid fa-chevron-down"></i
+              ></a>
+            </li>
+            <!-- contact  -->
+            <li class="relative py-6 cursor-pointer">
+              <a href="contact.html" class="hover:text-gray-300">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Search Input -->
+
+          <a
+            href=""
+            class="getBrochureLink"
+            data-brochure="https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing"
           >
-            Get Brochure
+            <button
+              type="button"
+              class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+            >
+              Get Brochure
+            </button>
+          </a>
+
+          <!-- Independent Dropdown for products -->
+          <div
+            id="contactDropdown"
+            class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black"
+          >
+            <div class="container flex items-center justify-center mx-auto">
+              <!-- <div class="h-96 border-white border-l-2"></div> -->
+              <ul
+                class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4"
+              >
+                <li
+                  class="elemparenthoverclass cursor-pointer flex relative justify-start items-center p-2 hover:bg-red-600"
+                >
+                  <span class="flex justify-between w-full">
+                    <h2 class="hover:text-white">Master Pin Pusher</h2>
+                    <i class="fa-solid fa-chevron-down"></i
+                  ></span>
+                  <ul
+                    class="elemhoverclass elemhoverclass1 hidden absolute animate-dropdown justify-center"
+                  >
+                    <div class="w-full border-red-600 py-2 border-l-2 bg-white">
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="tracklink-press.html">Tracklink Press</a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+                <li
+                  class="elemparenthoverclass cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600"
+                >
+                  <span class="flex justify-between w-full">
+                    <h2 class="hover:text-white">Undercarriage Repair</h2>
+                    <i class="fa-solid fa-chevron-down"></i
+                  ></span>
+
+                  <ul
+                    class="elemhoverclass elemhoverclass2 hidden absolute animate-dropdown justify-center"
+                  >
+                    <div class="w-full border-red-600 border-l-2 bg-white py-4">
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="trackwinder.html">Track Winder</a>
+                      </li>
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="trackassemblypress.html"
+                          >Track Assembly Press</a
+                        >
+                      </li>
+
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="rollerconveyartable.html"
+                          >Roller Conveyor Table</a
+                        >
+                      </li>
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="electrictorquewrencher.html"
+                          >Electronic Torque Wrench</a
+                        >
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+                <li
+                  class="elemparenthoverclass cursor-pointer flex relative justify-center items-start p-2 hover:bg-red-600"
+                >
+                  <h3 class="hover:text-white">Hydraulic Cylinder Repair</h3>
+                  <i class="fa-solid fa-chevron-down ml-10"></i>
+                  <ul
+                    class="elemhoverclass hidden absolute animate-dropdown justify-center"
+                  >
+                    <div class="w-full border-red-600 border-l-2 bg-white py-4">
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="cylinderhoningstation.html"
+                          >Cylinder Honing Station</a
+                        >
+                      </li>
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="Nutbuster.html"> Nut Buster</a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+                <li
+                  class="elemparenthoverclass cursor-pointer flex relative justify-start items-start p-2 hover:bg-red-600"
+                >
+                  <span class="flex justify-between w-full">
+                    <h2 class="hover:text-white">Hydraulic Repair</h2>
+                    <i class="fa-solid fa-chevron-down"></i
+                  ></span>
+                  <ul
+                    class="elemhoverclass elemhoverclass2 absolute animate-dropdown justify-start"
+                  >
+                    <div
+                      class="w-full border-red-600 border-l-2 bg-white py-4 m-8"
+                    >
+                      <li class="py-1 px-4 hover:bg-[#F5091C] hover:text-white">
+                        <a href="hydrauliccylindersjacks.html"
+                          >Hydraulic Cylinders (Jacks)</a
+                        >
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- for mobile  -->
+        <nav class="box flex md:hidden justify-between py-4">
+          <a href="index.html"
+            ><div class="text-xl w-40 font-bold text-[#fff]">
+              <img src="./assets/img/icon/lllogo (1).png" alt="" /></div
+          ></a>
+
+          <button class="text-white" id="mobileMenuButton">
+            <i class="fa-solid fa-bars text-2xl" style="color: #ca0707"></i>
           </button>
-        </a>
-      </div>
-    </header>
+        </nav>
+        <div
+          id="mobileMenu"
+          class="hidden h-screen w-full flex-col space-y-4 items-center text-lg z-50 bg-opacity-90 p`-4 sm:hidden"
+        >
+          <ul class="space-y-12 ulmobile">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li class="relative">
+              <a
+                href="about.html"
+                class="text-white cursor-pointer"
+                onclick="toggleDropdown()"
+                >About</a
+              >
+            </li>
+            <li><a href="blogs.html" class="text-white">Blogs</a></li>
+            <li><a href="gallery.html" class="text-white">Gallery</a></li>
+            <li>
+              <a
+                href="Products.html"
+                class="text-white"
+                onclick="toggleDropdown()"
+                >Products</a
+              >
+            </li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+
+          <!-- Search Input -->
+          <a
+            href=""
+            class="getBrochureLink"
+            data-brochure="https://drive.google.com/file/d/1CdWAGmRbV6dX9nEjutC9mlltOr1wt9Xq/view?usp=sharing"
+          >
+            <button
+              type="button"
+              class="border brochar rounded px-6 py-1 border-red-800 focus:outline-none text-white focus:ring focus:ring-red-900 hover:bg-[#A90101] ease-in"
+            >
+              Get Brochure
+            </button>
+          </a>
+        </div>
+      </header>
       <!-- header ends  -->
       <!-- producthero / -->
       <div class="">
@@ -284,12 +297,18 @@
               >
                 TRACKLINK
               </h1>
-              <span class="text-4xl md:text-6xl font-medium  flex items-center">
-                <i class="fa-solid fa-screwdriver-wrench text-3xl md:text-5xl lg:text-6xl mr-2" style="color: #e00b0b;"></i> Press 
-            </span>
-            <span class="text-2xl  font-medium m-8 md:mt-8 lg:mt-8 flex items-center">
-              [ FTLP-100 ] 
-          </span>
+              <span class="text-4xl md:text-6xl font-medium flex items-center">
+                <i
+                  class="fa-solid fa-screwdriver-wrench text-3xl md:text-5xl lg:text-6xl mr-2"
+                  style="color: #e00b0b"
+                ></i>
+                Press
+              </span>
+              <span
+                class="text-2xl font-medium m-8 md:mt-8 lg:mt-8 flex items-center"
+              >
+                [ FTLP-100 ]
+              </span>
             </div>
           </div>
         </div>
@@ -305,9 +324,14 @@
                   Product Brochure
                 </h1>
                 <h3 class="text-white text-sm mb-8">
-                  Fixomech portable track pin pushers are designed and assembled to make field service and shop repairs as easy as it can get.
+                  Fixomech portable track pin pushers are designed and assembled
+                  to make field service and shop repairs as easy as it can get.
                 </h3>
-                <a href="#" class="getBrochureLink" data-brochure="https://drive.google.com/file/d/1dUs-9R-Fw7GToz9XnABoKzHXIwcPzSOV/view?usp=sharing">
+                <a
+                  href="#"
+                  class="getBrochureLink"
+                  data-brochure="https://drive.google.com/file/d/1dUs-9R-Fw7GToz9XnABoKzHXIwcPzSOV/view?usp=sharing"
+                >
                   <button
                     class="rounded-lg w-44 px-2 md:px-4 py-2 bg-white text-red-600 font-semibold mb-3"
                   >
@@ -422,6 +446,7 @@
 
       <!-- products -->
       <div class="bg-gray-100 h-auto w-full grid place-content-center">
+        <!-- desc 1  -->
         <div class="px-4 sm:px-6">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center max-w-screen-xl mx-auto"
@@ -433,19 +458,34 @@
               </h3>
               <h2 class="text-2xl font-bold text-black">Tracklink Press</h2>
               <p class="text-gray-700 text-sm text-justify">
-                Fixomech portable track pin pushers are designed and assembled to make field service and shop repairs as easy as it can get. With help of just the manual guide or a short video you can unbox the Fixomech track pin press and put it to use right away. This portable yet a very “mechanically colossal” machine can unpin the most rugged pins.
+                Fixomech portable track pin pushers are designed and assembled
+                to make field service and shop repairs as easy as it can get.
+                With help of just the manual guide or a short video you can
+                unbox the Fixomech track pin press and put it to use right away.
+                This portable yet a very “mechanically colossal” machine can
+                unpin the most rugged pins.
               </p>
               <p class="text-gray-700 text-sm text-justify">
-                A track pin press is a value addition to any track repair workshop providing safety for operators and reduces the lead time to disassemble the track. 
+                A track pin press is a value addition to any track repair
+                workshop providing safety for operators and reduces the lead
+                time to disassemble the track.
               </p>
               <p class="text-gray-700 text-sm text-justify">
-              You can choose from a wide range of pin pushers from 100-ton capacity up to 500-ton capacity. </p>
+                You can choose from a wide range of pin pushers from 100-ton
+                capacity up to 500-ton capacity.
+              </p>
 
-              
-              
-            <p class="text-gray-700 text-sm text-justify">You can rest assured that they have been rigorously tested to not only meet, but to exceed worldwide safety standards including the European Conformity (CE) standard.
-            </p>
-            <p class="text-gray-700 text-sm text-justify">For more information and pricing please contact <a class="text-red-600" href="mailto:info@fixomech.com">info@fixomech.com</a></p>
+              <p class="text-gray-700 text-sm text-justify">
+                You can rest assured that they have been rigorously tested to
+                not only meet, but to exceed worldwide safety standards
+                including the European Conformity (CE) standard.
+              </p>
+              <p class="text-gray-700 text-sm text-justify">
+                For more information and pricing please contact
+                <a class="text-red-600" href="mailto:info@fixomech.com"
+                  >info@fixomech.com</a
+                >
+              </p>
             </div>
 
             <!-- Product Image Carousel Section -->
@@ -560,6 +600,150 @@
             </div>
           </div>
         </div>
+       <!-- Description 2 -->
+<div class="px-4 sm:px-6 py-10">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center max-w-screen-xl mx-auto"
+  >
+    <!-- Product Image Carousel Section -->
+    <div
+      class="px-6 flex justify-center items-center fade-in-right w-full"
+    >
+      <!-- Swiper Container -->
+      <div
+        class="swiper-container second-carousel w-full max-w-md overflow-hidden"
+      >
+        <!-- Wrapper for slides -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Untitled-3.jpg"
+              alt="Tracklink Pump Image 1"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Fixo tpp.jpg"
+              alt="Tracklink Pump Image 2"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Fixo tpp 3.jpg"
+              alt="Tracklink Pump Image 3"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Remote 1.jpg"
+              alt="Tracklink Pump Image 4"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Remote 3.jpg"
+              alt="Tracklink Pump Image 5"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/WhatsApp Image 2024-11-14 at 2.57.52 PM (1).jpeg"
+              alt="Tracklink Pump Image 6"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+        </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!-- Product Description Section -->
+    <div class="space-y-4 p-6 fade-in-left">
+      <h2 class="text-2xl font-bold text-black">Track link Pump</h2>
+      <p class="text-gray-700 text-sm text-justify">
+        A 700-bar compact power pack (pumping unit) with two-stage flow enables faster task completion. Available options include a manual hand DCV, pendant operation, or remote control. providing enhanced operator safety.
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        Voltage options include single-phase 230V or 110V, and three-phase 380-440V. Pneumatic (air-operated) pumping units can also be supplied upon request
+        where electrical supply is restricted.
+      </p>
+    </div>
+
+    <!-- Modal Structure -->
+    <div
+      id="imageModal2"
+      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+      style="display: none"
+    >
+      <div
+        class="swiper-container modal-carousel-2 w-full max-w-3xl overflow-hidden"
+      >
+        <!-- Wrapper for slides -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Untitled-3.jpg"
+              alt="Tracklink Pump Image 1"
+              class="rounded-lg w-full h-auto object-contain"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Fixo tpp.jpg"
+              alt="Tracklink Pump Image 2"
+              class="rounded-lg w-full h-auto object-contain"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Fixo tpp 3.jpg"
+              alt="Tracklink Pump Image 3"
+              class="rounded-lg w-full h-auto object-contain"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Remote 1.jpg"
+              alt="Tracklink Pump Image 4"
+              class="rounded-lg w-full h-auto object-contain"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/Remote 3.jpg"
+              alt="Tracklink Pump Image 5"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/img/products/tracklinepress/tracklinkpump/WhatsApp Image 2024-11-14 at 2.57.52 PM (1).jpeg"
+              alt="Tracklink Pump Image 6"
+              class="rounded-lg shadow-lg w-full h-auto object-contain modal-trigger-2"
+            />
+          </div>
+        </div>
+        <!-- Modal Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Modal Swiper Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
       </div>
 
       <!-- table  -->
@@ -801,7 +985,9 @@
                     Portability:
                   </h3>
                   <p class="text-gray-700">
-                    All our presses come with good quality storage boxes and all tooling are laid out in separate compartments inside each box 
+                    All our presses come with good quality storage boxes and all
+                    tooling are laid out in separate compartments inside each
+                    box
                   </p>
                 </div>
               </div>
@@ -816,7 +1002,10 @@
                     Double-Acting Cylinders:
                   </h3>
                   <p class="text-gray-700">
-                    The double acting hydraulic cylinder is made in alloy steel and has long stroke with which the master pin can be pushed or installed in one stroke. Industry standard high flow couplings included.
+                    The double acting hydraulic cylinder is made in alloy steel
+                    and has long stroke with which the master pin can be pushed
+                    or installed in one stroke. Industry standard high flow
+                    couplings included.
                   </p>
                 </div>
               </div>
@@ -829,7 +1018,9 @@
                     Dual Control Pumps:
                   </h3>
                   <p class="text-gray-700">
-                    All our presses have the option to purchase a dual control pump, where you have both electric and manual handling in ONE unit 
+                    All our presses have the option to purchase a dual control
+                    pump, where you have both electric and manual handling in
+                    ONE unit
                   </p>
                 </div>
               </div>
@@ -842,7 +1033,9 @@
                     Pump Options:
                   </h3>
                   <p class="text-gray-700">
-                    Fixomech can offer an extensive range of pump options, from manual, solenoid , electric, pneumatic (air pump), petrol (diesel) pump and many other options. 
+                    Fixomech can offer an extensive range of pump options, from
+                    manual, solenoid , electric, pneumatic (air pump), petrol
+                    (diesel) pump and many other options.
                   </p>
                 </div>
               </div>
@@ -963,140 +1156,141 @@
         </div>
       </div>
 
-    <!-- scroller  -->
+      <!-- scroller  -->
 
-<section class="bg-gray-100 flex items-center justify-center h-auto py-12">
-
-  <section class="w-full max-w-5xl lg:max-w-7xl"> 
-    <h2 class="text-center text-gray-800 text-xl font-semibold mb-2">OTHER PRODUCTS</h2>
-    <h3 class="text-center text-red-500 text-2xl font-bold mb-4">Explore More</h3>
-
-    <div class="relative mx-auto" style="width: 100%">
-      <div id="scroller" class="space-x-4 overflow-y-hidden">
-        <!-- Card 1 -->
-        <a
-          href="tracklink-press.html"
-          class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-        >
-          <img
-            src="assets/img/products/tracklinepress/TLP 1.jpg"
-            alt="Tracklink Press"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-4 text-center">
-            <p class="text-gray-700 font-medium">Tracklink Press</p>
-          </div>
-        </a>
-        <!-- Card 2 -->
-        <a
-          href="electrictorquewrencher.html"
-          class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-        >
-          <img
-            src="assets/img/products/ElectricTorqueWrench/ETW 1.jpg"
-            alt="Electric Torque Wrench"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-4 text-center">
-            <p class="text-gray-700 font-medium">
-              Electric Torque Wrench
-            </p>
-          </div>
-        </a>
-        <!-- Card 3 -->
-        <a
-          href="trackwinder.html"
-          class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-        >
-          <img
-            src="assets/img/products/Trackwinder/TrackWinder-3.jpg"
-            alt="Track Winder"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-4 text-center">
-            <p class="text-gray-700 font-medium">Track Winder</p>
-          </div>
-        </a>
-        <!-- Card 4 -->
-        <a
-          href="rollerconveyartable.html"
-          class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-        >
-          <img
-            src="assets/img/products/Roller Conveyer Table/RGT2.jpg"
-            alt="Roller Conveyer Table"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-4 text-center">
-            <p class="text-gray-700 font-medium">Roller Conveyer Table</p>
-          </div>
-        </a>
-        <!-- Card 5 -->
-        <a
-          href="Nutbuster.html"
-          class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-        >
-          <img
-            src="assets/img/products/Nutbuster/Nutbuster 2.jpg"
-            alt="Nut Buster"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-4 text-center">
-            <p class="text-gray-700 font-medium">Nut Buster</p>
-          </div>
-        </a>
-        <!-- Card 6 -->
-        <a
-          href="cylinderhoningstation.html"
-          class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-        >
-          <img
-            src="assets/img/products/Cylinder Honing/CH2.jpg"
-            alt="Cylinder Honing Station"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-4 text-center">
-            <p class="text-gray-700 font-medium">
-              Cylinder Honing Station
-            </p>
-          </div>
-        </a>
-        <a
-        href="trackassemblypress.html"
-        class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+      <section
+        class="bg-gray-100 flex items-center justify-center h-auto py-12"
       >
-        <img
-          src="assets/img/products/TrackAssemblyPress/TrackPress-darkbg-compressed.jpeg"
-          alt="Track Assembly Press"
-          class="w-full h-56 object-cover"
-        />
-        <div class="p-4 text-center">
-          <p class="text-gray-700 font-medium">
-            Track Assembly Press
-          </p>
-        </div>
-      </a>
-      <a
-        href="hydrauliccylindersjacks.html"
-        class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
-      >
-        <img
-          src="assets/img/products/HydraulicCylindersJacks/1 FVPS.jpg"
-          alt="hydrauliccylindersjacks"
-          class="w-full h-56 object-cover"
-        />
-        <div class="p-4 text-center">
-          <p class="text-gray-700 font-medium">
-            Hydraulic Cylinders [jacks]
-          </p>
-        </div>
-      </a>
-      </div>
-    </div>
-    
-  </section>
-</section>
-  
+        <section class="w-full max-w-5xl lg:max-w-7xl">
+          <h2 class="text-center text-gray-800 text-xl font-semibold mb-2">
+            OTHER PRODUCTS
+          </h2>
+          <h3 class="text-center text-red-500 text-2xl font-bold mb-4">
+            Explore More
+          </h3>
+
+          <div class="relative mx-auto" style="width: 100%">
+            <div id="scroller" class="space-x-4 overflow-y-hidden">
+              <!-- Card 1 -->
+              <a
+                href="tracklink-press.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/tracklinepress/TLP 1.jpg"
+                  alt="Tracklink Press"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">Tracklink Press</p>
+                </div>
+              </a>
+              <!-- Card 2 -->
+              <a
+                href="electrictorquewrencher.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/ElectricTorqueWrench/ETW 1.jpg"
+                  alt="Electric Torque Wrench"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">
+                    Electric Torque Wrench
+                  </p>
+                </div>
+              </a>
+              <!-- Card 3 -->
+              <a
+                href="trackwinder.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/Trackwinder/TrackWinder-3.jpg"
+                  alt="Track Winder"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">Track Winder</p>
+                </div>
+              </a>
+              <!-- Card 4 -->
+              <a
+                href="rollerconveyartable.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/Roller Conveyer Table/RGT2.jpg"
+                  alt="Roller Conveyer Table"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">Roller Conveyer Table</p>
+                </div>
+              </a>
+              <!-- Card 5 -->
+              <a
+                href="Nutbuster.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/Nutbuster/Nutbuster 2.jpg"
+                  alt="Nut Buster"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">Nut Buster</p>
+                </div>
+              </a>
+              <!-- Card 6 -->
+              <a
+                href="cylinderhoningstation.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/Cylinder Honing/CH2.jpg"
+                  alt="Cylinder Honing Station"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">
+                    Cylinder Honing Station
+                  </p>
+                </div>
+              </a>
+              <a
+                href="trackassemblypress.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/TrackAssemblyPress/TrackPress-darkbg-compressed.jpeg"
+                  alt="Track Assembly Press"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">Track Assembly Press</p>
+                </div>
+              </a>
+              <a
+                href="hydrauliccylindersjacks.html"
+                class="card bg-white shadow-lg rounded-lg overflow-hidden inline-block"
+              >
+                <img
+                  src="assets/img/products/HydraulicCylindersJacks/1 FVPS.jpg"
+                  alt="hydrauliccylindersjacks"
+                  class="w-full h-56 object-cover"
+                />
+                <div class="p-4 text-center">
+                  <p class="text-gray-700 font-medium">
+                    Hydraulic Cylinders [jacks]
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
 
       <!-- Footer -->
       <footer class="py-16 px-6 lg:px-24 bg-black text-white">
@@ -1268,47 +1462,46 @@
         />
       </a>
     </div>
-   <script>
-    // Brochure download functionality
-const brochureLinks = document.querySelectorAll('.getBrochureLink');
-const modalWindow = document.getElementById('formModal');
-const closeButton = document.getElementById('closeModal');
-const formSubmission = document.getElementById('brochureForm');
+    <script>
+      // Brochure download functionality
+      const brochureLinks = document.querySelectorAll(".getBrochureLink");
+      const modalWindow = document.getElementById("formModal");
+      const closeButton = document.getElementById("closeModal");
+      const formSubmission = document.getElementById("brochureForm");
 
-let selectedBrochureUrl = ""; // To store the URL of the selected brochure
+      let selectedBrochureUrl = ""; // To store the URL of the selected brochure
 
-brochureLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent the default anchor behavior
-        selectedBrochureUrl = link.getAttribute('data-brochure'); // Get the brochure URL from the link
-        modalWindow.classList.remove('hidden');
-    });
-});
+      brochureLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent the default anchor behavior
+          selectedBrochureUrl = link.getAttribute("data-brochure"); // Get the brochure URL from the link
+          modalWindow.classList.remove("hidden");
+        });
+      });
 
-closeButton.addEventListener('click', () => {
-    modalWindow.classList.add('hidden');
-});
+      closeButton.addEventListener("click", () => {
+        modalWindow.classList.add("hidden");
+      });
 
-formSubmission.addEventListener('submit', (e) => {
-    e.preventDefault();
+      formSubmission.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    const userName = document.getElementById('name').value;
-    const userEmail = document.getElementById('email').value;
-    const userPhone = document.getElementById('phone').value;
+        const userName = document.getElementById("name").value;
+        const userEmail = document.getElementById("email").value;
+        const userPhone = document.getElementById("phone").value;
 
-    if (userName && userEmail && userPhone) {
-        alert("Brochure is being downloaded...");
+        if (userName && userEmail && userPhone) {
+          alert("Brochure is being downloaded...");
 
-        // Redirect to the selected brochure URL
-        window.location.href = selectedBrochureUrl;
+          // Redirect to the selected brochure URL
+          window.location.href = selectedBrochureUrl;
 
-        modalWindow.classList.add('hidden');
-    } else {
-        alert("Please fill out all fields.");
-    }
-});
-
-   </script>
+          modalWindow.classList.add("hidden");
+        } else {
+          alert("Please fill out all fields.");
+        }
+      });
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -1324,6 +1517,55 @@ formSubmission.addEventListener('submit', (e) => {
         s0.parentNode.insertBefore(s1, s0);
       })();
     </script>
+    <!-- JavaScript for the Second Modal -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Swiper for desc 2
+  const desc2Swiper = new Swiper(".second-carousel", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true, // Optional, for continuous scrolling
+  });
+
+  // Modal 2 logic
+  const modal2 = document.getElementById("imageModal2");
+  const triggers2 = document.querySelectorAll(".modal-trigger-2");
+
+  triggers2.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      modal2.style.display = "flex";
+      initModalSwiper2();
+    });
+  });
+
+  modal2.addEventListener("click", (e) => {
+    if (e.target === modal2) {
+      modal2.style.display = "none";
+    }
+  });
+
+  function initModalSwiper2() {
+    new Swiper(".modal-carousel-2", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true, // Optional
+    });
+  }
+});
+
+</script>
     <script src="script.js"></script>
     <script src="scriptproduct.js"></script>
   </body>
