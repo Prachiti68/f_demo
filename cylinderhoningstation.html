@@ -551,7 +551,7 @@ The FIXOMECH Nut Buster’s head is meticulously engineered to repair cylinders 
 
 
   
-  <!-- features section  -->
+<!-- features section  -->
 <div class="h-fit w-full flex justify-center items-start md:p-10 lg:px-20">
   <div class="bg-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex justify-center items-start gap-20 flex-col md:flex-row">
     <!-- Product Range Section -->
@@ -679,61 +679,80 @@ The FIXOMECH Nut Buster’s head is meticulously engineered to repair cylinders 
     </div>
 
     <!-- Callback Form Section -->
-       <section id="request-callback" class="request-callback section mt-4 md:w-1/2">
-         <div class="max-w-4xl mx-auto px-6">
-           <!-- Get in Touch (Top) -->
-           <div class="mb-8">
-             <h3 class="text-2xl font-semibold mb-3">Get In Touch</h3>
-             <p class="text-lg text-gray-600">
-               Have questions or need help? Fill out the form, and we'll get back to you shortly.
-             </p>
-           </div>
-   
-           <!-- Callback Form (Bottom) -->
-           <div class="bg-white p-6 rounded-lg shadow-lg">
-             <h4 class="text-xl font-semibold mb-4">Request a Callback</h4>
-             <p class="text-sm text-gray-500 mb-4"><small>* Indicates a required field.</small></p>
-             <form id="callback-form" action="" method="POST">
-               <div class="mb-4">
-                 <label for="name" class="block text-sm font-medium text-gray-700">Full Name: *</label>
-                 <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
-               </div>
-   
-               <div class="mb-4">
-                 <label for="company" class="block text-sm font-medium text-gray-700">Company Name: *</label>
-                 <input type="text" id="company" name="company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
-               </div>
-   
-               <div class="mb-4">
-                 <label for="email" class="block text-sm font-medium text-gray-700">Email: *</label>
-                 <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
-               </div>
-   
-               <div class="mb-4">
-                 <label for="country" class="block text-sm font-medium text-gray-700">Country: *</label>
-                 <select id="country" name="country" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required>
-                   <option value="" disabled selected>Select Country</option>
-                   <option value="us">United States</option>
-                   <option value="in">India</option>
-                 </select>
-               </div>
-   
-               <div class="mb-6">
-                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone No. (& Country Code): *</label>
-                 <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
-               </div>
-   
-               <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
-                 Submit
-               </button>
-             </form>
-           </div>
-         </div>
-       </section>
+    <!-- Callback Form Section -->
+    <section id="request-callback" class="request-callback section mt-4 md:w-1/2">
+      <div class="max-w-4xl mx-auto px-6">
+        <!-- Get in Touch (Top) -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-3">Get In Touch</h3>
+          <p class="text-lg text-gray-600">
+            Have questions or need help? Fill out the form, and we'll get back to you shortly.
+          </p>
+        </div>
+
+        <!-- Callback Form (Bottom) -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h4 class="text-xl font-semibold mb-4">Request a Callback</h4>
+          <p class="text-sm text-gray-500 mb-4"><small>* Indicates a required field.</small></p>
+          <form id="callback-form" action="" method="POST">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700">Full Name: *</label>
+              <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+            </div>
+
+            <div class="mb-4">
+              <label for="company" class="block text-sm font-medium text-gray-700">Company Name: *</label>
+              <input type="text" id="company" name="company" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+            </div>
+
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email: *</label>
+              <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+            </div>
+
+            <div class="mb-4">
+              <label for="country" class="block text-sm font-medium text-gray-700">Country: *</label>
+              <select id="country" name="country" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                <option value="" disabled selected>Select Country</option>
+                <option value="us">United States</option>
+                <option value="in">India</option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone No. (& Country Code): *</label>
+              <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" required />
+            </div>
+
+            <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <!-- YouTube Video Embed -->
+        <div class="mt-8">
+          <h4 class="text-xl font-semibold mb-4">Watch Our Demo Video</h4>
+          <div class="relative w-full">
+            <div class="aspect-w-16 aspect-h-9 sm:aspect-w-16 sm:aspect-h-9  lg:h-[500px] xl:h-[550px]">
+              <iframe
+                class="rounded-lg shadow-lg w-full h-full"
+                src="https://www.youtube.com/embed/27vrsCw8hYU?si=lnxbOfODwbPafuPA?autoplay=1&mute=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+
    
   </div>
 </div>
-
 
   <!-- scroller  -->
 
