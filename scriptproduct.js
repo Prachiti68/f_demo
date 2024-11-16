@@ -40,7 +40,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
 // scroller 
   const scroller = document.getElementById('scroller');
-  let scrollSpeed = 6; // Adjust the speed as needed
+  let scrollSpeed = 2; // Adjust the speed as needed
 
   // Duplicate content for seamless scrolling
   scroller.innerHTML += scroller.innerHTML;
@@ -53,7 +53,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
     if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
       scroller.scrollLeft = 0;
     }
-  }, 20); // Adjust the interval for smoothness and speed
+  }, 20); 
 
   // Optional: Pause scrolling on hover
   scroller.addEventListener('mouseenter', () => {
@@ -61,7 +61,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   scroller.addEventListener('mouseleave', () => {
-    scrollSpeed = 1; // Resume scrolling when the mouse leaves
+    scrollSpeed = 2; // Resume scrolling when the mouse leaves
   });
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -302,8 +302,3 @@ document.getElementById('imageModal').addEventListener('click', (e) => {
   });
 
   
-
-
-  // scroptfor master brocher
- 
-   

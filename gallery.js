@@ -1,3 +1,8 @@
+    // Toggle mobile menu
+    document.getElementById('mobileMenuButton').addEventListener('click', function() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+    });
 // Product image data with names
 const productImages = {
     "Tracklink_Press": [
@@ -32,7 +37,7 @@ const productImages = {
     ],
     "Track_Assembly_Press": [
         { src: "assets/img/products/TrackAssemblyPress/TrackPress-darkbg-compressed.jpeg", name: "Track Assembly Press image 1" },
-        { src: "assets/img/products/TrackAssemblyPress/trackpressgallery.jpeg", name: "Track Assembly Press image 2" },
+        { src: "assets/img/products/TrackAssemblyPress/trackassemblygallery.jpeg", name: "Track Assembly Press image 2" },
         { src: "assets/img/products/TrackAssemblyPress/Undercarriagerepair-wholeline-compressed.jpeg", name: "Track Assembly Press image 3" },
         { src: "assets/img/products/TrackAssemblyPress/completeline-UC-compressed.jpeg", name: "Track Assembly Press image 4" }
     ],
