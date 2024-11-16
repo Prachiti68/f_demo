@@ -6,9 +6,9 @@
 // Product image data with names
 const productImages = {
     "Tracklink_Press": [
-        { src: "assets/img/products/tracklinepress/TLP 1.jpg", name: "Tracklink Press image 1" },
-        { src: "assets/img/products/tracklinepress/TLP 2.jpg", name: "Tracklink Press image 2" },
-        { src: "assets/img/products/tracklinepress/TLP 3.jpg", name: "Tracklink Press image 3" }
+        { src: "assets/img/products/tracklinepress/TLP 1.jpg", name: "Track link Press image 1" },
+        { src: "assets/img/products/tracklinepress/TLP 2.jpg", name: "Track link Press image 2" },
+        { src: "assets/img/products/tracklinepress/TLP 3.jpg", name: "Track link Press image 3" }
     ],
     "Electric_Torque_Wrench": [
         { src: "assets/img/products/ElectricTorqueWrench/ETW 1.jpg", name: "Electric Torque Wrench image 1" },
