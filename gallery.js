@@ -8,7 +8,9 @@ const productImages = {
     "Tracklink_Press": [
         { src: "assets/img/products/tracklinepress/TLP 1.jpg", name: "Track link Press image 1" },
         { src: "assets/img/products/tracklinepress/TLP 2.jpg", name: "Track link Press image 2" },
-        { src: "assets/img/products/tracklinepress/TLP 3.jpg", name: "Track link Press image 3" }
+        { src: "assets/img/products/tracklinepress/TLP 3.jpg", name: "Track link Press image 3" },
+        { src: "assets/img/products/tracklinepress/TLP 4.jpg", name: "Track link Press image 4" },
+        { src: "assets/img/products/tracklinepress/1.jpg", name: "Track link Press image 5" }
     ],
     "Electric_Torque_Wrench": [
         { src: "assets/img/products/ElectricTorqueWrench/ETW 1.jpg", name: "Electric Torque Wrench image 1" },
@@ -22,13 +24,14 @@ const productImages = {
         { src: "assets/img/products/Roller Conveyer Table/RGT2.jpg", name: "Roller Conveyer Table image 2" }
     ],
     "Nut_Buster": [
-        { src: "assets/img/products/Nutbuster/1.jpg", name: "Nut Buster image 1" },
+        { src: "assets/img/products/Nutbuster/8.jpg", name: "Nut Buster image 1" },
         { src: "assets/img/products/Nutbuster/2.jpg", name: "Nut Buster image 2" },
         { src: "assets/img/products/Nutbuster/3.jpg", name: "Nut Buster image 3" },
         { src: "assets/img/products/Nutbuster/4.jpg", name: "Nut Buster image 4" },
-        { src: "assets/img/products/Nutbuster/5.jpg", name: "Nut Buster image 5" },
-        { src: "assets/img/products/Nutbuster/6.jpg", name: "Nut Buster image 6" },
-        { src: "assets/img/products/Nutbuster/7.jpg", name: "Nut Buster image 7" }
+        { src: "assets/img/products/Nutbuster/10.jpg", name: "Nut Buster image 5" },
+        { src: "assets/img/products/Nutbuster/11.jpg", name: "Nut Buster image 6" },
+        { src: "assets/img/products/Nutbuster/7.jpg", name: "Nut Buster image 7" },
+        { src: "assets/img/products/Nutbuster/1.jpg", name: "Nut Buster image 8" }
     ],
     "Cylinder_Honing_Station": [
         { src: "assets/img/products/Cylinder Honing/CH1.jpg", name: "Cylinder Honing Station image 1" },
@@ -42,7 +45,11 @@ const productImages = {
         { src: "assets/img/products/TrackAssemblyPress/completeline-UC-compressed.jpeg", name: "Track Assembly Press image 4" }
     ],
     "Hydraulic_Cylinders_Jacks": [
-        { src: "assets/img/products/HydraulicCylindersJacks/1 FVPS.jpg", name: "Hydraulic Cylinders (Jacks) image 1" }
+        { src: "assets/img/products/HydraulicCylindersJacks/1 FVPS.jpg", name: "Hydraulic Cylinders (Jacks) image 1 - Low Height Cylinders FVPS" },
+        { src: "assets/img/products/FIXO JACKS/Low Height Cylinders/FFS/2 FFS.jpg", name: "Hydraulic Cylinders (Jacks) image 2 - Low Height Cylinders FFS" },
+        { src: "assets/img/products/FIXO JACKS/Low Height Cylinders/FTL-S/8  FTL-S.jpg", name: "Hydraulic Cylinders (Jacks) image 3 - Low Height Cylinders FTL-S" },
+        { src: "assets/img/products/FIXO JACKS/Low Height Cylinders/FLS/3 FLS.jpg" , name: "Hydraulic Cylinders (Jacks) image 4 - Low Height Cylinders FLS" },
+        
         
     ]
 };

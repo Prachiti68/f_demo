@@ -861,7 +861,7 @@ let selectedBrochureUrl = ""; // To store the URL of the selected brochure
 brochureLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent the default anchor behavior
-        selectedBrochureUrl = link.getAttribute('data-brochure'); // Get the brochure URL from the link
+        selectedBrochureUrl = link.getAttribute('data-brochure'); //  Get the brochure URL from the link
         modalWindow.classList.remove('hidden');
     });
 });
